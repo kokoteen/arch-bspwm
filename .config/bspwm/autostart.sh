@@ -24,7 +24,7 @@ feh --bg-scale ~/.config/bspwm/wall.png &
 xsetroot -cursor_name left_ptr &
 sxhkd &
 
-conky -c $HOME/.config/bspwm/system-overview &
+conky -c $HOME/.config/bspwm/clock_primary &
 run variety &
 run nm-applet &
 run pamac-tray &
