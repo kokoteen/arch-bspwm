@@ -24,7 +24,16 @@ feh --bg-scale ~/.config/bspwm/wall.png &
 xsetroot -cursor_name left_ptr &
 sxhkd &
 
-conky -c $HOME/.config/bspwm/clock_primary &
+#conky time
+if [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ]]; then
+		killall conky
+		conky -c $HOME/.config/bspwm/clock_primary &
+		conky -c $HOME/.config/bspwm/clock_docked &
+elif [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]]; then
+		killall conky
+        conky -c $HOME/.config/bspwm/clock_primary &
+fi
+
 run variety &
 run nm-applet &
 run pamac-tray &
