@@ -14,7 +14,7 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
-PS1='[\u@\h \W]\$ '
+PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 if [ -d "$HOME/.bin" ] ;
 	then PATH="$HOME/.bin:$PATH"
@@ -90,7 +90,7 @@ alias hw="hwinfo --short"
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
 
 #shopt
-shopt -s autocd # change to named directory
+shopt -s autocd # Allows you to cd into directory merely by typing the directory name.
 shopt -s cdspell # autocorrects cd misspellings
 shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob
@@ -120,10 +120,5 @@ alias ssn="sudo shutdown now"
 
 #bare git
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-#create a file called .bashrc-personal and put all your personal aliases
-#in there. They will not be overwritten by skel.
-
-[[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 #neofetch
