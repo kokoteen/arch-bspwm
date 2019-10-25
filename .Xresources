@@ -109,9 +109,9 @@ URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
 ! macros for clipboard and selection
 URxvt*copyCommand:      xclip -i -selection clipboard
 URxvt*pasteCommand:     xclip -o -selection clipboard
-URxvt*keysym.M-c:       perl:clipboard:copy
-URxvt*keysym.m-v:       perl:clipboard:paste
-URxvt*keysym.M-C-v:     perl:clipboard:paste_escaped
+URxvt*keysym.C-C:       perl:clipboard:copy
+URxvt*keysym.C-V:       perl:clipboard:paste
+URxvt*keysym.C-A-V:     perl:clipboard:paste_escaped
 URxvt*keysym.M-Escape:  perl:keyboard-select:activate
 URxvt*keysym.M-s:       perl:keyboard-select:search
 URxvt*keysym.M-u:       perl:url-select:select_next
