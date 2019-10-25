@@ -17,7 +17,7 @@ $HOME/.config/polybar/launch.sh &
 setxkbmap us,rs,hr -option 'grp:ctrl_alt_toggle' #man xkeyboard-config
 
 #Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-scale ~/.config/bspwm/wall.png &
+feh --bg-scale ~/.config/bspwm/submerged_4k_desktop.jpg &
 #feh --randomize --bg-fill ~/Képek/*
 #feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
 

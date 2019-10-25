@@ -62,7 +62,7 @@ bspc rule -a VirtualBox Machine state=fullscreen
 bspc rule -a Arandr state=floating
 bspc rule -a feh state=floating
 bspc rule -a Galculator state=floating
-bspc rule -a Oblogout state=floating
+bspc rule -a Oblogout monitor=primary state=floating center=true
 
 #Tiled applications
 bspc rule -a Gnome-disks state=tiled
