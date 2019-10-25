@@ -55,15 +55,9 @@ URxvt*iconFile:  		/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
 URxvt*depth:             32
 URxvt*transparent:      true
 URxvt*shading:          30
-!URxvt*background:       rgba:0000/0000/0000/AAAA
-!URxvt*background:       [80]#404552
-!URxvt*background:       [70]#3F424A
-URxvt*background:        [80]#282A36
-URxvt*foreground:        #F8F8FF
 URxvt*underlineColor:    #4682B4
 URxvt*highlightColor:    #4682B4
 URxvt*throughColor:      Blue
-URxvt*cursorColor:       #c5c8c6
 URxvt*scrollBar:         false
 URxvt*scrollTtyOutput:   false
 URxvt*scrollWithBuffer:  true
@@ -76,22 +70,42 @@ URxvt*colorUL:      	 #87afd7
 
 
 ! colors
-URxvt*color0: #3f3f3f
-URxvt*color1: #ac3c3c
-URxvt*color2: #60b48a
-URxvt*color3: #dfaf8f
-URxvt*color4: #506070
-URxvt*color5: #dc8cc3
-URxvt*color6: #8cd0d3
-URxvt*color7: #dcdccc
-URxvt*color8: #79A9FF
-URxvt*color9: #da6e6e
-URxvt*color10: #c3bf9f
-URxvt*color11: #f0dfaf
-URxvt*color12: #94bff3
-URxvt*color13: #ec93d3
-URxvt*color14: #93e0e3
-URxvt*color15: #ffffff
+! special
+URxvt*foreground:   #c5c8c6
+URxvt*background:   #1d1f21
+URxvt*cursorColor:  #c5c8c6
+
+! black
+URxvt*color0:       #1d1f21
+URxvt*color8:       #969896
+
+! red
+URxvt*color1:       #cc342b
+URxvt*color9:       #cc342b
+
+! green
+URxvt*color2:       #198844
+URxvt*color10:      #198844
+
+! yellow
+URxvt*color3:       #fba922
+URxvt*color11:      #fba922
+
+! blue
+URxvt*color4:       #3971ed
+URxvt*color12:      #3971ed
+
+! magenta
+URxvt*color5:       #a36ac7
+URxvt*color13:      #a36ac7
+
+! cyan
+URxvt*color6:       #3971ed
+URxvt*color14:      #3971ed
+
+! white
+URxvt*color7:       #c5c8c6
+URxvt*color15:      #fffffURxvt*
 
 ! fonts
 URxvt*letterSpace: 	    		-2
@@ -117,7 +131,7 @@ URxvt*keysym.M-s:       perl:keyboard-select:search
 URxvt*keysym.M-u:       perl:url-select:select_next
 URxvt*resize-font.smaller:	C-Down
 URxvt*resize-font.bigger:	C-Up
-URxvt*urlLauncher:      firefox
+URxvt*urlLauncher:      google-chrome-stable
 URxvt*underlineURLs:    true
 URxvt*urlButton:        1
 URxvt*geometry: 		90x30
