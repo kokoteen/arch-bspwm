@@ -118,6 +118,7 @@ font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
+
 modules-left = i3 xwindow
 modules-center = kernel
 modules-right = memory2 cpu2 date
@@ -432,7 +433,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = weather time 
-modules-right = xkeyboard memory2 cpu2 pavolume battery date kdeconnect
+modules-right = xkeyboard memory2 cpu2 pavolume battery date
 
 tray-detached = false
 tray-offset-x = 0
@@ -1335,13 +1336,6 @@ label-unmounted = %mountpoint% not mounted
 format-unmounted-foreground = ${colors.foreground}
 format-unmounted-background = ${colors.background}
 ;format-unmounted-underline = ${colors.alert}
-
-################################################################################
-
-#[module/kdeconnect]  
-#type = custom/script  
-#exec = ~/.config/polybar/scripts/polybar-kdeconnect.sh -d"  
-#tail = true
 
 ################################################################################
 
