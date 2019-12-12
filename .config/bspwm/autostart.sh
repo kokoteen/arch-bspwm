@@ -34,7 +34,7 @@ elif [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]]; then
         conky -c $HOME/.config/bspwm/clock_primary &
 fi
 
-run variety &
+#run variety &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
