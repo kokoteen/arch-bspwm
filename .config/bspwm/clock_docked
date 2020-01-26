@@ -26,7 +26,7 @@ conky.config = {
 	alignment = 'top_right',					-- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
 												-- middle-left,middle-middle,middle-right,none
 	--Arch Duoscreen
-	xinerama_head = 2,
+	xinerama_head = 1,                                              -- 1 for the screen on the left side of a monitor, 2 for the right side 
 	gap_x = 10,									-- pixels between right or left border
 	gap_y = 50,									-- pixels between bottom or left border
 	minimum_height = 20,						-- minimum height of window
