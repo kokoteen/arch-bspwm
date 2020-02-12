@@ -15,6 +15,7 @@ off
 output VIRTUAL1
 off
 output LVDS1
+crtc 0
 mode 1600x900
 pos 0x0
 primary

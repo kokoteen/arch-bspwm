@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# If refreshing bspwm, remove all previous rules to prevent doubling up.
+bspc rule -r "*"
+
 #LAUNCHERS
 $HOME/.config/bspwm/autostart.sh
 
@@ -27,6 +30,7 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
 
 #BSPWM coloring
@@ -42,7 +46,7 @@ if [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ]]; then
 	bspc monitor LVDS1 -d 6 7 8 9 10
 	bspc monitor HDMI1 -d 1 2 3 4 5 
 elif [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]]; then
-    bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+	bspc monitor LVDS1 -d 1 2 3 4 5 6 7 8 9 10
 fi
 
 #Fullscreen applications
@@ -53,7 +57,6 @@ bspc rule -a VirtualBox Machine state=fullscreen
 #Floating applications
 bspc rule -a Arandr state=floating
 bspc rule -a feh state=floating
-bspc rule -a Galculator state=floating
 bspc rule -a Oblogout monitor=primary state=floating center=true
 
 #Tiled applications

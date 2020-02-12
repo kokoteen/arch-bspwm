@@ -26,12 +26,12 @@ sxhkd &
 
 #conky time
 if [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ]]; then
-		killall conky
-		conky -c $HOME/.config/bspwm/clock_primary &
-		conky -c $HOME/.config/bspwm/clock_docked &
+	killall conky
+	conky -c $HOME/.config/bspwm/clock_primary &
+	conky -c $HOME/.config/bspwm/clock_docked &
 elif [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]]; then
-		killall conky
-        conky -c $HOME/.config/bspwm/clock_primary &
+	killall conky
+	conky -c $HOME/.config/bspwm/clock_primary &
 fi
 
 #run variety &
