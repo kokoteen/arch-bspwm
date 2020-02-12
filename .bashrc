@@ -121,4 +121,5 @@ alias ssn="sudo shutdown now"
 #bare git
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-#neofetch
+#remove
+alias remove="pikaur -Rns"
