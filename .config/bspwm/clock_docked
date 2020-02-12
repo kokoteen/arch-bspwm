@@ -14,49 +14,50 @@ conky.config = {
 
 	--Various settings
 
-	background = false, 							-- forked to background
+	background = false, 						-- forked to background
 	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
 	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
-	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	no_buffers = true,						-- Subtract (file system) buffers from used memory?
 	update_interval = 1,						-- update interval
 
 
 	--Placement
 
 	alignment = 'top_right',					-- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
-												-- middle-left,middle-middle,middle-right,none
+									-- middle-left,middle-middle,middle-right,none
 	--Arch Duoscreen
-	xinerama_head = 1,                                              -- 1 for the screen on the left side of a monitor, 2 for the right side 
-	gap_x = 10,									-- pixels between right or left border
-	gap_y = 50,									-- pixels between bottom or left border
+	xinerama_head = 1,						-- 1 for the screen on the left side of a monitor, 2 for the right side 
+	gap_x = 10,							-- pixels between right or left border
+	gap_y = 50,							-- pixels between bottom or left border
 	minimum_height = 20,						-- minimum height of window
 	minimum_width = 280,						-- minimum height of window
 	maximum_width = 280,						-- maximum height of window
 
 	--Textual
 
-	font = 'Bootcamp:size=40:bold',  			-- font for complete conky unless in code defined
-	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
-	override_utf8_locale = true,				-- force UTF8 requires xft
-	uppercase = true,							-- uppercase or not
-	use_xft = true,								-- xft font - anti-aliased font
+	font = 'Bootcamp:size=40:bold',  				-- font for complete conky unless in code defined
+	max_text_width = 0,						-- 0 will make sure line does not get broken if width too smal
+	override_utf8_locale = true,					-- force UTF8 requires xft
+	uppercase = true,						-- uppercase or not
+	use_xft = true,							-- xft font - anti-aliased font
 
 	--Windows
 
-	own_window = true,							-- create your own window to draw
-	own_window_argb_value = 150,				    -- real transparency - composite manager required 0-255
-	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window = true,						-- create your own window to draw
+	own_window_argb_value = 150,					-- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,					-- use ARGB - composite manager required
 	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
-	own_window_colour = '#000000',				-- set colour if own_window_transparent no
-	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
-	own_window_transparent = true,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_colour = '#000000',					-- set colour if own_window_transparent no
+									-- if own_window true - just hints - own_window_type sets it
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  
+	own_window_transparent = true,					-- if own_window_argb_visual is true sets background opacity 0%
 	own_window_title = 'concky_clock_docked',			-- set the name manually  - default conky "hostname"
-	own_window_type = 'desktop',				-- if own_window true options are: normal/override/dock/desktop/panel
+	own_window_type = 'desktop',					-- if own_window true options are: normal/override/dock/desktop/panel
 
 
 	--Colours
 
-	default_color = '#ff0000',  				-- default color and border color
+	default_color = '#ff0000',  					-- default color and border color
 	color1 = '#FFFFFF',
 	color2 = '#929292',
 	color3 = '#cccccc',
