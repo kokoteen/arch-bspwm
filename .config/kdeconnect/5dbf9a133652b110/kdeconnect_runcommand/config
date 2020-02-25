@@ -1,2 +1,0 @@
-[General]
-commands="@ByteArray({\"_1e9b69ca_5af9_4766_be29_290c34d3237e_\":{\"command\":\"systemctl suspend\",\"name\":\"suspend\"},\"_21e067c1_03fa_4f93_9558_eb1ebde2688b_\":{\"command\":\"amixer set Master 5%-\",\"name\":\"volume down\"},\"_4d553a1d_9faa_4062_a520_1cec172d1928_\":{\"command\":\"amixer set Master 10%+\",\"name\":\"volume up\"},\"_5cb1d208_91e3_4903_8bba_7c1d1c12c1ef_\":{\"command\":\"systemctl poweroff\\n\",\"name\":\"poweroff\"},\"_fe98bb35_9b59_46d1_8731_b9e610b3193a_\":{\"command\":\"systemctl reboot\",\"name\":\"reboot\"}})"
