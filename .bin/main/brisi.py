@@ -34,17 +34,21 @@ def process_files():
     print("Eneter index of pkg NOT to be removed[q/Q]: ")
     not_del = []
     
-    elem = input().lower()
-    if elem == '':
-        elem = 'q'
+    # remove those needed pkg
+    ind = input().lower()
+    if ind == '':
+        ind = 'q'
 
-    while elem != 'q':
-        not_del.append(elem)
-        elem = int(input())
+    while ind != 'q':
+        not_del.append(del_list[int(ind)])
+
+        ind = input().lower()
+        if ind == '':
+            ind = 'q'
 
     # save those packages
     if not_del:
-        [del_list.pop(ind) for ind in not_del]
+        [del_list.remove(elem) for elem in not_del]
 
     # create .txt file of packages to be deleted
     print("Saving list of pkg to \'delete_pkg.txt\'")
