@@ -31,7 +31,16 @@ def process_files():
     [print(ind, elem) for ind, elem in enumerate(del_list)]
 
     # check if some packages are needed
-    not_del = input("Eneter index of pkg NOT to be removed: ")
+    print("Eneter index of pkg NOT to be removed[q/Q]: ")
+    not_del = []
+    
+    elem = input().lower()
+    if elem == '':
+        elem = 'q'
+
+    while elem != 'q':
+        not_del.append(elem)
+        elem = int(input())
 
     # save those packages
     if not_del:
