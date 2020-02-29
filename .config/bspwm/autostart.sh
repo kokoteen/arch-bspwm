@@ -32,11 +32,13 @@ elif [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]]; then
 	conky -c $HOME/.config/bspwm/clock_primary &
 fi
 
+#bluetooth
+#blueberry-tray &
+
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
 numlockx on &
-blueberry-tray &
 compton --config $HOME/.config/bspwm/compton.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &

@@ -15,7 +15,7 @@
     `$ config config --local status.showUntrackedFiles no`
 3. run ***brisi.py*** script to delete unnecessary pkg
 4. install pkg with ***yay***  
-`$ yay -S $(<installed_final.txtr)`
+`$ yay -S $(<installed_final.txt)`
 5. start display manager  
 `$ sudo systemctl enable lightdm.service -f`  
 `$ sudo systemctl set-default graphical.target`
