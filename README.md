@@ -17,7 +17,7 @@
 4. install pkg with ***yay***  
 `<$ yay -S $(<installed_final.txtr)>`
 5. start display manager  
-`<$ sudo systemctl enable lightdm.service -f>`
+`<$ sudo systemctl enable lightdm.service -f>`  
 `<$ sudo systemctl set-default graphical.target>`
 
 
