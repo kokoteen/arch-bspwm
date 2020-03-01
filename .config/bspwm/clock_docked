@@ -35,7 +35,7 @@ conky.config = {
 
 	--Textual
 
-	font = 'Bootcamp:size=40:bold',  				-- font for complete conky unless in code defined
+	font = 'Comic Sans MS:size=40:bold',  				-- font for complete conky unless in code defined
 	max_text_width = 0,						-- 0 will make sure line does not get broken if width too smal
 	override_utf8_locale = true,					-- force UTF8 requires xft
 	uppercase = true,						-- uppercase or not
