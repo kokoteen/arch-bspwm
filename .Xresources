@@ -76,11 +76,11 @@ URxvt*color15:          #ffffff
 
 ! fonts
 URxvt*letterSpace: 	    		-2
-URxvt*font:                 	xft:bitstream vera sans mono:regular:size=14
-URxvt*imFont:               	xft:bitstream vera sans mono:regular:size=14
-URxvt*boldFont:             	xft:bitstream vera sans mono:bold:size=14
-URxvt*italicFont:           	xft:bitstream vera sans mono:italic:size=14
-URxvt*boldItalicFont:     		xft:bitstream vera sans mono:regular:size=14
+URxvt*font:                 	xft:hack:regular:size=14
+URxvt*imFont:               	xft:hack:regular:size=14
+URxvt*boldFont:             	xft:hack:size=14
+URxvt*italicFont:           	xft:hack:italic:size=14
+URxvt*boldItalicFont:     		xft:hack:italic:size=14
 
 ! perl extensions
 URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font,tabbed

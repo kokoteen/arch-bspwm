@@ -2,4 +2,5 @@ call plug#begin('~/.vim/plugged')
 
 "Fugitive Vim Github Wrapper
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 call plug#end()
