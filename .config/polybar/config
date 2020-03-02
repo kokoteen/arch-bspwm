@@ -1109,8 +1109,8 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-;   
-format-prefix = " "
+;    
+format-prefix = ""
 format-prefix-foreground = #cd1f3f
 format-underline = #cd1f3f
 
@@ -1164,7 +1164,7 @@ type = internal/cpu
 interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = "  "
+format-prefix = ""
 format-prefix-foreground = #cd1f3f
 format-underline = #cd1f3f
 
@@ -1183,7 +1183,8 @@ format-padding = 2
 ;   %percentage% (default) - total cpu load
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = Cpu %percentage:3%%
+#label = Cpu %percentage:3%%
+label = %percentage:3%%
 
 ################################################################################
 
@@ -1194,9 +1195,9 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %Y-%m-%d%"
-date-alt = " %d-%m-%Y"
-format-prefix = " "
+date = " %d-%m-%Y"
+date-alt = " %Y-%m-%d%"
+format-prefix = ""
 format-prefix-foreground = #FF9D00
 format-underline = #FF9D00
 format-foreground = ${colors.foreground}
@@ -1425,7 +1426,7 @@ interval = 1
 ;   %mb_total%
 label = %percentage_used%%
 
-format = Mem <label>
+format = <label>
 format-prefix = "  "
 format-prefix-foreground = #3384d0
 format-underline = #3384d0
@@ -1848,7 +1849,7 @@ format-background = ${colors.background}
 ;https://github.com/jaagr/polybar/wiki/Module:-xkeyboard
 type = internal/xkeyboard
 blacklist-0 = num lock
-
+# 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-prefix-background = ${colors.background}
