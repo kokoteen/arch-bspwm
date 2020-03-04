@@ -7,8 +7,45 @@ function run {
   fi
 }
 
-#Find out your monitor name with xrandr or arandr (save and you get this line)
+#find out your monitor name with xrandr or arandr (save and you get this line)
 autorandr -c --force
+
+#position monitor based on .monitor_position 
+FILE=$HOME/.monitor_position
+if [[ ! -f "$FILE" ]]; then
+	#checks if FILE doesn't exist
+    # pokrenuti python skriptu
+fi
+
+#create .clock_docked if it doesnt exist
+#for conky clock
+FILE=$HOME/.clock_docked
+if [[ ! -f "$FILE" ]]; then
+	#copy & rename cloc_primary for docked monitor
+	cp $HOME/.config/bspwm/clock_primary $HOME/
+	mv $HOME/.config/bspwm/clock_primary $HOME/.clock_docked
+	#edit file
+	sed -i "s/alignment = 'top_middle'/alignment = 'top_right'/" $HOME/.clock_docked
+	sed -i "s/own_window_title = 'concky_clock_primary'/own_window_title = 'concky_clock_docked'/" $HOME/.clock_docked
+	#show clock based on a value in .monitor_position
+	if (( $(cat $HOME/.monitor_position) == "1")); then
+		#left position
+		sed -i "s/xinerama_head = 0/xinerama_head = 1/" $HOME/.clock_docked
+	elif (( $(cat $HOME/.monitor_position) == "2")); then
+		#right position
+		sed -i "s/xinerama_head = 0/xinerama_head = 2/" $HOME/.clock_docked
+	fi
+fi
+
+#conky clock
+if (( $(xrandr | grep "*" | wc | awk '{print $1}') == "2" )); then
+	killall conky
+	conky -c $HOME/.config/bspwm/clock_primary &
+	conky -c $HOME/.clock_docked &
+elif (( $(xrandr | grep "*" | wc | awk '{print $1}') == "1" )); then
+	killall conky
+	conky -c $HOME/.config/bspwm/clock_primary &
+fi
 
 #polybar
 $HOME/.config/polybar/launch.sh &
@@ -16,21 +53,11 @@ $HOME/.config/polybar/launch.sh &
 #add keyboard layout
 setxkbmap us,rs,hr -option 'grp:ctrl_alt_toggle' #man xkeyboard-config
 
-#Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-scale ~/.config/bspwm/submerged_4k_desktop.jpg &
+#wallpaper
+feh --bg-scale $HOME/.config/bspwm/submerged_4k_desktop.jpg &
 
 xsetroot -cursor_name left_ptr &
 sxhkd &
-
-#conky time
-if [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ]]; then
-	killall conky
-	conky -c $HOME/.config/bspwm/clock_primary &
-	conky -c $HOME/.config/bspwm/clock_docked &
-elif [[ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]]; then
-	killall conky
-	conky -c $HOME/.config/bspwm/clock_primary &
-fi
 
 #bluetooth
 #blueberry-tray &

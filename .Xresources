@@ -76,11 +76,11 @@ URxvt*color15:          #ffffff
 
 ! fonts
 URxvt*letterSpace: 	    		-2
-URxvt*font:                 	xft:hack:regular:size=14
-URxvt*imFont:               	xft:hack:regular:size=14
-URxvt*boldFont:             	xft:hack:size=14
-URxvt*italicFont:           	xft:hack:italic:size=14
-URxvt*boldItalicFont:     		xft:hack:italic:size=14
+URxvt*font:                 	xft:Droid Sans Mono Slashed for Powerline:regular:size=14
+URxvt*imFont:               	xft:Droid Sans Mono Slashed for Powerline:regular:size=14
+URxvt*boldFont:             	xft:Droid Sans Mono Slashed for Powerline:size=14
+URxvt*italicFont:           	xft:Droid Sans Mono Slashed for Powerline:italic:size=14
+URxvt*boldItalicFont:     		xft:Droid Sans Mono Slashed for Powerline:italic:size=14
 
 ! perl extensions
 URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font,tabbed
