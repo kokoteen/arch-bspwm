@@ -66,6 +66,7 @@ bspc rule -a VirtualBox Machine state=fullscreen
 bspc rule -a Arandr state=floating
 bspc rule -a feh state=floating
 bspc rule -a Oblogout monitor=primary state=floating center=true
+bspc rule -a matplotlib state=floating center=true
 
 #Tiled applications
 bspc rule -a Gnome-disks state=tiled
@@ -82,3 +83,5 @@ bspc rule -a Xfce4-settings-manager state=tiled
 #bspc config external_rules_command ~/.config/bspwm/scripts/pseudo_automatic_mode
 ##Adjust new window: splits biggest windows to keep windows about the same size
 #bspc config external_rules_command ~/.config/bspwm/scripts/adjust-new-window
+bspc rule -a Toplevel state=floating center=true
+bspc rule -a Tk state=floating center=true
