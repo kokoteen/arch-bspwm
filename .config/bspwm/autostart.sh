@@ -13,8 +13,9 @@ autorandr -c --force
 #position monitor based on .monitor_position 
 FILE=$HOME/.monitor_position
 if [[ ! -f "$FILE" ]]; then
-	#checks if FILE doesn't exist
+    #checks if FILE doesn't exist
     # pokrenuti python skriptu
+    echo 'not exist'
 fi
 
 #create .clock_docked if it doesnt exist
@@ -23,7 +24,7 @@ FILE=$HOME/.clock_docked
 if [[ ! -f "$FILE" ]]; then
 	#copy & rename cloc_primary for docked monitor
 	cp $HOME/.config/bspwm/clock_primary $HOME/
-	mv $HOME/.config/bspwm/clock_primary $HOME/.clock_docked
+	mv $HOME/clock_primary $HOME/.clock_docked
 	#edit file
 	sed -i "s/alignment = 'top_middle'/alignment = 'top_right'/" $HOME/.clock_docked
 	sed -i "s/own_window_title = 'concky_clock_primary'/own_window_title = 'concky_clock_docked'/" $HOME/.clock_docked
