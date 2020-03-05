@@ -15,7 +15,7 @@ FILE=$HOME/.monitor_position
 if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
     #checks if FILE doesn't exist
     arandr #sets monitor positions
-	python $HOME/.config/bspwm/scripts/cfg_monitor_position.py #generates .monitor_position
+	./$HOME/.config/sxhkd/.cfg_monitor_pos.sh #generates .monitor_position
 fi
 
 #create .clock_docked if it doesnt exist

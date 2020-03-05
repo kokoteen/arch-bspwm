@@ -34,7 +34,7 @@ super + F7
 
 #
 super + F8
-
+      /$HOME/.config/sxhkd/.cfg_monitor_pos.sh
 
 # Oblogout
 super + F9
