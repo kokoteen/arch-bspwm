@@ -10,15 +10,7 @@ function run {
 #find out your monitor name with xrandr or arandr (save and you get this line)
 autorandr -c --force
 
-#position monitor based on .monitor_position 
-FILE=$HOME/.monitor_position
-if [ $(xrandr | grep " connected" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
-    #checks if FILE doesn't exist
-    arandr #sets monitor positions
-	./$HOME/.config/sxhkd/.cfg_monitor_pos.sh #generates .monitor_position
-fi
-
-#create .clock_docked if it doesnt exist
+#create .clock_docked if it doesnt exist /runs only once, probobly
 #for conky clock
 FILE=$HOME/.clock_docked
 if [ $(xrandr | grep " connected" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
@@ -29,7 +21,7 @@ if [ $(xrandr | grep " connected" | wc | awk '{print $1}') == "2" ] && [ ! -f "$
 	sed -i "s/alignment = 'top_middle'/alignment = 'top_right'/" $HOME/.clock_docked
 	sed -i "s/own_window_title = 'concky_clock_primary'/own_window_title = 'concky_clock_docked'/" $HOME/.clock_docked
 	#show clock based on a value in .monitor_position
-	if [ clear$(cat $HOME/.monitor_position) == "1" ]; then
+	if [ $(cat $HOME/.monitor_position) == "1" ]; then
 		#left position
 		sed -i "s/xinerama_head = 0/xinerama_head = 1/" $HOME/.clock_docked
 	elif [ $(cat $HOME/.monitor_position) == "2" ]; then
