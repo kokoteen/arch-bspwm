@@ -42,18 +42,18 @@ bspc config urgent_border_color 	"#dd2727"
 
 
 #AutoConfig monitor
-if (( $(xrandr | grep "*" | wc | awk '{print $1}') == "2" )); then
+if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ]; then
 	monitor_type=$(xrandr | grep " connected" | awk '{print $1}' | head -n 1)
-	if (( $(cat $HOME/.monitor_position) == "1")); then
+	if [ $(cat $HOME/.monitor_position) == "1" ]; then
 		#left position
 		bspc monitor $monitor_type -d 6 7 8 9 10
 		bspc monitor HDMI1 -d 1 2 3 4 5 
-	elif (( $(cat $HOME/.monitor_position) == "2")); then
+	elif [ $(cat $HOME/.monitor_position) == "2" ]; then
 		#right position
 		bspc monitor HDMI1 -d 6 7 8 9 10
 		bspc monitor $monitor_type -d 1 2 3 4 5 
 	fi #add projector mode
-elif (( $(xrandr | grep "*" | wc | awk '{print $1}') == "1" )); then
+elif [ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]; then
 	bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 fi
 
@@ -67,8 +67,6 @@ bspc rule -a Arandr state=floating
 bspc rule -a feh state=floating
 bspc rule -a Oblogout monitor=primary state=floating center=true
 bspc rule -a matplotlib state=floating center=true
-bspc rule -a Tk state=floating center=true
-bspc rule -a Toplevel state=floating center=true
 
 #Tiled applications
 bspc rule -a Gnome-disks state=tiled
