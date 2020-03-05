@@ -12,16 +12,16 @@ autorandr -c --force
 
 #position monitor based on .monitor_position 
 FILE=$HOME/.monitor_position
-if [[ ! -f "$FILE" ]]; then
+if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
     #checks if FILE doesn't exist
-    # pokrenuti python skriptu
-    echo 'not exist'
+    arandr #sets monitor positions
+	python $HOME/.config/bspwm/scripts/cfg_monitor_position.py #generates .monitor_position
 fi
 
 #create .clock_docked if it doesnt exist
 #for conky clock
 FILE=$HOME/.clock_docked
-if [[ ! -f "$FILE" ]]; then
+if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
 	#copy & rename cloc_primary for docked monitor
 	cp $HOME/.config/bspwm/clock_primary $HOME/
 	mv $HOME/clock_primary $HOME/.clock_docked
@@ -29,21 +29,21 @@ if [[ ! -f "$FILE" ]]; then
 	sed -i "s/alignment = 'top_middle'/alignment = 'top_right'/" $HOME/.clock_docked
 	sed -i "s/own_window_title = 'concky_clock_primary'/own_window_title = 'concky_clock_docked'/" $HOME/.clock_docked
 	#show clock based on a value in .monitor_position
-	if (( $(cat $HOME/.monitor_position) == "1")); then
+	if [ clear$(cat $HOME/.monitor_position) == "1" ]; then
 		#left position
 		sed -i "s/xinerama_head = 0/xinerama_head = 1/" $HOME/.clock_docked
-	elif (( $(cat $HOME/.monitor_position) == "2")); then
+	elif [ $(cat $HOME/.monitor_position) == "2" ]; then
 		#right position
 		sed -i "s/xinerama_head = 0/xinerama_head = 2/" $HOME/.clock_docked
 	fi
 fi
 
 #conky clock
-if (( $(xrandr | grep "*" | wc | awk '{print $1}') == "2" )); then
+if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ]; then
 	killall conky
 	conky -c $HOME/.config/bspwm/clock_primary &
 	conky -c $HOME/.clock_docked &
-elif (( $(xrandr | grep "*" | wc | awk '{print $1}') == "1" )); then
+elif [ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]; then
 	killall conky
 	conky -c $HOME/.config/bspwm/clock_primary &
 fi
