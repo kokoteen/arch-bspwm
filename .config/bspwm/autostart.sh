@@ -12,7 +12,7 @@ autorandr -c --force
 
 #position monitor based on .monitor_position 
 FILE=$HOME/.monitor_position
-if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
+if [ $(xrandr | grep " connected" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
     #checks if FILE doesn't exist
     arandr #sets monitor positions
 	./$HOME/.config/sxhkd/.cfg_monitor_pos.sh #generates .monitor_position
@@ -21,7 +21,7 @@ fi
 #create .clock_docked if it doesnt exist
 #for conky clock
 FILE=$HOME/.clock_docked
-if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
+if [ $(xrandr | grep " connected" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; then
 	#copy & rename cloc_primary for docked monitor
 	cp $HOME/.config/bspwm/clock_primary $HOME/
 	mv $HOME/clock_primary $HOME/.clock_docked
@@ -39,11 +39,11 @@ if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ] && [ ! -f "$FILE" ]; 
 fi
 
 #conky clock
-if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ]; then
+if [ $(xrandr | grep " connected" | wc | awk '{print $1}') == "2" ]; then
 	killall conky
 	conky -c $HOME/.config/bspwm/clock_primary &
 	conky -c $HOME/.clock_docked &
-elif [ $(xrandr | grep "*" | wc | awk '{print $1}') == "1" ]; then
+elif [ $(xrandr | grep " connected" | wc | awk '{print $1}') == "1" ]; then
 	killall conky
 	conky -c $HOME/.config/bspwm/clock_primary &
 fi
