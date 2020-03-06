@@ -9,5 +9,10 @@ if [ "$(echo "$p" | awk '{print $1}')" -eq 4 ]; then
 	p=$(echo -e "1 Left/Up\n2 Right/Down\n3 Mirror\n4 Configure monitors position - arandr" | rofi -dmenu -p "Select Monitor Position > ")
 fi
 
+#exit if zero
+if [ -z "$p" ]; then
+	exit 1
+fi
+
 #save cfg
 echo "$p" | awk '{print $1}' > .monitor_position
