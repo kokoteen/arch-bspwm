@@ -119,7 +119,7 @@ alias jctl="journalctl -p 3 -xb"
 alias ssn="sudo shutdown now"
 
 #bare git
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias gitt='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #remove
 alias remove="pikaur -Rns"
