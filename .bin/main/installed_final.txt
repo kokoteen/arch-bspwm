@@ -1,6 +1,3 @@
-# da li treba? 
-# xfce4-panel
-
 accountsservice
 adapta-gtk-theme
 adobe-source-sans-pro-fonts
@@ -216,6 +213,7 @@ mlocate
 mobile-broadband-provider-info
 modemmanager
 moka-icon-theme
+montserrat-font-ttf
 mtools
 mtpfs
 nano
@@ -247,7 +245,6 @@ openconnect
 openresolv
 openssh
 openvpn
-opera
 os-prober
 oxy-neon
 p7zip
@@ -285,6 +282,8 @@ python-autopep8
 python-black
 python-pylint
 python-pywal
+python-virtualenv
+python-virtualenvwrapper
 python2-dbus
 python2-xdg
 qbittorrent
@@ -301,6 +300,7 @@ rp-pppoe
 rsync
 rxvt-unicode
 sardi-icons
+scrot
 sdparm
 sed
 sg3_utils
@@ -338,7 +338,9 @@ ttf-inconsolata
 ttf-iosevka
 ttf-liberation
 ttf-ms-fonts
+ttf-opensans
 ttf-roboto
+ttf-roboto-slab
 ttf-ubuntu-font-family
 ttf-wps-fonts
 tumbler

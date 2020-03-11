@@ -27,12 +27,6 @@ alias ll='ls -la'
 alias l='ls' 					
 alias l.="ls -A | egrep '^\.'"      
 
-#fix obvious typo's
-alias cd..='cd ..'
-alias pdw="pwd"
-alias udpate='sudo pikaur -Syyu'
-alias upate='sudo pikaur -Syyu'
-
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -43,9 +37,6 @@ alias df='df -h'
 
 #free
 alias free="free -mt"
-
-#use all cores
-alias uac="sh ~/.bin/main/000*"
 
 #continue download
 alias wget="wget -c"
@@ -123,3 +114,8 @@ alias gitt='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #remove
 alias remove="pikaur -Rns"
+
+#virtualenvweapper
+export WORKON_HOME=~/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/bin/virtualenvwrapper_lazy.sh
