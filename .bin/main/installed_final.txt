@@ -23,8 +23,6 @@ arcolinux-lightdm-gtk-greeter-settings
 arcolinux-local-applications-git
 arcolinux-mirrorlist-git
 arcolinux-nitrogen-git
-arcolinux-oblogout
-arcolinux-oblogout-themes-git
 arcolinux-polybar-git
 arcolinux-qt5-git
 arcolinux-rofi-git
