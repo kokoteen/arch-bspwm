@@ -37,7 +37,7 @@ super + F8
 
 # Oblogout
 super + F9
-      oblogout
+      /$HOME/.bin/.logout_script.sh
 
 #
 super + F10
