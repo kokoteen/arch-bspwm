@@ -35,7 +35,7 @@ super + F7
 super + F8
       /$HOME/.bin/.cfg_monitor_pos.sh
 
-# Oblogout
+# Logout
 super + F9
       /$HOME/.bin/.logout_script.sh
 
@@ -110,7 +110,7 @@ super + shift + x
 
 #Screen-Locker
 super + shift + l
-      slimlock
+      betterlockscreen -l
 
 #Xfce4-settings-manager
 super + shift + s
