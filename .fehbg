@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/kokotin/.config/bspwm/submerged_4k_desktop.jpg' 
+feh --no-fehbg --bg-scale '/home/kokotin/.config/bspwm/wallpapers/submerged_4k_desktop.jpg' 
