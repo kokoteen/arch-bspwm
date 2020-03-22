@@ -113,7 +113,7 @@ super + shift + l
       betterlockscreen -l
 
 #Xfce4-settings-manager
-super + shift + s
+super + shift + p
       xfce4-settings-manager
 
 
