@@ -42,19 +42,23 @@ bspc config urgent_border_color 	"#dd2727"
 
 
 #AutoConfig monitor
-if [ $(xrandr | grep "*" | wc | awk '{print $1}') == "2" ]; then
+layout() {
+	bspc monitor $1 -d 6 7 8 9 10
+	bspc monitor $2 -d 1 2 3 4 5	
+}
+
+if [ $(xrandr | grep "*" | wc | awk '{print $1}') -eq "2" ]; then
 	monitor_type1=$(xrandr | grep -w connected | awk '{print $1}' | head -n 1)
 	monitor_type2=$(xrandr | grep -w connected | awk '{print $1}' | tail -n 1)
-	if [ $(cat $HOME/.monitor_position) == "1" ]; then
-		#left position
-		bspc monitor $monitor_type1 -d 6 7 8 9 10
-		bspc monitor $monitor_type2 -d 1 2 3 4 5 
-	elif [ $(cat $HOME/.monitor_position) == "2" ]; then
-		#right position
-		bspc monitor $monitor_type2 -d 6 7 8 9 10
-		bspc monitor $monitor_type1 -d 1 2 3 4 5 
-	fi #add projector mode
-elif [ $(xrandr | grep -w connected | wc | awk '{print $1}') == "1" ]; then
+
+	#left position
+	[ $(grep -w monitor_position $HOME/.monitor_position | awk '{print $2}') -eq "1" ] && layout $monitor_type1 $monitor_type2
+	# right position
+	[ $(grep -w monitor_position $HOME/.monitor_position | awk '{print $2}') -eq "2" ] && layout $monitor_type2 $monitor_type1
+	#mirror mode
+	[ $(grep -w mirror_mode $HOME/.monitor_position | awk '{print $2}') -eq "1" ] && bspc monitor -d 1 2 3 
+
+elif [ $(xrandr | grep -w connected | wc | awk '{print $1}') -eq "1" ]; then
 	bspc monitor -d 1 2 3 4 5
 fi
 

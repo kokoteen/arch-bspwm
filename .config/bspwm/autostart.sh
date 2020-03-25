@@ -25,23 +25,24 @@ if [ $(xrandr | grep -w connected | wc | awk '{print $1}') == "2" ]; then
 	fi
 
 	#check if the position and clock differ
-	if [ $(cat .clock_docked | grep -w xinerama_head | awk -F'[, ]' '{print $3}') != $(cat $HOME/.monitor_position) ]; then
-		#show clock based on a value in .monitor_position
-		if [ $(cat $HOME/.monitor_position) == "1" ]; then
-			#left position
-			sed -i "s/xinerama_head = 0/xinerama_head = 1/" $HOME/.clock_docked
-		elif [ $(cat $HOME/.monitor_position) == "2" ]; then
-			#right position
-			sed -i "s/xinerama_head = 0/xinerama_head = 2/" $HOME/.clock_docked
-    fi
+	if [ $(grep -w xinerama_head $HOME/.clock_docked | awk -F'[, ]' '{print $3}') != $(grep -w monitor_position $HOME/.monitor_position | awk '{print $2}') ]; then
+  		#left position
+		[ $(grep -w monitor_position $HOME/.monitor_position | awk '{print $2}') -eq "1" ] && sed -i "s/xinerama_head = 0/xinerama_head = 1/" $HOME/.clock_docked
+		# right position
+		[ $(grep -w monitor_position $HOME/.monitor_position | awk '{print $2}') -eq "2" ] && sed -i "s/xinerama_head = 0/xinerama_head = 2/" $HOME/.clock_docked
 	fi
 fi
 
 #run conky clock
 if [ $(xrandr | grep -w connected | wc | awk '{print $1}') == "2" ]; then
-	killall conky
-	conky -c $HOME/.config/bspwm/clock_primary &
-	conky -c $HOME/.clock_docked &
+	if [ $(grep -w mirror_mode $HOME/.monitor_position | awk '{print $2}') -eq "0" ]; then
+		killall conky
+		conky -c $HOME/.config/bspwm/clock_primary &
+		conky -c $HOME/.clock_docked &
+	elif [ $(grep -w mirror_mode $HOME/.monitor_position | awk '{print $2}') -eq "1" ]; then
+		killall conky
+		conky -c $HOME/.config/bspwm/clock_primary &
+	fi
 elif [ $(xrandr | grep -w connected | wc | awk '{print $1}') == "1" ]; then
 	killall conky
 	conky -c $HOME/.config/bspwm/clock_primary &
@@ -66,7 +67,7 @@ run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
 numlockx on &
-compton --config $HOME/.config/bspwm/compton.conf &
+picom --config $HOME/.config/bspwm/compton.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run kdeconnect-indicator &
