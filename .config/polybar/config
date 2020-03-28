@@ -433,7 +433,7 @@ font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = weather time 
-modules-right = xkeyboard memory2 cpu2 pavolume battery date
+modules-right = xkeyboard memory2 cpu2 pavolume date 
 
 tray-detached = false
 tray-offset-x = 0
@@ -1089,18 +1089,6 @@ animation-charging-framerate = 750
 
 ################################################################################
 
-[module/compton]
-;https://github.com/jaagr/polybar/wiki/User-contributed-modules#compton
-type = custom/script
-exec = ~/.config/polybar/scripts/compton.sh
-click-left = ~/.config/polybar/scripts/compton-toggle.sh
-interval = 5
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-;format-underline = #00AF02
-
-################################################################################
-
 [module/cpu1]
 ;https://github.com/jaagr/polybar/wiki/Module:-cpu
 type = internal/cpu
@@ -1213,8 +1201,8 @@ type = internal/date
 interval = 1
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-time = %H:%M
-time-alt = %H:%M
+time = %I:%M %p
+time-alt = %I:%M %P
 format-prefix = " "
 format-prefix-foreground = #F400FF
 format-underline = #F400FF
@@ -1222,23 +1210,6 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %time%
 label-font = 5
-
-
-#################################################################
-
-[module/discord]
-type = custom/script
-exec = echo " Discord "
-;exec = echo " "
-interval = 1
-tail = true
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix-foreground = #738adb
-format-underline = #738adb
-click-left = discord &
-click-right = killall Discord && killall Discord
-format-prefix = ""
 
 #################################################################
 
@@ -1603,23 +1574,6 @@ format-background = ${colors.background}
 
 ################################################################################
 
-[module/spotify1]
-;https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh
-type = custom/script
-exec = ~/.config/polybar/scripts/spotify1.sh
-interval = 1
-
-;format = <label>
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-padding = 2
-format-underline = #0f0
-format-prefix = "  "
-format-prefix-foreground = #0f0
-label = %output:0:150%
-
-################################################################################
-
 [module/temperature1]
 ;https://github.com/jaagr/polybar/wiki/Module:-temperature
 type = internal/temperature
@@ -1681,22 +1635,6 @@ format-background = ${colors.background}
 format-prefix = " "
 format-prefix-foreground = #C15D3E
 format-underline = #C15D3E
-
-################################################################################
-
-[module/variety]
-type = custom/script
-exec = echo " Variety"
-;exec = echo " "
-interval = 1
-tail = true
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = ""
-format-prefix-foreground = #FFFFF
-format-underline = #0084FF
-click-right = variety --preferences
-click-left = variety --selector
 
 ################################################################################
 
