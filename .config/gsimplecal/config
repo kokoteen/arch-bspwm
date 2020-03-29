@@ -13,6 +13,6 @@ mainwindow_skip_taskbar = 1
 mainwindow_resizable = 0
 mainwindow_position = mouse
 mainwindow_xoffset = -150
-mainwindow_yoffset = 30
+mainwindow_yoffset = 35
 clock_label = Local
 clock_tz =
