@@ -58,7 +58,7 @@ $HOME/.config/polybar/launch.sh &
 setxkbmap us,rs,hr -option 'grp:ctrl_alt_toggle' #man xkeyboard-config
 
 #wallpaper
-feh --bg-scale $HOME/.config/bspwm/wallpapers/submerged_4k_desktop.jpg &
+feh --bg-scale $HOME/.config/bspwm/wallpapers/wallhaven-p8pylp.jpg &
 
 xsetroot -cursor_name left_ptr &
 sxhkd &

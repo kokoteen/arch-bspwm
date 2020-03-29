@@ -432,7 +432,7 @@ font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
 modules-left = bspwm xwindow
-modules-center = weather time 
+modules-center = weather clock 
 modules-right = xkeyboard memory2 cpu2 pavolume date 
 
 tray-detached = false
@@ -1177,38 +1177,30 @@ label = %percentage:3%%
 ################################################################################
 
 [module/date]
-;https://github.com/jaagr/polybar/wiki/Module:-date
-type = internal/date
-; Seconds to sleep between updates
-interval = 5
-; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %d-%m-%Y"
-date-alt = " %Y-%m-%d%"
-format-prefix = ""
+type = custom/script
+exec = /usr/bin/date '+%d-%m-%Y'
+click-left = /usr/bin/gsimplecal
+interval = 60
+format-prefix = " "
 format-prefix-foreground = #FF9D00
 format-underline = #FF9D00
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-label = %date% 
+label = %output%
+
 
 #################################################################
 
-[module/time]
-;https://github.com/jaagr/polybar/wiki/Module:-date
-type = internal/date
-; Seconds to sleep between updates
+[module/clock]
+type = custom/script
+exec = /usr/bin/date '+%I:%M %p'
 interval = 1
-; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-time = %I:%M %p
-time-alt = %I:%M %P
 format-prefix = " "
 format-prefix-foreground = #F400FF
 format-underline = #F400FF
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-label = %time%
+label = %output%
 label-font = 5
 
 #################################################################
