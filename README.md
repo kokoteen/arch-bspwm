@@ -27,8 +27,11 @@
 
 After installation, to configure dual monitor setup, run ***".cfg_monitor_pos.sh"***  by presing `super + F8`.
 
-## 3. Suspend & Oblogout
+## 3. Suspend
 
 Fors suspend to work properly after lid is closed, comment everythin in file ***"/etc/systemd/logind.conf"*** .
+<<<<<<< HEAD
 
 Created rofi script for interactive logout.
+=======
+>>>>>>> 7d209eaad16df8fcefe94e534e0b6ef7ed92802a
