@@ -31,4 +31,4 @@ After installation, to configure dual monitor setup, run ***".cfg_monitor_pos.sh
 
 Fors suspend to work properly after lid is closed, comment everythin in file ***"/etc/systemd/logind.conf"*** .
 
-For oblogout to work properly change some files as it is described in [this](https://bugs.launchpad.net/oblogout/+bug/910870) article.
+Created rofi script for interactive logout.
