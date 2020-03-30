@@ -21,7 +21,7 @@
 `$ sudo systemctl set-default graphical.target`
 
 
-
+nemoj ovako da cuvas
 
 ## 2. Setup dual-monitor
 
