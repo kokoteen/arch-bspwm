@@ -1,7 +1,14 @@
 #!/bin/bash
 
+#rofi options
+opt='''-width 16 
+	   -lines 5 
+	   -dmenu 
+	   -p
+	'''
+
 #get cfg
-p=$(echo -e "1 Cancel\n2 Shutdown\n3 Restart\n4 Suspend " | rofi -dmenu -p "Select Command > " | awk '{print $1}')
+p=$(echo -e "1 Cancel\n2 Shutdown\n3 Restart\n4 Suspend " | rofi $opt "Select Command > " | awk '{print $1}')
 
 case $p in
 	"2") systemctl poweroff ;;

@@ -1,10 +1,17 @@
 #!/bin/bash
 
+#rofi options
+opt='''-width 17 
+	   -lines 6 
+	   -dmenu 
+	   -p
+	'''
+
 #cancel mirror mode
-[ $(grep -w mirror_mode $HOME/.monitor_position| awk '{print $2}') -eq "1" ] && echo -e "1 Do it!" | rofi -dmenu -p "Cancel Mirror Mode > " && sed -i "s/mirror_mode 1/mirror_mode 0/" $HOME/.monitor_position
+[ $(grep -w mirror_mode $HOME/.monitor_position| awk '{print $2}') -eq "1" ] && echo -e "1 Do it!" | rofi $opt "Cancel Mirror Mode" && sed -i "s/mirror_mode 1/mirror_mode 0/" $HOME/.monitor_position
 
 #get cfg
-p=$(echo -e "1 Left\n2 Right\n3 Top\n4 Bottom\n5 Mirror" | rofi -dmenu -p "Select Monitor Position > " | awk '{print $1}')
+p=$(echo -e "1 Left\n2 Right\n3 Top\n4 Bottom\n5 Mirror" | rofi $opt "Monitor Position" | awk '{print $1}')
 
 #process input 
 #separated because of conky clock
