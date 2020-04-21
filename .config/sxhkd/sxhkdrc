@@ -33,15 +33,15 @@ super + F7
 
 #
 super + F8
-      /$HOME/.bin/.cfg_monitor_pos.sh
+
 
 # Logout
 super + F9
-      /$HOME/.bin/.logout_script.sh
+      /$HOME/.bin/logout_script.sh
 
-#
+# Monitor Position
 super + F10
-
+      /$HOME/.bin/cfg_monitor_pos.sh
 
 # Rofi Fullscreen
 super + F11

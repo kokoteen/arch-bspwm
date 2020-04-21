@@ -1,3 +1,8 @@
+" Call the .vimrc.plug file
+if filereadable(expand("~/.vimrc.plug"))
+  source ~/.vimrc.plug
+endif
+
 " Set compatibility to Vim only.
 set nocompatible
 
@@ -85,11 +90,8 @@ autocmd BufWinEnter *.* silent loadview
 " Color sheme
 set background=dark
 highlight Normal ctermfg=grey ctermbg=black
+colorscheme nord
 
-" Call the .vimrc.plug file
-if filereadable(expand("~/.vimrc.plug"))
-  source ~/.vimrc.plug
-endif
 
 " LET PART
 

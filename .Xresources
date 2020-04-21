@@ -2,6 +2,7 @@
 ! URxvt standard arcolinux theme - Reload with xrdb -merge ~/.Xresources
 ! ------------------------------------------------------------------------------
 
+
 ! general settings
 URxvt*saveline:         15000
 URxvt*termName:         xterm-256color
@@ -15,7 +16,7 @@ URxvt*iconFile:         /usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
 
 ! appearance
 URxvt*depth:             32
-URxvt*transparent:       true
+URxvt*transparent:       false
 URxvt*shading:           30
 URxvt*underlineColor:    #c7e6ff
 URxvt*highlightColor:    #c7e6ff
@@ -32,47 +33,46 @@ URxvt*colorUL:           #87afd7
 
 
 ! colors
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
 ! special
-URxvt*foreground:        #f8f8f2
-URxvt*background:        #282a36
-URxvt*cursorColor:       #f8f8f2
+URxvt*foreground:        nord4
+URxvt*background:        nord0
+URxvt*cursorColor:       nord4
+URxvt*fading:			 35
+URxvt*fadeColor:		 nord3
 
-! black
-URxvt*color0:            #282a36
-URxvt*color8:            #969896
-
-! red
-URxvt*color1:            #ff5555
-! bold red
-URxvt*color9:            #cc342b
-
-! green
-URxvt*color2:           #50fa7b
-! bold green
-URxvt*color10:          #198844
-
-! yellow
-URxvt*color3:           #f1fa8c
-! bold yellow
-URxvt*color11:          #fba922
-
-! blue
-URxvt*color4:           #6272a4
-! bold blue
-URxvt*color12:          #3971ed
-
-! purple
-URxvt*color5:           #bd93f9
-! pink
-URxvt*color13:          #ff79c6
-
-! cyan
-URxvt*color6:           #8be9fd
-URxvt*color14:          #8be9fd
-
-! white
-URxvt*color7:           #f8f8f2
-URxvt*color15:          #ffffff
+URxvt*color0: nord1
+URxvt*color1: nord11
+URxvt*color2: nord14
+URxvt*color3: nord13
+URxvt*color4: nord9
+URxvt*color5: nord15
+URxvt*color6: nord8
+URxvt*color7: nord5
+URxvt*color8: nord3
+URxvt*color9: nord11
+URxvt*color10: nord14
+URxvt*color11: nord13
+URxvt*color12: nord9
+URxvt*color13: nord15
+URxvt*color14: nord7
+URxvt*color15: nord6
 
 ! fonts
 URxvt*letterSpace: 	    		-2

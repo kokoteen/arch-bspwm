@@ -4,7 +4,7 @@
 bspc rule -r "*"
 
 #LAUNCHERS
-$HOME/.config/bspwm/autostart.sh
+"$HOME/.config/bspwm/autostart.sh"
 
 #fix for moving spotify to specific workspace
 #bspc config external_rules_command ~/.config/bspwm/scripts/external_rules_command
@@ -43,22 +43,22 @@ bspc config urgent_border_color 	"#dd2727"
 
 #AutoConfig monitor
 layout() {
-	bspc monitor $1 -d 6 7 8 9 10
-	bspc monitor $2 -d 1 2 3 4 5	
+	bspc monitor "$1" -d 6 7 8 9 10
+	bspc monitor "$2" -d 1 2 3 4 5	
 }
 
-if [ $(xrandr | grep "*" | wc | awk '{print $1}') -eq "2" ]; then
+if [ "$(xrandr | grep "\*" | wc | awk '{print $1}')" -eq "2" ]; then
 	monitor_type1=$(xrandr | grep -w connected | awk '{print $1}' | head -n 1)
 	monitor_type2=$(xrandr | grep -w connected | awk '{print $1}' | tail -n 1)
 
 	#left position
-	[ $(grep -w monitor_position $HOME/.monitor_position | awk '{print $2}') -eq "1" ] && layout $monitor_type1 $monitor_type2
+	[ "$(grep -w monitor_position "$HOME/.monitor_position" | awk '{print $2}')" -eq "1" ] && layout "$monitor_type1" "$monitor_type2"
 	# right position
-	[ $(grep -w monitor_position $HOME/.monitor_position | awk '{print $2}') -eq "2" ] && layout $monitor_type2 $monitor_type1
+	[ "$(grep -w monitor_position "$HOME/.monitor_position" | awk '{print $2}')" -eq "2" ] && layout "$monitor_type2" "$monitor_type1"
 	#mirror mode
-	[ $(grep -w mirror_mode $HOME/.monitor_position | awk '{print $2}') -eq "1" ] && bspc monitor -d 1 2 3 
+	[ "$(grep -w mirror_mode "$HOME/.monitor_position" | awk '{print $2}')" -eq "1" ] && bspc monitor -d 1 2 3 
 
-elif [ $(xrandr | grep -w connected | wc | awk '{print $1}') -eq "1" ]; then
+elif [ "$(xrandr | grep -w connected | wc | awk '{print $1}')" -eq "1" ]; then
 	bspc monitor -d 1 2 3 4 5
 fi
 
