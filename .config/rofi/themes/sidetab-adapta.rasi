@@ -41,7 +41,7 @@ configuration {
         anchor:   north;
         location: north;
         width:    22%;
-        height:   10%;
+        height:   76px;
 }
 
 #mainbox {
