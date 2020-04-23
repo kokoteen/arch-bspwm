@@ -3,7 +3,7 @@
 #rofi options
 run_rofi()
 {
-    rofi -width 16 -lines 5 -dmenu -p "$@"
+    rofi -dmenu -theme themes/sidetab-adapta -p "$@"
 }
 
 #cancel mirror mode
