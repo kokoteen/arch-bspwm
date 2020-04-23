@@ -38,15 +38,21 @@ configuration {
 }
 
 #window {
-        anchor:   north;
-        location: north;
-        width:    22%;
-        height:   76px;
+        anchor:   center;
+        location: center;
+        width:    100%;
+        height:   100%;
+        orientation: horizontal;
+        spacing:  400;
+        children: [dummy, mainbox, dummy];
 }
 
+
 #mainbox {
-        children: [ prompt, listview ];
+        orientation: vertical;
+        children: [dummy, prompt, listview, dummy ];
 }
+
 
 
 element {
