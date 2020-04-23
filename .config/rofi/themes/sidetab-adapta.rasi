@@ -38,13 +38,12 @@ configuration {
 }
 
 #window {
-        anchor:   center;
-        location: center;
-        width:    100%;
+        anchor:   west;
+        location: west;
+        width:    250;
         height:   100%;
         orientation: horizontal;
-        spacing:  400;
-        children: [dummy, mainbox, dummy];
+        children: [mainbox];
 }
 
 
@@ -53,7 +52,9 @@ configuration {
         children: [dummy, prompt, listview, dummy ];
 }
 
-
+prompt {
+        padding: 0 0 0 45;
+}
 
 element {
         padding: 8px;
