@@ -4,7 +4,7 @@ configuration {
 }
 
 * {
-	background-color:            #00000000;
+	background-color:            #080808;
 	text-color:                  #d3d7cf;
 	selbg:                       #215d9c;
 	actbg:                       #262626;
@@ -30,28 +30,28 @@ configuration {
 window {
 	location:	 		center;
 	anchor:		 		center;
-	height:		 		100%;
-	width:		 		100%;
-	orientation: 		vertical;
-	children:	 		[dummy, mainbox, dummy];
+	height:		 		250px;
+	width:		 		250px;
+	border-radius: 		15px;
+	children:	 		[mainbox];
 }
 
+    
 mainbox {
-	spacing:  	 		350px;
-    orientation: 		horizontal;
-    children:	 		[dummy, listview, dummy];		
+	//       			u r d l
+	padding: 			6 1 6 1;
+    children:	 		[listview];		
 }
 
 
 listview {
-	spacing:			0.42em;
-	background-color: 	#080808;
-	dynamic: 			false;
+	dynamic: 			true;
 	cycle:   			true;
 }
 
 element { 
 	padding: 			20px;
+	border-radius: 		15px;
 }
 
 

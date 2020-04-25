@@ -3,11 +3,11 @@
 #rofi options
 run_rofi()
 {
-    rofi -dmenu -theme themes/logout -p "$@"
+    rofi -dmenu -theme themes/logout #-p "$@" # dodati opciju prompt u temi
 }
 
 #get cfg
-p=$(printf "%s\n" "1 Cancel" "2 Shutdown" "3 Reboot" "4 Suspend " | run_rofi "Select Command > " | awk '{print $1}')
+p=$(printf "%s\n" "1 Cancel" "2 Shutdown" "3 Reboot" "4 Suspend " | run_rofi | awk '{print $1}')
 
 
 case $p in
