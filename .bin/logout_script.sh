@@ -3,11 +3,11 @@
 #rofi options
 run_rofi()
 {
-    rofi -width 16 -lines 5 -dmenu -p "$@"
+    rofi -dmenu -theme themes/logout -p "$@"
 }
 
 #get cfg
-p=$(printf "%s\n" "1 Cancel" "2 Shutdown" "3 Restart" "4 Suspend " | run_rofi "Select Command > " | awk '{print $1}')
+p=$(printf "%s\n" "1 Cancel" "2 Shutdown" "3 Reboot" "4 Suspend " | run_rofi "Select Command > " | awk '{print $1}')
 
 
 case $p in
