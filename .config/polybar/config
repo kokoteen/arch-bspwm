@@ -113,7 +113,8 @@ module-margin-right = 1
 font-0 = "Noto Sans:size=10;0"
 font-1 = "FontAwesome:size=13;0"
 font-2 = "Iosevka:size=13;0"
-font-3 = "Font Awesome 5 Free:size=10;0"
+font-3 = "Font Awesome 5 Free:size=13;0"
+font-4 = "Font Awesome 5 Brands:size=10;0"
 
 modules-left = bspwm xwindow
 modules-center = weather clock 
@@ -302,7 +303,7 @@ label-discharging =  %percentage%%
 format-discharging-underline = ${colors.color14}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
-;     
+;     
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.color14}
 format-full-underline = ${colors.color14}
@@ -311,15 +312,15 @@ format-background = ${colors.background}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-foreground = ${colors.foreground}
 
 animation-charging-0 = 
 animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
+animation-charging-2 = 
+animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 750
@@ -386,9 +387,10 @@ ramp-coreload-7-foreground = #ff5555
 type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
-interval = 1
+interval = 3
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+format-font=4
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.color11}
@@ -402,7 +404,7 @@ label-font = 0
 ;   <ramp-coreload>
 format = <label>
 
-format-padding = 2
+format-padding = 0
 
 ; Available tokens:
 ;   %percentage% (default) - total cpu load
@@ -418,13 +420,13 @@ type = custom/script
 exec = /usr/bin/date '+%d-%m-%Y'
 click-left = /usr/bin/gsimplecal
 interval = 1000
+format-font=4
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.color12}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %output%
-
 
 #################################################################
 
@@ -438,7 +440,7 @@ format-underline = ${colors.color15}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 label = %output%
-label-font = 5
+label-font = 0
 
 
 ################################################################################
@@ -553,7 +555,8 @@ format-background = ${colors.background}
 type = custom/script
 interval = 10
 format = <label>
-;
+; 
+format-font=2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.color14}
