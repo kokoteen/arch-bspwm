@@ -111,13 +111,13 @@ module-margin-right = 1
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=11;0"
-font-1 = "FontAwesome:size=12;1"
-font-2 = "Iosevka:size=13;2"
-font-3 = "Material Icons:size=13;2"
+font-1 = "FontAwesome:size=13;1"
+font-2 = "Iosevka:size=14;2"
+font-3 = "Material Icons:size=14;3"
 
 modules-left = bspwm xwindow
 modules-center = weather clock 
-modules-right = xkeyboard memory2 cpu2 pavolume date kdeconnect battery
+modules-right = xkeyboard cpu2 memory2 pavolume date kdeconnect battery
 
 tray-detached = false
 tray-offset-x = 0
@@ -147,19 +147,22 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default = " "
+;
+;
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+;
+ws-icon-default = " "
 
-
+format-font=4
 format = <label-state> <label-mode>
 
 label-focused = %icon%
@@ -366,8 +369,8 @@ exec = /usr/bin/date '+%d-%m-%Y'
 click-left = /usr/bin/gsimplecal
 interval = 1000
 format-font=4
-;
-format-prefix = " "
+;   
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.color12}
 format-foreground = ${colors.foreground}
@@ -380,8 +383,8 @@ label = %output%
 type = custom/script
 exec = /usr/bin/date '+%I:%M %p'
 interval = 1
-format-font=5
-format-prefix = " "
+;
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.color15}
 format-foreground = ${colors.foreground}

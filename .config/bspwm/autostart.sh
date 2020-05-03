@@ -67,9 +67,9 @@ sxhkd &
 #bluetooth
 #blueberry-tray &
 
-run nm-applet &
-run pamac-tray &
-run xfce4-power-manager &
+run nm-applet &		# wifi icon
+#run pamac-tray & 	# package manager
+#run xfce4-power-manager &
 numlockx on &
 picom --config "$HOME/.config/bspwm/compton.conf" &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
