@@ -51,39 +51,39 @@ URxvt*colorUL:           #87afd7
 #define nord15 #B48EAD
 
 ! special
-URxvt*foreground:        nord4
-URxvt*background:        nord0
-URxvt*cursorColor:       nord4
-URxvt*fading:			 35
-URxvt*fadeColor:		 nord3
+*foreground:        nord4
+*background:        nord0
+*cursorColor:       nord4
+*fading:			35
+*fadeColor:		 	nord3
 
-URxvt*color0: nord1
-URxvt*color1: nord11
-URxvt*color2: nord14
-URxvt*color3: nord13
-URxvt*color4: nord9
-URxvt*color5: nord15
-URxvt*color6: nord8
-URxvt*color7: nord5
-URxvt*color8: nord3
-URxvt*color9: nord11
-URxvt*color10: nord14
-URxvt*color11: nord13
-URxvt*color12: nord9
-URxvt*color13: nord15
-URxvt*color14: nord7
-URxvt*color15: nord6
+*color0: 			nord1
+*color1: 			nord11
+*color2: 			nord14
+*color3: 			nord13
+*color4: 			nord9
+*color5: 			nord15
+*color6: 			nord8
+*color7: 			nord5
+*color8: 			nord3
+*color9: 			nord11
+*color10: 			nord14
+*color11: 			nord13
+*color12: 			nord9
+*color13: 			nord15
+*color14: 			nord7
+*color15: 			nord6
 
 ! fonts
-URxvt*letterSpace: 	    		-2
-URxvt*font:                 	xft:Droid Sans Mono Slashed for Powerline:regular:size=14
-URxvt*imFont:               	xft:Droid Sans Mono Slashed for Powerline:regular:size=14
-URxvt*boldFont:             	xft:Droid Sans Mono Slashed for Powerline:size=14
-URxvt*italicFont:           	xft:Droid Sans Mono Slashed for Powerline:italic:size=14
-URxvt*boldItalicFont:     		xft:Droid Sans Mono Slashed for Powerline:italic:size=14
+URxvt*letterSpace: 	    		0
+URxvt*font:                 	xft:Ubuntu Mono derivative Powerline:regular:size=13
+URxvt*imFont:               	xft:Ubuntu Mono derivative Powerline:regular:size=13
+URxvt*boldFont:             	xft:Ubuntu Mono derivative Powerline:size=13
+URxvt*italicFont:           	xft:Ubuntu Mono derivative Powerline:italic:size=13
+URxvt*boldItalicFont:     		xft:Ubuntu Mono derivative Powerline:italic:size=13
 
 ! perl extensions
-URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font,tabbed
+URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
 
 ! macros for clipboard and selection
 URxvt*copyCommand:      xclip -i -selection clipboard
@@ -109,3 +109,7 @@ URxvt*tabbed.tab-bg:    4
 URxvt*buffered:         false
 URxvt*keysym.Control-Shift-C: perl:clipboard:copy
 URxvt*keysym.Control-Shift-V: perl:clipboard:paste
+
+
+st*.font:	Ubuntu Mono derivative Powerline:pixelsize=17:antialias=true:autohint=true;
+st*.alpha: 1

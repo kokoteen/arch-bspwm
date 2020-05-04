@@ -7,7 +7,7 @@ run_rofi()
 }
 
 #cancel mirror mode #! al probati negde drugde da se ovo odradi npr tamo gde pocinje autorandr
-# [ "$(grep -w mirror_mode "$HOME/.monitor_position" | awk '{print $2}')" -eq "1" ] && printf "%s\n" "1 Do it!" | run_rofi "Cancel Mirror Mode" && sed -i "s/mirror_mode 1/mirror_mode 0/" "$HOME/.monitor_position"
+[ "$(grep -w mirror_mode "$HOME/.monitor_position" | awk '{print $2}')" -eq "1" ] && printf "%s\n" "1 Do it!" | run_rofi "Cancel Mirror Mode" && sed -i "s/mirror_mode 1/mirror_mode 0/" "$HOME/.monitor_position"
 
 #get cfg
 p=$(printf "%s\n" "1 Left" "2 Right" "3 Top" "4 Bottom" "5 Mirror" | run_rofi "Monitor Position" | awk '{print $1}')
