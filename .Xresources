@@ -76,11 +76,11 @@ URxvt*colorUL:           #87afd7
 
 ! fonts
 URxvt*letterSpace: 	    		0
-URxvt*font:                 	xft:Ubuntu Mono derivative Powerline:regular:size=13
-URxvt*imFont:               	xft:Ubuntu Mono derivative Powerline:regular:size=13
-URxvt*boldFont:             	xft:Ubuntu Mono derivative Powerline:size=13
-URxvt*italicFont:           	xft:Ubuntu Mono derivative Powerline:italic:size=13
-URxvt*boldItalicFont:     		xft:Ubuntu Mono derivative Powerline:italic:size=13
+URxvt*font:                 	xft:Ubuntu Mono derivative Powerline:style=Regular:size=13
+URxvt*imFont:               	xft:Ubuntu Mono derivative Powerline:style=Regular:size=13
+URxvt*boldFont:             	xft:Ubuntu Mono derivative Powerline:style=Bold:size=13
+URxvt*italicFont:           	xft:Ubuntu Mono derivative Powerline:style=Italic:size=13
+URxvt*boldItalicFont:     		xft:Ubuntu Mono derivative Powerline:style=Bold Italic:size=13
 
 ! perl extensions
 URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font

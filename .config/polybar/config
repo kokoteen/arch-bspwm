@@ -81,12 +81,12 @@ height = 3%
 radius = 0.0
 fixed-center = true
 bottom = false
-separator = |
+separator = "|"
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 3
 line-color = #f00
 
 wm-restack = bspwm
@@ -106,11 +106,11 @@ border-color = ${colors.color0}
 padding-left = 0
 padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 0
+module-margin-right = 0
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Noto Sans:size=11;0"
+font-0 = "Ubuntu Mono derivative Powerline:style=Regular:size=13;0"
 font-1 = "FontAwesome:size=13;1"
 font-2 = "Iosevka:size=14;2"
 font-3 = "Material Icons:size=14;3"
@@ -160,7 +160,7 @@ ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
 ;
-ws-icon-default = " "
+ws-icon-default = ""
 
 format-font=4
 format = <label-state> <label-mode>
@@ -186,17 +186,17 @@ label-monocle = "  "
 label-monocle-foreground = ${colors.foreground}
 label-tiled = "  "
 label-tiled-foreground = ${colors.foreground}
-label-fullscreen = "  "
+label-fullscreen = ""
 label-fullscreen-foreground = ${colors.foreground}
 label-floating = "  "
 label-floating-foreground = ${colors.foreground}
 label-pseudotiled = "  "
 label-pseudotiled-foreground = ${colors.foreground}
-label-locked = "  "
+label-locked = ""
 label-locked-foreground = ${colors.foreground}
 label-sticky = "  "
 label-sticky-foreground = ${colors.foreground}
-label-private =  "     "
+label-private =  "  "
 label-private-foreground = ${colors.foreground}
 
 ; Separator in between workspaces
@@ -295,23 +295,24 @@ adapter = AC0
 full-at = 100
 ;   
 format-charging = <animation-charging> <label-charging>
-label-charging =  %percentage%%
+label-charging = %percentage%%
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
 format-charging-underline = ${colors.color14}
 
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging =  %percentage%%
+label-discharging = %percentage%%
 format-discharging-underline = ${colors.color14}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
-;     
-format-full-prefix = " "
+
+format-full-prefix = ""
 format-full-prefix-foreground = ${colors.color14}
 format-full-underline = ${colors.color14}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
+;     
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -613,7 +614,7 @@ type = internal/xwindow
 ;   %title%
 ; Default: %title%
 label = %title%
-label-maxlen = 50
+label-maxlen = 30
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
