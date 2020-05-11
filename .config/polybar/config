@@ -627,6 +627,7 @@ format-font=4
 format-underline = ${colors.color3}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
+click-right = exec kdeconnect-settings
 exec = ~/.config/polybar/scripts/polybar-kdeconnect.sh -d
 tail = true
 
