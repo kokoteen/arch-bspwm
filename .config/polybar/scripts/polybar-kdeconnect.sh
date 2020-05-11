@@ -11,11 +11,11 @@ THEME=themes/kde_connect
 # Color Settings of Icon shown in Polybar
 COLOR_DISCONNECTED='#000'       # Device Disconnected
 COLOR_NEWDEVICE='#ff0'          # New Device
-COLOR_BATTERY_90='#fff'         # Battery >= 90
-COLOR_BATTERY_80='#ccc'         # Battery >= 80
-COLOR_BATTERY_70='#aaa'         # Battery >= 70
-COLOR_BATTERY_60='#888'         # Battery >= 60
-COLOR_BATTERY_50='#666'         # Battery >= 50
+COLOR_BATTERY_70='#fff'         # Battery >= 90
+COLOR_BATTERY_60='#ccc'         # Battery >= 80
+COLOR_BATTERY_50='#aaa'         # Battery >= 70
+COLOR_BATTERY_40='#888'         # Battery >= 60
+COLOR_BATTERY_30='#666'         # Battery >= 50
 COLOR_BATTERY_LOW='#f00'        # Battery <  50
 
 # Icons shown in Polybar
@@ -99,14 +99,14 @@ get_icon () {
         icon=$ICON_SMARTPHONE
     fi
     case $1 in
-    "-1")   ICON="%{F$COLOR_DISCONNECTED}$icon%{F-}" ;;
-    "-2")   ICON="%{F$COLOR_NEWDEVICE}$icon%{F-}" ;;
-    5*)     ICON="%{F$COLOR_BATTERY_50}$icon%{F-}" ;;
-    6*)     ICON="%{F$COLOR_BATTERY_60}$icon%{F-}" ;;
-    7*)     ICON="%{F$COLOR_BATTERY_70}$icon%{F-}" ;;
-    8*)     ICON="%{F$COLOR_BATTERY_80}$icon%{F-}" ;;
-    9*|100) ICON="%{F$COLOR_BATTERY_90}$icon%{F-}" ;;
-    *)      ICON="%{F$COLOR_BATTERY_LOW}$icon%{F-}" ;;
+    "-1")           ICON="%{F$COLOR_DISCONNECTED}$icon%{F-}" ;;
+    "-2")           ICON="%{F$COLOR_NEWDEVICE}$icon%{F-}" ;;
+    3*)             ICON="%{F$COLOR_BATTERY_30}$icon%{F-}" ;;
+    4*)             ICON="%{F$COLOR_BATTERY_40}$icon%{F-}" ;;
+    5*)             ICON="%{F$COLOR_BATTERY_50}$icon%{F-}" ;;
+    6*)             ICON="%{F$COLOR_BATTERY_60}$icon%{F-}" ;;
+    7*|8*|9*|100)   ICON="%{F$COLOR_BATTERY_70}$icon%{F-}" ;;
+    *)              ICON="%{F$COLOR_BATTERY_LOW}$icon%{F-}" ;;
     esac
     echo $ICON
 }
