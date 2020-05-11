@@ -370,8 +370,8 @@ exec = /usr/bin/date '+%d-%m-%Y'
 click-left = /usr/bin/gsimplecal
 interval = 1000
 format-font=4
-;   
-format-prefix = " "
+;    
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.color12}
 format-foreground = ${colors.foreground}
