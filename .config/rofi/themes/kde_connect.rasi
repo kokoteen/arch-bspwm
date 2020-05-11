@@ -32,8 +32,6 @@ configuration {
 window {
         anchor:         north east;
         location:       north east;
-        width:          250;
-        height:         450;
         y-offset:       3%;
         x-offset:       0%;
         orientation:    horizontal;
@@ -54,12 +52,14 @@ dummy {
 
 listview {
         expand:         false;
-        lines:          6;
+        padding:        0 0 20 0;
 }
 
 
 prompt {
-        padding:        0 0 0 45;
+        padding:        25 0 0 45;
+        border:         0 0 1 0;
+        border-color:   @accent2-color;
         spacing:        0px;
 }
 

@@ -623,6 +623,7 @@ format-background = ${colors.background}
 
 [module/kdeconnect]
 type = custom/script
+format-font=4
 format-underline = ${colors.color3}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
