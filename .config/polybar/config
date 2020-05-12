@@ -217,7 +217,7 @@ format-background = ${colors.background}
 [module/arch-aur-updates]
 type = custom/script
 exec = ~/.config/polybar/scripts/check-all-updates.sh
-interval = 1000
+interval = 3600
 label = Updates: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -229,7 +229,7 @@ format-underline = #FFBB00
 [module/aur-updates]
 type = custom/script
 exec = cower -u | wc -l
-interval = 1000
+interval = 3600
 label = Aur: %output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -368,7 +368,7 @@ label = %percentage:3%%
 type = custom/script
 exec = /usr/bin/date '+%d-%m-%Y'
 click-left = /usr/bin/gsimplecal
-interval = 1000
+interval = 3600
 format-font=4
 ;    
 format-prefix = " "
@@ -383,7 +383,7 @@ label = %output%
 [module/clock]
 type = custom/script
 exec = /usr/bin/date '+%I:%M %p'
-interval = 1
+interval = 5
 ;
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
@@ -399,7 +399,7 @@ label-font = 1
 [module/memory2]
 ;https://github.com/jaagr/polybar/wiki/Module:-memory
 type = internal/memory
-interval = 1
+interval = 3
 ; Available tokens:
 ;   %percentage_used% (default)
 ;   %percentage_free%
@@ -474,7 +474,7 @@ format-background = ${colors.background}
 
 [module/weather]
 type = custom/script
-interval = 10
+interval = 3600
 format = <label>
 ; 
 format-font=2
@@ -623,6 +623,7 @@ format-background = ${colors.background}
 
 [module/kdeconnect]
 type = custom/script
+interval = 5
 format-font=4
 format-underline = ${colors.color3}
 format-foreground = ${colors.foreground}
