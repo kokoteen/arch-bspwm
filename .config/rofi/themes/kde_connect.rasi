@@ -34,7 +34,6 @@ window {
         location:       north east;
         y-offset:       3%;
         x-offset:       0%;
-        orientation:    horizontal;
         border-radius:  25px 25px 25px 25px;
         children:       [mainbox];
 }

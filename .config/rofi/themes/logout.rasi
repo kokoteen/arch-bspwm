@@ -1,15 +1,12 @@
-configuration {
-	show-icons:      			 true;
-	sidebar-mode:    			 true;
-}
-
 * {
-	background-color:            #080808;
-	text-color:                  #d3d7cf;
-	selbg:                       #215d9c;
-	actbg:                       #262626;
-	urgbg:                       #e53935;
-	winbg:			     		 #26c6da;
+	text-font:                   "Ubuntu Mono derivative Powerline 14";
+  	icon-font:                   "Material Icons 80";
+	background-color:            #434c5e;
+	text-color:                  #eceff4;
+	selbg:                       #39454b;
+	actbg:                       #2e3440;
+	urgbg:                       #ff5252;
+	winbg:			     		 #88c0d0;
 
 	selected-normal-foreground:  @winbg;
 	normal-foreground:           @text-color;
@@ -30,27 +27,32 @@ configuration {
 window {
 	location:	 		center;
 	anchor:		 		center;
-	height:		 		250px;
-	width:		 		250px;
 	border-radius: 		15px;
+	width:				450px;
 	children:	 		[mainbox];
+	font: 				@icon-font;
 }
 
     
 mainbox {
 	//       			u r d l
-	padding: 			6 1 6 1;
-    children:	 		[listview];		
+	padding: 			10 10 10 10;
+    children:	 		[dummy, listview, dummy];  
 }
 
+dummy {
+	expand:				true;
+}
 
 listview {
-	dynamic: 			true;
-	cycle:   			true;
+	layout:				horizontal; 
+	expand:				false;
+	padding: 			0 0 0 7px;
+
 }
 
 element { 
-	padding: 			20px;
+	padding: 			15px;
 	border-radius: 		15px;
 }
 
@@ -73,8 +75,8 @@ element normal.active {
 element selected.normal {
 	background-color: @selected-normal-background;
 	text-color:       @selected-normal-foreground;
-	border:           0 5px 0 5px;
-	border-color:	    @active-background;
+	border:           0px;
+	border-color:	  @active-background;
 }
 
 element selected.urgent {
