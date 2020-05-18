@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#set -e 
 
 # CONFIGURATION
 LOCATION=0
@@ -35,8 +36,8 @@ show_devices (){
         isreach="$(qdbus org.kde.kdeconnect "/modules/kdeconnect/devices/$deviceid" org.kde.kdeconnect.device.isReachable)"
         istrust="$(qdbus org.kde.kdeconnect "/modules/kdeconnect/devices/$deviceid" org.kde.kdeconnect.device.isTrusted)"
         if [ "$isreach" = "true" ] && [ "$istrust" = "true" ]
-        then
-            battery="$(qdbus org.kde.kdeconnect "/modules/kdeconnect/devices/$deviceid" org.kde.kdeconnect.device.battery.charge)"
+        then 
+            [ "$devicetype" = "desktop" ] && battery='100' || battery=$(qdbus org.kde.kdeconnect "/modules/kdeconnect/devices/$deviceid" org.kde.kdeconnect.device.battery.charge)
             icon=$(get_icon "$battery" "$devicetype")
             devices+="%{A1:$DIR/polybar-kdeconnect.sh -n '$devicename' -i $deviceid -b $battery -m:}$icon%{A}$SEPERATOR" # show_menu
         elif [ "$isreach" = "false" ] && [ "$istrust" = "true" ]
