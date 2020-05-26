@@ -22,9 +22,7 @@ if [ -d "$HOME/.bin" ] ;
 fi
 
 #list
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -la'
+alias ls='ls -oAh --group-directories-first --color=auto'
 alias l='ls' 					
 alias l.="ls -A | egrep '^\.'"      
 
