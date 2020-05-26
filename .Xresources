@@ -54,7 +54,7 @@ URxvt*colorUL:           #87afd7
 *foreground:        nord4
 *background:        nord0
 *cursorColor:       nord4
-*fading:			35
+*fading:			0
 *fadeColor:		 	nord3
 
 *color0: 			nord1
