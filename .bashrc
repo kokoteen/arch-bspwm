@@ -23,8 +23,7 @@ fi
 
 #list
 alias ls='ls -oAh --group-directories-first --color=auto'
-alias l='ls' 					
-alias l.="ls -A | egrep '^\.'"      
+alias l='ls'     
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
@@ -61,17 +60,6 @@ alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
 
 #add new fonts
 alias fc='sudo fc-cache -fv'
-
-#copy/paste all content of /etc/skel over to home folder - Beware
-alias skel='cp -rf /etc/skel/* ~'
-#backup contents of /etc/skel to hidden backup folder in home/user
-alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
-
-#copy bashrc-latest over on bashrc - cb= copy bashrc
-alias cb="cp ~/.bashrc-latest ~/.bashrc && source ~/.bashrc && sudo cp /etc/skel/.bashrc-latest /etc/skel/.bashrc"
-
-#quickly kill conkies
-alias kc='killall conky'
 
 #hardware info --short
 alias hw="hwinfo --short"
