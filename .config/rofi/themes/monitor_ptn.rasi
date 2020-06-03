@@ -32,16 +32,14 @@ configuration {
 window {
         anchor:         west;
         location:       west;
-        width:          250;
+        width:          250px;
         height:         100%;
-        orientation:    horizontal;
-        children:       [mainbox];
+        children:       [ mainbox];
 }
 
 
 mainbox {
-        orientation:    vertical;
-        children:       [dummy, prompt, listview, dummy ];
+        children:       [dummy,prompt, listview, dummy];
 }
 
 dummy {
@@ -54,7 +52,8 @@ prompt {
 
 
 listview {
-        expand:         true;
+        expand:         false;
+        lines:          5;
 }
 
 element {
