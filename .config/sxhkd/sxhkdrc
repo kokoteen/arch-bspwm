@@ -1,4 +1,4 @@
-#########################
+PP#########################
 # SUPER + FUNCTION KEYS #
 #########################
 
@@ -63,7 +63,6 @@ super + f
 super + h
       urxvt 'htop task manager' -e htop
 
-
 # Toggle pseudo tiling of window
 super + p
       bspc node --state \~pseudo_tiled
@@ -71,10 +70,6 @@ super + p
 #Pavucontrol
 super + v
       pavucontrol
-
-#Hide polybar
-super + y
-      polybar-msg cmd toggle
 
 #Xkill
 super + Escape
@@ -206,25 +201,8 @@ super + shift + {1-9,0}
 super + Tab
       bspc desktop -f '^{1-9,10}'
 
-
-# Focus next/previous window
-ctrl + alt + Left
-      bspc node --focus west
-
-# Focus next/previous window
-ctrl + alt + Right
-      bspc node --focus east
-
-# Focus Up window
-ctrl + alt + Up
-      bspc node --focus north
-
-# Focus Down window
-ctrl + alt + Down
-      bspc node --focus south
-
 #Rotate desktop
-alt + space
+super + r
       bspc node @/ --rotate {90,-90}
 
 # Swap windows by direction
@@ -232,7 +210,7 @@ super + {_,shift + }{Left,Down,Up,Right}
       bspc node --{focus,swap} {west,south,north,east}
 
 # Focus windows by direction
-ctrl + super + {Left,Down,Up,Right}
+super + {Left,Down,Up,Right}
       bspc node --{focus} {west,south,north,east}
 
 # Flip layout vertically/horizontally
@@ -240,7 +218,7 @@ super + {_,shift + }a
       bspc node @/ --flip {vertical,horizontal}
 
 # Expand tiled space
-alt + shift + {h,j,k,l}
+super + alt + {h,j,k,l}
       bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
 # Contract tiled space
@@ -251,15 +229,11 @@ super + ctrl + {h,j,k,l}
 super + bracket{left,right}
       bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
-# Move floating window
-super + alt + {_,shift + }{Left,Down,Up,Right}
-      ~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
-
 # set the window state
 super + space
       bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# Focus parent/brother/first/second for preselection
+#! Focus parent/brother/first/second for preselection
 super + ctrl + {e,r,t,y}
       bspc node --focus @{parent,brother,first,second}
 
@@ -268,8 +242,8 @@ super + ctrl + {u,i,o,p}
       bspc node --presel-dir \~{west,south,north,east}
 
 # Define splitting ratio for next window on leaf/parent
-super + ctrl + {_,shift +}{1-9}
-      bspc node {_,@/} --presel-ratio 0.{1-9}
+super + ctrl + {1-9}
+      bspc node --presel-ratio 0.{1-9}
 
 # Cancel preselection
 super + ctrl + space

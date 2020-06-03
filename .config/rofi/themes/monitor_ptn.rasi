@@ -44,8 +44,17 @@ mainbox {
         children:       [dummy, prompt, listview, dummy ];
 }
 
+dummy {
+        expand:         true;
+}
+
 prompt {
         padding:        0 0 0 45;
+}
+
+
+listview {
+        expand:         true;
 }
 
 element {
