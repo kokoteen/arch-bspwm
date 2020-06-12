@@ -112,7 +112,7 @@ module-margin-right = 0
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Ubuntu Mono derivative Powerline:style=Regular:size=13;0"
 font-1 = "FontAwesome:size=13;1"
-font-2 = "Iosevka:size=14;2"
+font-2 = "Iosevka Term:style=Regular:size=14;2"
 font-3 = "Material Icons:size=14;3"
 
 modules-left = bspwm xwindow
@@ -122,9 +122,10 @@ modules-right = xkeyboard cpu2 memory2 pavolume date kdeconnect battery
 tray-detached = false
 tray-offset-x = 0
 tray-offset-y = 0
-tray-padding = 2
+tray-padding = 1
 tray-maxsize = 20
 tray-scale = 1.0
+;left right or center
 tray-position = right
 tray-background = ${colors.background}
 
@@ -293,6 +294,8 @@ type = internal/battery
 battery = BAT0
 adapter = AC0
 full-at = 100
+
+
 ;   
 format-charging = <animation-charging> <label-charging>
 label-charging = %percentage%%
@@ -344,7 +347,7 @@ format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.color11}
 
-label-font = 0
+label-font = 1
 
 ; Available tags:
 ;   <label> (default)
