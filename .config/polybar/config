@@ -123,7 +123,7 @@ tray-detached = false
 tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 1
-tray-maxsize = 20
+tray-maxsize = 28
 tray-scale = 1.0
 ;left right or center
 tray-position = right
