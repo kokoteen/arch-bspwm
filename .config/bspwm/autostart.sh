@@ -52,8 +52,6 @@ elif [ "$(xrandr | grep -w connected | wc | awk '{print $1}')" -eq "1" ]; then
 	conky -c "$HOME/.config/bspwm/clock_primary" &
 fi
 
-#polybar
-"$HOME/.config/polybar/launch.sh" &
 
 #add keyboard layout
 setxkbmap us,rs,hr -option 'grp:ctrl_alt_toggle' #man xkeyboard-config
@@ -63,15 +61,19 @@ feh --bg-scale "$HOME/.config/bspwm/wallpapers/wallhaven-lmpx9l.jpg" &
 
 xsetroot -cursor_name left_ptr &
 sxhkd &
+numlockx on &
+picom --config "$HOME/.config/bspwm/compton.conf" &
 
 #bluetooth
 #blueberry-tray &
 
-run nm-applet &		# wifi icon
-#run pamac-tray & 	# package manager
-#run xfce4-power-manager &
-numlockx on &
-picom --config "$HOME/.config/bspwm/compton.conf" &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
-#run kdeconnect-indicator &
+run "$HOME/.config/polybar/launch.sh"		# polybar
+run nm-applet 								# wifi icon
+#run pamac-tray  							# package manager
+#run xfce4-power-manager
+#run kdeconnect-indicator					# kdeconnect  
+run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
+run /usr/lib/xfce4/notifyd/xfce4-notifyd	# notification
+run "$HOME/.config/bspwm/scripts/swallow.py"  
+
+
