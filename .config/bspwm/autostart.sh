@@ -54,15 +54,14 @@ fi
 
 
 #add keyboard layout
-setxkbmap us,rs,hr -option 'grp:ctrl_alt_toggle' #man xkeyboard-config
+setxkbmap us,rs,hr -option 'grp:ctrl_alt_toggle' 	# man xkeyboard-config
 
 #wallpaper
-feh --bg-scale "$HOME/.config/bspwm/wallpapers/wallhaven-lmpx9l.jpg" &
+feh --bg-scale "$HOME/.config/bspwm/wallpapers/wallhaven-lmpx9l.jpg" 
 
-xsetroot -cursor_name left_ptr &
-
-numlockx on &
-picom --config "$HOME/.config/bspwm/compton.conf" &
+xsetroot -cursor_name left_ptr  
+numlockx on 										# num lock 
+picom --config "$HOME/.config/bspwm/compton.conf" & 
 
 #bluetooth
 #blueberry-tray &
