@@ -72,10 +72,8 @@ bspc rule -a Arandr state=floating
 bspc rule -a feh state=floating
 bspc rule -a Oblogout monitor=primary state=floating center=true
 bspc rule -a matplotlib state=floating center=true
-
-#Tiled applications
-bspc rule -a Gnome-disks state=tiled
-bspc rule -a Xfce4-settings-manager state=tiled
+bspc rule -a File-roller state=floating center=true
+bspc rule -a Pavucontrol state=floating center=true
 
 #open applications on specific workspaces
 #bspc rule -a Google-chrome desktop='^1' follow=on
