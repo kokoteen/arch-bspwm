@@ -22,7 +22,8 @@ if [ -d "$HOME/.bin" ] ;
 fi
 
 #list
-alias ls='ls -oAh --group-directories-first --color=auto'
+# alias ls='ls -oAh --group-directories-first --color=auto'
+alias ls='exa -lah --group-directories-first'
 alias l='ls'     
 
 ## Colorize the grep command output for ease of use (good for log files)##
