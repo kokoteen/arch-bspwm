@@ -71,7 +71,7 @@ run "$HOME/.config/polybar/launch.sh"				# polybar
 run nm-applet 										# wifi icon
 #run pamac-tray  									# package manager
 #run xfce4-power-manager
-#run kdeconnect-indicator							# kdeconnect  
+run kdeconnect-indicator							# kdeconnect  
 run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 run /usr/lib/xfce4/notifyd/xfce4-notifyd			# notification
 # run "$HOME/.config/bspwm/scripts/swallow.py"		# swollowing window; problem with googlechrome/can't have more then one window open -> fix: work only for terminal 2. problem pgrep doesnt detect/doubling  

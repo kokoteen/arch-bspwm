@@ -26,7 +26,7 @@ imap <F2> <C-O>:set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 " Uncomment below to set the max textwidth. Use a value corresponding to the width of your screen.
-" set textwidth=79
+set textwidth=100
 set formatoptions=tcqrn1
 set tabstop=4
 set shiftwidth=4
@@ -34,6 +34,7 @@ set softtabstop=4
 set expandtab
 set noshiftround
 set autoindent
+set smartindent
 set cursorline
 
 " Display 5 lines above/below the cursor when scrolling with a mouse.
@@ -63,6 +64,9 @@ set number relativenumber
 
 " Set status line display
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 " Encoding
 set encoding=utf-8
@@ -89,6 +93,7 @@ autocmd BufWinEnter *.* silent loadview
 
 " Color sheme
 set background=dark
+set colorcolumn=100
 highlight Normal ctermfg=grey ctermbg=black
 colorscheme nord
 
@@ -116,3 +121,16 @@ let g:airline_symbols.readonly = ''
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
+
+" syntstic
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+" ale
+let g:airline#extensions#ale#enabled = 1
+let g:ale_lint_delay = 0
+let g:ale_list_window_size = 5
+let g:ale_open_list = 1
+let g:ale_lint_on_text_changed = 'always'

@@ -126,7 +126,7 @@ ctrl + shift + Escape
 #########################
 
 #screeenshooter
-ctrl + p
+alt + p
      xfce4-screenshooter
 
 #########################
@@ -246,5 +246,5 @@ super + ctrl + {1-9}
       bspc node --presel-ratio 0.{1-9}
 
 # Cancel preselection
-super + ctrl + space
+super + alt + space
       bspc node --presel-dir cancel

@@ -115,15 +115,15 @@ font-1 = "FontAwesome:size=13;1"
 font-2 = "Iosevka Term:style=Regular:size=14;2"
 font-3 = "Material Icons:size=14;3"
 
-modules-left = bspwm xwindow
+modules-left = bspwm
 modules-center = weather clock 
-modules-right = xkeyboard cpu2 memory2 pavolume date kdeconnect battery
+modules-right = xkeyboard cpu2 memory2 pavolume date battery
 
 tray-detached = false
 tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 1
-tray-maxsize = 28
+tray-maxsize = 23
 tray-scale = 1.0
 ;left right or center
 tray-position = right
@@ -301,17 +301,17 @@ format-charging = <animation-charging> <label-charging>
 label-charging = %percentage%%
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
-format-charging-underline = ${colors.color14}
+format-charging-underline = ${colors.color15}
 
 format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%%
-format-discharging-underline = ${colors.color14}
+format-discharging-underline = ${colors.color15}
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
 format-full-prefix = ""
-format-full-prefix-foreground = ${colors.color14}
-format-full-underline = ${colors.color14}
+format-full-prefix-foreground = ${colors.color15}
+format-full-underline = ${colors.color15}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
