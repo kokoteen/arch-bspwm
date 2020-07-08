@@ -369,7 +369,7 @@ label = %percentage:3%%
 
 [module/date]
 type = custom/script
-exec = /usr/bin/date '+%d-%m-%Y'
+exec = /usr/bin/date '+%a %d-%m-%Y'
 click-left = /usr/bin/gsimplecal
 interval = 3600
 format-font=4
