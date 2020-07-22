@@ -47,7 +47,7 @@ alias userlist="cut -d: -f1 /etc/passwd"
 alias merge="xrdb -merge ~/.Xresources"
 
 # Aliases for software managment
-alias update='sudo pikaur -Syyu'
+alias update='sudo yay -Syyu'
 
 #ps
 alias ps="ps auxf"
@@ -86,7 +86,7 @@ alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 #Cleanup orphaned packages
-alias cleanup='sudo pikaur -Rns $(pikaur -Qtdq)'
+alias cleanup='sudo yay -Rns $(yay -Qtdq)'
 
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -98,7 +98,7 @@ alias ssn="sudo shutdown now"
 alias gitt='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #remove
-alias remove="pikaur -Rns"
+alias remove="yay -Rns"
 
 #get fastest mirrors in your neighborhood
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
