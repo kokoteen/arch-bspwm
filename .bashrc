@@ -56,9 +56,6 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 #grub update
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
-#improve png
-alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
-
 #add new fonts
 alias fc='sudo fc-cache -fv'
 
@@ -109,6 +106,8 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
+#temperature
+alias temp="sensors acpitz-acpi-0 | grep -w temp1"
 
 #virtualenvweapper
 export WORKON_HOME=~/.virtualenvs
