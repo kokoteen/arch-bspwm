@@ -19,7 +19,7 @@ URxvt*depth:             32
 URxvt*transparent:       false
 URxvt*shading:           30
 URxvt*underlineColor:    #c7e6ff
-URxvt*highlightColor:    #c7e6ff
+URxvt*highlightColor:    #000000
 URxvt*throughColor:      Blue
 URxvt*scrollBar:         false
 URxvt*scrollTtyOutput:   true
@@ -110,6 +110,3 @@ URxvt*buffered:         false
 URxvt*keysym.Control-Shift-C: perl:clipboard:copy
 URxvt*keysym.Control-Shift-V: perl:clipboard:paste
 
-
-st*.font:	Ubuntu Mono derivative Powerline:pixelsize=17:antialias=true:autohint=true;
-st*.alpha: 1

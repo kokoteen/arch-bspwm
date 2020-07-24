@@ -79,6 +79,8 @@ super + Escape
 super + Return
       urxvt
 
+super + shift + Return
+      termite
 #########################
 # SUPER + SHIFT KEYS    #
 #########################
