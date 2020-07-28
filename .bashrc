@@ -15,11 +15,7 @@
 export HISTCONTROL=ignoreboth:erasedups
 
 #PS1="\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
-if [ "$TERM" ==  "xterm-termite" ]; then
-  PS1=" \[$(tput setaf 8)\]\[$(tput setab 8)\]\[$(tput bold)\]\[$(tput setaf 2)\]-> \[$(tput setaf 4)\]\W \[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]\[$(tput setaf 8)\]\[$(tput sgr0)\] "
-elif [ "$TERM" ==  "xterm-256color" ]; then
-  PS1=" \[$(tput bold)\]\[$(tput setaf 2)\]-> \[$(tput setaf 4)\]\W \[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
-fi
+PS1=" \[$(tput setaf 8)\]\[$(tput setab 8)\]\[$(tput bold)\]\[$(tput setaf 2)\]-> \[$(tput setaf 4)\]\W \[$(tput setaf 7)\]\\$\[$(tput sgr0)\]\[$(tput setaf 8)\]\[$(tput sgr0)\] "
 
 
 if [ -d "$HOME/.bin" ] ;
@@ -53,6 +49,13 @@ alias merge="xrdb -merge ~/.Xresources"
 
 # Aliases for software managment
 alias update='yay -Syyu'
+alias search='yay -Ss'
+
+#Cleanup orphaned packages
+alias cleanup='yay -Rns $(yay -Qtdq)'
+
+#remove
+alias remove="yay -Rns"
 
 #ps
 alias ps="ps auxf"
@@ -90,9 +93,6 @@ alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
-#Cleanup orphaned packages
-alias cleanup='yay -Rns $(yay -Qtdq)'
-
 #get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
@@ -101,9 +101,6 @@ alias ssn="sudo shutdown now"
 
 #bare git
 alias gitt='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-#remove
-alias remove="yay -Rns"
 
 #get fastest mirrors in your neighborhood
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"

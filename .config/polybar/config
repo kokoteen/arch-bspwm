@@ -310,10 +310,9 @@ format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
 
 format-full-prefix = ""
-format-full-prefix-foreground = ${colors.color15}
 format-full-underline = ${colors.color15}
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+format-full-foreground = ${colors.foreground}
+format-full-background = ${colors.background}
 
 ;     
 ramp-capacity-0 = 
