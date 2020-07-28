@@ -19,7 +19,7 @@ URxvt*depth:             32
 URxvt*transparent:       false
 URxvt*shading:           30
 URxvt*underlineColor:    #c7e6ff
-URxvt*highlightColor:    #c7e6ff
+URxvt*highlightColor:    #000000
 URxvt*throughColor:      Blue
 URxvt*scrollBar:         false
 URxvt*scrollTtyOutput:   true
@@ -76,14 +76,14 @@ URxvt*colorUL:           #87afd7
 
 ! fonts
 URxvt*letterSpace: 	    		0
-URxvt*font:                 	xft:Ubuntu Mono derivative Powerline:style=Regular:size=13
-URxvt*imFont:               	xft:Ubuntu Mono derivative Powerline:style=Regular:size=13
-URxvt*boldFont:             	xft:Ubuntu Mono derivative Powerline:style=Bold:size=13
-URxvt*italicFont:           	xft:Ubuntu Mono derivative Powerline:style=Italic:size=13
-URxvt*boldItalicFont:     		xft:Ubuntu Mono derivative Powerline:style=Bold Italic:size=13
+URxvt*font:                 	xft:My Font:style=Regular:size=13
+URxvt*imFont:               	xft:My Font:style=Regular:size=13
+URxvt*boldFont:             	xft:My Font:style=Bold:size=13
+URxvt*italicFont:           	xft:My Font:style=Italic:size=13
+URxvt*boldItalicFont:     		xft:My Font:style=Bold Italic:size=13
 
 ! perl extensions
-URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
+URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font,matcher
 
 ! macros for clipboard and selection
 URxvt*copyCommand:      xclip -i -selection clipboard
@@ -110,6 +110,3 @@ URxvt*buffered:         false
 URxvt*keysym.Control-Shift-C: perl:clipboard:copy
 URxvt*keysym.Control-Shift-V: perl:clipboard:paste
 
-
-st*.font:	Ubuntu Mono derivative Powerline:pixelsize=17:antialias=true:autohint=true;
-st*.alpha: 1
