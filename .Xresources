@@ -54,8 +54,6 @@ URxvt*colorUL:           #87afd7
 *foreground:        nord4
 *background:        nord0
 *cursorColor:       nord4
-*fading:			0
-*fadeColor:		 	nord3
 
 *color0: 			nord1
 *color1: 			nord11
@@ -96,7 +94,7 @@ URxvt*keysym.M-s:       perl:keyboard-select:search
 URxvt*keysym.M-u:       perl:url-select:select_next
 URxvt*resize-font.smaller:	C-Down
 URxvt*resize-font.bigger:	C-Up
-URxvt*urlLauncher:      google-chrome-stable
+URxvt*urlLauncher:      /usr/bin/xdg-open
 URxvt*underlineURLs:    true
 URxvt*urlButton:        1
 URxvt*geometry: 		90x30
@@ -109,4 +107,4 @@ URxvt*tabbed.tab-bg:    4
 URxvt*buffered:         false
 URxvt*keysym.Control-Shift-C: perl:clipboard:copy
 URxvt*keysym.Control-Shift-V: perl:clipboard:paste
-
+URxvt*cursorBlink:      true
