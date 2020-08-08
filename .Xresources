@@ -6,6 +6,7 @@
 ! general settings
 URxvt*saveline:         15000
 URxvt*termName:         xterm-256color
+URxvt*cursorBlink:      true
 URxvt*urgentOnBell:     false
 URxvt*visualBell:       true
 URxvt*iso14755:         false
@@ -86,17 +87,17 @@ URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font
 ! macros for clipboard and selection
 URxvt*copyCommand:      xclip -i -selection clipboard
 URxvt*pasteCommand:     xclip -o -selection clipboard
-URxvt*keysym.C-C:       perl:clipboard:copy
-URxvt*keysym.C-V:       perl:clipboard:paste
+URxvt*keysym.Control-Shift-C: perl:clipboard:copy
+URxvt*keysym.Control-Shift-V: perl:clipboard:paste
 URxvt*keysym.C-A-V:     perl:clipboard:paste_escaped
 URxvt*keysym.M-Escape:  perl:keyboard-select:activate
 URxvt*keysym.M-s:       perl:keyboard-select:search
 URxvt*keysym.M-u:       perl:url-select:select_next
 URxvt*resize-font.smaller:	C-Down
 URxvt*resize-font.bigger:	C-Up
-URxvt*urlLauncher:      /usr/bin/xdg-open
-URxvt*underlineURLs:    true
-URxvt*urlButton:        1
+URxvt*url-select.undeline: true
+URxvt*url-select.launcher: /usr/bin/google-chrome-stable
+URxvt*matcher.button:   1
 URxvt*geometry: 		90x30
 
 ! tabbed
@@ -105,6 +106,3 @@ URxvt*tabbed.tabbar-bg: 16
 URxvt*tabbed.tab-fg:    15
 URxvt*tabbed.tab-bg:    4
 URxvt*buffered:         false
-URxvt*keysym.Control-Shift-C: perl:clipboard:copy
-URxvt*keysym.Control-Shift-V: perl:clipboard:paste
-URxvt*cursorBlink:      true
