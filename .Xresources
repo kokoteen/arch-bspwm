@@ -6,6 +6,7 @@
 ! general settings
 URxvt*saveline:         15000
 URxvt*termName:         xterm-256color
+URxvt*pointerBlank:     true
 URxvt*cursorBlink:      true
 URxvt*urgentOnBell:     false
 URxvt*visualBell:       true
