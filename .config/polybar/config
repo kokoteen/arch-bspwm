@@ -476,7 +476,7 @@ format-background = ${colors.background}
 
 [module/weather]
 type = custom/script
-interval = 5
+interval = 900
 format = <label>
 ; 
 format-font=2
