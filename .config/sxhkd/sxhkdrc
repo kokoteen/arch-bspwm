@@ -59,9 +59,6 @@ super + F12
 super + f
       bspc node --state \~fullscreen
 
-# Htop
-super + h
-      urxvt 'htop task manager' -e htop
 
 # Toggle pseudo tiling of window
 super + p
@@ -105,13 +102,17 @@ super + shift + q
 super + shift + x
       bspc quit
 
-#Screen-Locker
-super + shift + l
-      betterlockscreen -l
-
 #Xfce4-settings-manager
 super + shift + p
       xfce4-settings-manager
+
+#########################
+# SUPER + CTRL KEYS    #
+#########################
+
+#Screen-Locker
+super + ctrl + l
+      betterlockscreen -l
 
 
 #########################
@@ -207,13 +208,13 @@ super + Tab
 super + r
       bspc node @/ --rotate {90,-90}
 
-# Swap windows by direction
+# Focus/swap windows by direction
 super + {_,shift + }{Left,Down,Up,Right}
       bspc node --{focus,swap} {west,south,north,east}
 
-# Focus windows by direction
-super + {Left,Down,Up,Right}
-      bspc node --{focus} {west,south,north,east}
+# Focus/swap windows by direction
+super + {_,shift + }{h,j,k,l}
+      bspc node --{focus,swap} {west,south,north,east}
 
 # Flip layout vertically/horizontally
 super + {_,shift + }a
