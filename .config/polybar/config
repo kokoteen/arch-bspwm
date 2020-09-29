@@ -86,7 +86,7 @@ separator = "|"
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 1
 line-color = #f00
 
 wm-restack = bspwm

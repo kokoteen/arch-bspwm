@@ -57,7 +57,7 @@ fi
 setxkbmap us,rs,hr -option 'grp:ctrl_alt_toggle' 	# man xkeyboard-config
 
 #wallpaper
-feh --bg-scale "$HOME/.config/bspwm/wallpapers/wallhaven-lmpx9l.jpg" 
+feh --bg-scale "$HOME/.config/bspwm/wallpapers/portal.jpg" 
 
 xsetroot -cursor_name left_ptr  
 numlockx on 										# num lock 
