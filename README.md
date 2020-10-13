@@ -26,7 +26,11 @@
 
 After installation, to configure dual monitor setup, run ***"cfg_monitor_pos.sh"***  by presing `super + F10`.
 
-## 3. Suspend
+## 3. Common problems
 
+### 1. Suspend
 Fors suspend to work properly after lid is closed, comment everythin in file ***"/etc/systemd/logind.conf"*** .
 
+### 2. VScode opens files instead of file manager
+Common problem with default file manager is when vscode starts opening files. To address this problem, in file `/usr/share/applications/code.desktop` change the row `MimeType=text/plain;inode/directory;` to `MimeType=text/plain;`  
+Then run `xdg-mime default exo-file-manager.desktop`
