@@ -1,9 +1,9 @@
-PP#########################
+#########################
 # SUPER + FUNCTION KEYS #
 #########################
 
 # GoogleChrome
-super + F1
+super + F1 
       google-chrome-stable
 
 # File Manager
@@ -12,6 +12,8 @@ super + F2
 
 # Rofi
 super + F3
+      rofi -show drun
+super + shift + F3
       rofi -show run
 
 # Emoji
@@ -37,15 +39,15 @@ super + F8
 
 # Logout
 super + F9
-      /$HOME/.bin/logout_script.sh
+      $HOME/.bin/logout_script.sh
 
 # Monitor Position
 super + F10
-      /$HOME/.bin/cfg_monitor_pos.sh
+      $HOME/.bin/cfg_monitor_pos.sh
 
-# Rofi Fullscreen
+# Rofi sxhkdrc file
 super + F11
-      rofi -show run -fullscreen
+      more $HOME/.config/sxhkd/sxhkdrc_shortcuts_file | grep -o ".*" | rofi -dmenu -theme themes/sxhkdrc_shortcuts -i -p "Search: "
 
 # Rofi theme selector
 super + F12

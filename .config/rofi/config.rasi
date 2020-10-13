@@ -1,0 +1,9 @@
+configuration {
+	modi: "drun,run";
+	width: 750;
+	lines: 12;
+	separator-style: "solid";
+	hide-scrollbar: true;
+	show-match: false;
+	theme: "/usr/share/rofi/themes/ArcoLinux-Nord.rasi";
+}
