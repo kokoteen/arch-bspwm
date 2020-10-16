@@ -75,7 +75,7 @@ URxvt*colorUL:           #87afd7
 *color15: 			nord6
 
 ! fonts
-URxvt*letterSpace: 	    		0
+URxvt*letterSpace: 	    		-2
 URxvt*font:                 	xft:My Font:style=Regular:size=13
 URxvt*imFont:               	xft:My Font:style=Regular:size=13
 URxvt*boldFont:             	xft:My Font:style=Bold:size=13
