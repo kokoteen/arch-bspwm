@@ -47,7 +47,7 @@ layout() {
 	bspc monitor "$2" -d 1 2 3 4 5	
 }
 
-if [ "$(xrandr | grep "\*" | wc | awk '{print $1}')" -eq "2" ]; then
+if [ "$(xrandr | grep -c "\*" )" -eq "2" ]; then
 	monitor_type1=$(xrandr | grep -w connected | awk '{print $1}' | head -n 1)
 	monitor_type2=$(xrandr | grep -w connected | awk '{print $1}' | tail -n 1)
 
