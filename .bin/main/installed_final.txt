@@ -84,6 +84,7 @@ file
 file-roller
 filesystem
 findutils
+firefox
 flex
 font-manager
 freetype2
@@ -104,7 +105,6 @@ gnome-disk-utility
 gnome-icon-theme
 gnome-keyring
 gnu-netcat
-google-chrome
 gparted
 gpick
 gpm
