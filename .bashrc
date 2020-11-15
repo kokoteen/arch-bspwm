@@ -12,6 +12,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export QT_QPA_PLATFORMTHEME=qt5ct
+export DESKTOP_SESSION=bspwm
 export HISTCONTROL=ignoreboth:erasedups
 
 #PS1="\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
