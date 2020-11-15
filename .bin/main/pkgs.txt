@@ -3,22 +3,21 @@ arc-gtk-theme
 arc-icon-theme
 arc-kde
 breeze
-breeze-cursors-lh
 bibata-cursor-theme
-faba-icon-theme
-halo-icons-git
-oxy-neon
-moka-icon-theme
-numix-circle-arc-icons-git
-numix-circle-icon-theme-git
-numix-gtk-theme-git
-numix-icon-theme-git
-paper-icon-theme
 papirus-icon-theme
-sardi-icons
-surfn-arc-breeze-icons-git
-surfn-icons-git
-zafiro-icon-theme
+#paper-icon-theme
+#faba-icon-theme
+#halo-icons-git
+#oxy-neon
+#moka-icon-theme
+#numix-circle-arc-icons-git
+#numix-circle-icon-theme-git
+#numix-gtk-theme-git
+#numix-icon-theme-git
+#sardi-icons
+#surfn-arc-breeze-icons-git
+#surfn-icons-git
+#zafiro-icon-theme
 
 font-manager
 ttf-bitstream-vera
@@ -44,6 +43,7 @@ awesome-terminal-fonts-patched
 adobe-source-sans-pro-fonts
 gsfonts
 
+iwd
 netctl
 networkmanager
 network-manager-applet
@@ -264,7 +264,6 @@ qt5-styleplugins
 qt5-xmlpatterns
 qt5ct
 
-#xfce4-notifyd --promeniti na dunst nekako
 xfce4-screenshooter
 
 
@@ -285,4 +284,4 @@ xdg-desktop-portal-gtk -?
 
 dmenu - msm da mi ne treba zbog rofi
 
-
+xfce4-notifyd --promeniti na dunst nekako
