@@ -20,7 +20,7 @@
     `$ gitt checkout`
     - set the flag ***"showUntrackedFiles"*** to ***"no"*** on this specific (local) repository  
     `$ gitt config --local status.showUntrackedFiles no`
-5. if you're not using display manager, add in `bash_profile` folowing code if you want to autostart `startx`:   
+5. if you're not using display manager, add in `bash_profile` following code if you want to autostart `startx`:   
     ```console
     if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
         exec startx
