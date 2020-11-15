@@ -3,7 +3,7 @@
 
 ## 1. Installation
 
-1. install [archboot](https://github.com/grm34/archboot "archboot")
+1. install [arch](https://wiki.archlinux.org/index.php/installation_guide "arch")
 2. install yay:  
 	- get yay from git
 	`git clone https://aur.archlinux.org/yay.git`
@@ -20,8 +20,13 @@
     `$ gitt checkout`
     - set the flag ***"showUntrackedFiles"*** to ***"no"*** on this specific (local) repository  
     `$ gitt config --local status.showUntrackedFiles no`
-5. start all necessary services
-6. start display manager  
+5. if you're not using display manager, add in `bash_profile` folowing code if you want to autostart `startx`:   
+    ```console
+    if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+        exec startx
+    fi
+    ```
+6. if you're using display manager, start it with following commands:  
 `$ sudo systemctl enable lightdm.service -f`  
 `$ sudo systemctl set-default graphical.target`
 
@@ -39,3 +44,13 @@ For suspend to work properly after lid is closed, comment everythin in file ***"
 ### 2. VScode opens files instead of file manager
 Common problem with default file manager is when vscode starts opening files. To address this problem, in file `/usr/share/applications/code.desktop` change the row `MimeType=text/plain;inode/directory;` to `MimeType=text/plain;`  
 Then run `xdg-mime default exo-file-manager.desktop`
+
+### 3. Autologin & colored output of `yay`  
+To autologin into the system run `systemctl edit getty@tty1` and paste the following content:  
+```
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin username --noclear %I $TERM
+Type=simple
+```
+For `yay` to have colored output uncomment `Color` in `/etc/pacman.conf`
