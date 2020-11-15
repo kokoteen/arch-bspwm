@@ -265,8 +265,7 @@ qt5-xmlpatterns
 qt5ct
 
 xfce4-screenshooter
-
-
+visual-studio-code-bin
 
 
 #! skroz nepotrebno al zanimljivo
