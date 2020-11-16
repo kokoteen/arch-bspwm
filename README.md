@@ -13,7 +13,7 @@
 `$ yay -S $(<pkgs.txt)`
 4. create ***"git --bare"*** repository:
     - clone dotfiles into a ***"bare"*** repository  
-    `$ git clone --bare <git-repo-url> $HOME/.cfg`
+    `$ git clone --bare https://github.com/kokoteen/arch-bspwm.git $HOME/.cfg`
     - define the alias in the current ***".bashrc"***  
     `alias gitt='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
     - checkout the actual content from the bare repository to `$HOME` and delete everything that is in conflict  
@@ -23,7 +23,7 @@
 5. if you're not using display manager, add in `bash_profile` following code if you want to autostart `startx`:   
     ```console
     if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-        exec startx
+        exec startx 2> "$HOME"/.xsession-errors
     fi
     ```
 6. if you're using display manager, start it with following commands:  

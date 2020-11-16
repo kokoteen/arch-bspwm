@@ -145,6 +145,7 @@ docker
 exa
 feh
 thunar
+tumbler
 sxhkd
 bspwm
 shellcheck
@@ -266,7 +267,8 @@ qt5ct
 
 xfce4-screenshooter
 visual-studio-code-bin
-
+gnome-keyring
+dunst
 
 #! skroz nepotrebno al zanimljivo
 playerctl - kontrolise bilo koji player iz terminala
