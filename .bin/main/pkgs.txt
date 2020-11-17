@@ -39,7 +39,7 @@ terminus-font
 montserrat-font-ttf
 nerd-fonts-iosevka
 noto-fonts-all
-awesome-terminal-fonts-patched
+awesome-terminal-fonts
 adobe-source-sans-pro-fonts
 gsfonts
 

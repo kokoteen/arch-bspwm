@@ -54,3 +54,6 @@ ExecStart=-/usr/bin/agetty --autologin username --noclear %I $TERM
 Type=simple
 ```
 For `yay` to have colored output uncomment `Color` in `/etc/pacman.conf`
+
+### 4. Powerline fonts
+Detailed instruction can be found [here](https://github.com/powerline/fonts.git)
