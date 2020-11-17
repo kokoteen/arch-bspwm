@@ -70,6 +70,6 @@ run sxhkd 											# keyboard
 run "$HOME/.config/polybar/launch.sh"				# polybar
 run nm-applet 										# wifi icon
 run kdeconnect-indicator							# kdeconnect  
-# run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
+run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 	# Authentication agents
 run dunst											# notification
 # run "$HOME/.config/bspwm/scripts/swallow.py"		# swollowing window; problem with googlechrome/can't have more then one window open -> fix: work only for terminal 2. problem pgrep doesnt detect/doubling  

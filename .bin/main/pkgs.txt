@@ -269,6 +269,8 @@ xfce4-screenshooter
 visual-studio-code-bin
 gnome-keyring
 dunst
+polkit
+polkit-gnome
 
 #! skroz nepotrebno al zanimljivo
 playerctl - kontrolise bilo koji player iz terminala
