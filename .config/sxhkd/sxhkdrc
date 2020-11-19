@@ -56,7 +56,10 @@ super + F12
 #########################
 # SUPER + ... KEYS      #
 #########################
- 
+# Terminal search (yay fzf)
+super + y
+      urxvt -e $HOME/.bin/yayfzf.sh
+       
 #Toggle fullscreen of window
 super + f
       bspc node --state \~fullscreen
