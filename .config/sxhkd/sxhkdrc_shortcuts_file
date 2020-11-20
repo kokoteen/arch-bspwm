@@ -1,7 +1,7 @@
 #########################
 # SUPER + F# KEYS       #
 #########################
-GoogleChrome                                                | super + F1 
+Firefox		                                                | super + F1 
 File Manager                                                | super + F2
 Rofi drun                                                   | super + F3
 Rofi run                                                    | super + shift + F3
@@ -16,6 +16,7 @@ Rofi theme selector                                         | super + F12
 #########################
 # SUPER + ... KEYS      #
 #########################
+Yayfzf														| super + y
 Toggle fullscreen of window                                 | super + f
 Toggle pseudo tiling of window                              | super + p
 Pavucontrol                                                 | super + v
@@ -60,4 +61,4 @@ Set the window state                                        | super + space
 Focus parent/brother/first/second for preselection          | super + ctrl + {e,r,t,y}
 Preselect the splitting area for next window on leaf/parent | super + ctrl + {u,i,o,p}
 Define splitting ratio for next window on leaf/parent       | super + ctrl + {1-9}
-Cancel preselection                                         |super + alt + space
+Cancel preselection                                         | super + alt + space

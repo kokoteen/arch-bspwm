@@ -2,7 +2,7 @@
 # SUPER + FUNCTION KEYS #
 #########################
 
-# GoogleChrome
+# Firefox
 super + F1 
       firefox
 
@@ -56,7 +56,7 @@ super + F12
 #########################
 # SUPER + ... KEYS      #
 #########################
-# Terminal search (yay fzf)
+# yayfzf
 super + y
       urxvt -e $HOME/.bin/yayfzf.sh
        
