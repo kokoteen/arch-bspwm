@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-yay -Slq | fzf -m --preview 'yay -Si {1}' | xargs -r yay -S
+yay -Sl | awk '{print $2($4=="" ? "" : " *")}'| fzf -e -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk "{print \$2}")' --layout=reverse | xargs -ro -n1 yay -S
