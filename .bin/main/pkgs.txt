@@ -271,6 +271,7 @@ gnome-keyring
 dunst
 polkit
 polkit-gnome
+fzf
 
 #! skroz nepotrebno al zanimljivo
 playerctl - kontrolise bilo koji player iz terminala
