@@ -3,7 +3,9 @@
 
 ## 1. Installation
 
-1. install [arch](https://wiki.archlinux.org/index.php/installation_guide "arch")
+1. install [arch](https://wiki.archlinux.org/index.php/installation_guide "arch")  
+    `base base-devel linux linux-frimware dhcpcd 
+     intel-ucode vim man-db man-pages inetutils netctl iwd`
 2. install yay:  
 	- get yay from git
 	`git clone https://aur.archlinux.org/yay.git`

@@ -57,7 +57,7 @@ pptpclient
 openssh
 openvpn
 
-accountsservice
+#accountsservice
 arandr
 autorandr
 asciinema

@@ -1,7 +1,7 @@
 #########################
 # SUPER + F# KEYS       #
 #########################
-Firefox		                                                | super + F1 
+Firefox                                                     | super + F1 
 File Manager                                                | super + F2
 Rofi drun                                                   | super + F3
 Rofi run                                                    | super + shift + F3
@@ -16,7 +16,7 @@ Rofi theme selector                                         | super + F12
 #########################
 # SUPER + ... KEYS      #
 #########################
-Yayfzf														| super + y
+Yayfzf                                                      | super + y
 Toggle fullscreen of window                                 | super + f
 Toggle pseudo tiling of window                              | super + p
 Pavucontrol                                                 | super + v
