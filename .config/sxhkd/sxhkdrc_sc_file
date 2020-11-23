@@ -1,6 +1,7 @@
 Firefox                                                       | super + F1
 File Manager                                                  | super + F2
-Rofi                                                          | Menu
+Rofi drun                                                     | Menu
+Rofi run                                                      | super + F3
 Emoji                                                         | super + F4
 Appfinder                                                     | super + F5
 Meld                                                          | super + F6

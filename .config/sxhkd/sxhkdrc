@@ -10,11 +10,13 @@ super + F1
 super + F2
       thunar
 
-## Rofi
+## Rofi drun
 Menu
       rofi -show drun -theme themes/ArcoLinux-Nord_round
-super + shift + F3
-      rofi -show run
+
+## Rofi run
+super + F3
+      rofi -show drun -theme themes/ArcoLinux-Nord_round
 
 ## Emoji
 super + F4
@@ -81,8 +83,6 @@ super + Escape
 super + Return
       urxvt
 
-super + shift + Return
-      termite
 #########################
 # SUPER + SHIFT KEYS    #
 #########################
