@@ -2,82 +2,82 @@
 # SUPER + FUNCTION KEYS #
 #########################
 
-# Firefox
+## Firefox
 super + F1 
       firefox
 
-# File Manager
+## File Manager
 super + F2
       thunar
 
-# Rofi
-super + F3
+## Rofi
+Menu
       rofi -show drun -theme themes/ArcoLinux-Nord_round
 super + shift + F3
       rofi -show run
 
-# Emoji
+## Emoji
 super + F4
       rofimoji
 
-# Appfinder
+## Appfinder
 super + F5
       xfce4-appfinder
 
-# Meld
+## Meld
 super + F6
       meld
 
 
-# Virtualbox
+## Virtualbox
 super + F7
 
 
 #
-super + F8
+#super + F8
 
 
-# Logout
+## Logout
 super + F9
       $HOME/.bin/logout_script.sh
 
-# Monitor Position
+## Monitor Position
 super + F10
       $HOME/.bin/cfg_monitor_pos.sh
 
-# Rofi sxhkdrc file
+## Rofi sxhkdrc file
 super + F11
-      more $HOME/.config/sxhkd/sxhkdrc_shortcuts_file | grep -o ".*" | rofi -dmenu -theme themes/sxhkdrc_shortcuts -i -p "Search: "
+      cat $HOME/.config/sxhkd/sxhkdrc_sc_file | grep -o ".*" | rofi -dmenu -theme themes/sxhkdrc_shortcuts -i -p "Search: "
 
-# Rofi theme selector
+## Rofi theme selector
 super + F12
       rofi-theme-selector  
 
 #########################
 # SUPER + ... KEYS      #
 #########################
-# yayfzf
+## Yayfzf
 super + y
       urxvt -e $HOME/.bin/yayfzf.sh
        
-#Toggle fullscreen of window
+## Toggle fullscreen of window
 super + f
       bspc node --state \~fullscreen
 
 
-# Toggle pseudo tiling of window
+## Toggle pseudo tiling of window
 super + p
       bspc node --state \~pseudo_tiled
 
-#Pavucontrol
+## Pavucontrol
 super + v
       pavucontrol
 
-#Xkill
+## Xkill
 super + Escape
       xkill
 
-#Terminal emulator
+## Terminal emulator
 super + Return
       urxvt
 
@@ -87,27 +87,27 @@ super + shift + Return
 # SUPER + SHIFT KEYS    #
 #########################
 
-#DMENU
+## DMENU
 super + shift + d
       dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=23'
 
-#Reload bspwm
+## Reload bspwm
 super + shift + r
       ~/.config/bspwm/bspwmrc
 
-#reload sxhkd:
+## Reload sxhkd
 super + shift + s
-      pkill -USR1 -x sxhkd
+      pkill -USR1 -x sxhkd && crt_sxhkdrc_sc_file.sh
 
-#kill
+## Kill
 super + shift + q
       bspc node -c
 
-#Logout
+## Logout
 super + shift + x
       bspc quit
 
-#Xfce4-settings-manager
+## Xfce4-settings-manager
 super + shift + p
       xfce4-settings-manager
 
@@ -115,7 +115,7 @@ super + shift + p
 # SUPER + CTRL KEYS    #
 #########################
 
-#Screen-Locker
+## Screen-Locker
 super + ctrl + l
       betterlockscreen -l
 
@@ -124,7 +124,7 @@ super + ctrl + l
 # CONTROL + SHIFT KEYS  #
 #########################
 
-#Xcfe4-TaskManager
+## Xcfe4-TaskManager
 ctrl + shift + Escape
       xfce4-taskmanager
 
@@ -133,7 +133,7 @@ ctrl + shift + Escape
 #     SCREENSHOTS       #
 #########################
 
-#screeenshooter
+## Screeenshooter
 alt + p
      xfce4-screenshooter
 
@@ -141,15 +141,15 @@ alt + p
 #     MULTIMEDIA KEYS   #
 #########################
 
-#Raises volume
+## Raises volume
 XF86AudioRaiseVolume
     amixer set Master 10%+
 
-#Lowers volume
+## Lowers volume
 XF86AudioLowerVolume
     amixer set Master 10%-
 
-#Mute
+## Mute
 XF86AudioMute
     amixer -D pulse set Master 1+ toggle
 
@@ -158,31 +158,31 @@ XF86AudioMute
 #putting a hashtag in front of the mpc line will NOT work
 #mpc works for ncmpcpp
 
-#PLAY
+## PLAY
 XF86AudioPlay
     mpc toggle
     #playerctl play-pause
 
-#Next
+## Next
 XF86AudioNext
      mpc next
      #playerctl next
 
-#previous
+## Previous
 XF86AudioPrev
     mpc prev
     #playerctl previous
 
-#Stop
+## Stop
 XF86AudioStop
     mpc stop
     #playerctl stop
 
-#Brightness up
+## Brightness up
 XF86MonBrightnessUp
     xbacklight -inc 10
 
-#Brightness down
+## Brightness down
 XF86MonBrightnessDown
     xbacklight -dec 10
 
@@ -193,66 +193,67 @@ XF86MonBrightnessDown
 
 #################################################################
 
-#Focus selected desktop FOR QWERTY KEYBOARDS
+## Focus selected desktop FOR QWERTY KEYBOARDS
 super + {1-9,0}
       bspc desktop -f '^{1-9,10}'
 
 #################################################################
 
-#Move window to selected desktop FOR QWERTY KEYBOARDS
+## Move window to selected desktop FOR QWERTY KEYBOARDS
 super + shift + {1-9,0}
       id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
 #################################################################
 
-#Focus selected desktop
+## Focus selected desktop
 super + Tab
       bspc desktop -f '^{1-9,10}'
 
-#Rotate desktop
+## Rotate desktop
 super + r
       bspc node @/ --rotate {90,-90}
 
-# Focus/swap windows by direction
+## Focus/swap windows by direction
 super + {_,shift + }{Left,Down,Up,Right}
       bspc node --{focus,swap} {west,south,north,east}
 
-# Focus/swap windows by direction
+## Focus/swap windows by direction
 super + {_,shift + }{h,j,k,l}
       bspc node --{focus,swap} {west,south,north,east}
 
-# Flip layout vertically/horizontally
+## Flip layout vertically/horizontally
 super + {_,shift + }a
       bspc node @/ --flip {vertical,horizontal}
 
-# Expand tiled space
+## Expand tiled space
 super + alt + {h,j,k,l}
       bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
 
-# Contract tiled space
+## Contract tiled space
 super + ctrl + {h,j,k,l}
       bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
 
-# Increase/decrease window gap on focused desktop
+## Increase/decrease window gap on focused desktop
 super + bracket{left,right}
       bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
 
-# set the window state
+## Set the window state
 super + space
       bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-#! Focus parent/brother/first/second for preselection
+## Focus parent/brother/first/second for preselection
 super + ctrl + {e,r,t,y}
       bspc node --focus @{parent,brother,first,second}
 
-# Preselect the splitting area for next window on leaf/parent
+## Preselect the splitting area for next window on leaf/parent
 super + ctrl + {u,i,o,p}
       bspc node --presel-dir \~{west,south,north,east}
 
-# Define splitting ratio for next window on leaf/parent
+## Define splitting ratio for next window on leaf/parent
 super + ctrl + {1-9}
       bspc node --presel-ratio 0.{1-9}
 
-# Cancel preselection
+## Cancel preselection
 super + alt + space
       bspc node --presel-dir cancel
+
