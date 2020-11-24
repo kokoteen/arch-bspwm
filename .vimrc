@@ -95,7 +95,7 @@ autocmd BufWinEnter *.* silent loadview
 set background=dark
 set colorcolumn=100
 highlight Normal ctermfg=grey ctermbg=black
-colorscheme nord
+colorscheme dracula
 
 
 " LET PART
@@ -109,15 +109,16 @@ endif
 
 " airline symbols
 let g:airline_left_sep = ''
-"let g:airline_left_sep = ''
+let g:airline_left_alt_sep = '│'
 let g:airline_right_sep = ''
-"let g:airline_right_sep = ''
-let g:airline_symbols.linenr = ''
-"let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.branch = ''
+let g:airline_right_alt_sep = '│'
+let g:airline_symbols.linenr = 'ℓ:'
+let g:airline_symbols.branch = 'µ'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_symbols.readonly = ''
+let g:airline_symbols.readonly = '®'
+let g:airline_symbols.dirty='⚡'
+let g:airline_symbols.maxlinenr = ' #'
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
