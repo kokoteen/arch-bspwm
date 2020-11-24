@@ -5,6 +5,7 @@ arc-kde
 breeze
 bibata-cursor-theme
 papirus-icon-theme
+gnome-icon-theme
 #paper-icon-theme
 #faba-icon-theme
 #halo-icons-git
