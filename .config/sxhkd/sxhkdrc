@@ -41,11 +41,11 @@ super + F7
 
 ## Logout
 super + F9
-      $HOME/.bin/logout_script.sh
+      logout_script.sh
 
 ## Monitor Position
 super + F10
-      $HOME/.bin/cfg_monitor_pos.sh
+      cfg_monitor_pos.sh
 
 ## Rofi sxhkdrc file
 super + F11
@@ -60,7 +60,7 @@ super + F12
 #########################
 ## Yayfzf
 super + y
-      urxvt -e $HOME/.bin/yayfzf.sh
+      urxvt -e yayfzf.sh
        
 ## Toggle fullscreen of window
 super + f
@@ -93,7 +93,7 @@ super + shift + d
 
 ## Reload bspwm
 super + shift + r
-      ~/.config/bspwm/bspwmrc
+      $HOME/.config/bspwm/bspwmrc
 
 ## Reload sxhkd
 super + shift + s
@@ -143,15 +143,15 @@ alt + p
 
 ## Raises volume
 XF86AudioRaiseVolume
-    amixer set Master 10%+
+    changeVolume 10%+
 
 ## Lowers volume
 XF86AudioLowerVolume
-    amixer set Master 10%-
+    changeVolume 10%-
 
 ## Mute
 XF86AudioMute
-    amixer -D pulse set Master 1+ toggle
+    changeVolume toggle
 
 #Playerctl works for Pragha, Spotify and others
 #DELETE the line for mpc if you want to use playerctl
