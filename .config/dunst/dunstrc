@@ -175,7 +175,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_path = /usr/share/icons/gnome/22x22/status/:/usr/share/icons/gnome/22x22/devices/:/usr/share/icons/hicolor/22x22/apps/
+    icon_path = /usr/share/icons/breeze-dark/status/22/:/usr/share/icons/breeze-dark/devices/22/
 
 
     ### History ###
