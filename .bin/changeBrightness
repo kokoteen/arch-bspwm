@@ -1,0 +1,15 @@
+#!/bin/bash
+# changeBrightness
+
+# Arbitrary but unique message id
+msgId="991050"
+
+# Change the volume using alsa(might differ if you use pulseaudio)
+xbacklight "$@" > /dev/null
+
+# Query xbacklight for the current brightness 
+brightness="$(xbacklight -get | xargs printf "%.*f" "$p")"
+
+# Show the brightness notification • ─ icon: contrast
+dunstify -a "changeBrightness" -u low -i whitebalance -r "$msgId" \
+"Brightness: ${brightness}%" "$(getProgressString 20 "<b>─</b>" "<b> </b>" "$brightness")"

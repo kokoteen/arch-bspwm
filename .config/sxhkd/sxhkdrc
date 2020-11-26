@@ -180,11 +180,11 @@ XF86AudioStop
 
 ## Brightness up
 XF86MonBrightnessUp
-    xbacklight -inc 10
+    changeBrightness -inc 10
 
 ## Brightness down
 XF86MonBrightnessDown
-    xbacklight -dec 10
+    changeBrightness -dec 10
 
 
 #########################

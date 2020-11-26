@@ -51,6 +51,9 @@ alias userlist="cut -d: -f1 /etc/passwd"
 #merge new settings
 alias merge="xrdb -merge ~/.Xresources"
 
+#startx
+alias startx='startx 2> "$HOME"/.xsession-errors'
+
 # Aliases for software managment
 alias update='yay -Syyu'
 alias search='yay -Ss'
