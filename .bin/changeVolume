@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # changeVolume
 
 # Arbitrary but unique message id
@@ -16,7 +16,7 @@ if [[ $volume == 0 || "$mute" == "off" ]]; then
 else
     # Show the volume notification • ─
     dunstify -a "changeVolume" -u low -i audio-volume-high -r "$msgId" \
-    "Volume: ${volume}%" "$(getProgressString 20 "<b>─</b>" "<b> </b>" $volume)"
+    "Volume: ${volume}%" "$(getProgressString 20 "<b>─</b>" "<b> </b>" "$volume")"
 fi
 
 # Play the volume changed sound
