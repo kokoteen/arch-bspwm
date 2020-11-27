@@ -16,7 +16,7 @@ if [[ $volume == 0 || "$mute" == "off" ]]; then
 else
     # Show the volume notification • ─
     dunstify -a "changeVolume" -u low -i audio-volume-high -r "$msgId" \
-    "Volume: ${volume}%" "$(getProgressString 20 "<b>─</b>" "<b> </b>" "$volume")"
+    "Volume: ${volume}%" "$("$HOME"/.bin/getProgressString 20 "<b>─</b>" "<b> </b>" "$volume")"
 fi
 
 # Play the volume changed sound

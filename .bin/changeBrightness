@@ -12,4 +12,4 @@ brightness="$(xbacklight -get | xargs printf "%.*f" "$p")"
 
 # Show the brightness notification • ─ icon: contrast
 dunstify -a "changeBrightness" -u low -i whitebalance -r "$msgId" \
-"Brightness: ${brightness}%" "$(getProgressString 20 "<b>─</b>" "<b> </b>" "$brightness")"
+"Brightness: ${brightness}%" "$("$HOME"/.bin/getProgressString 20 "<b>─</b>" "<b> </b>" "$brightness")"

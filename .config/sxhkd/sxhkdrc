@@ -41,11 +41,11 @@ super + F7
 
 ## Logout
 super + F9
-      logout_script.sh
+      $HOME/.bin/logout_script.sh
 
 ## Monitor Position
 super + F10
-      cfg_monitor_pos.sh
+      $HOME/.bin/cfg_monitor_pos.sh
 
 ## Rofi sxhkdrc file
 super + F11
@@ -60,7 +60,7 @@ super + F12
 #########################
 ## Yayfzf
 super + y
-      urxvt -e yayfzf.sh
+      urxvt -e $HOME/.bin/yayfzf.sh
        
 ## Toggle fullscreen of window
 super + f
@@ -97,7 +97,7 @@ super + shift + r
 
 ## Reload sxhkd
 super + shift + s
-      pkill -USR1 -x sxhkd && crt_sxhkdrc_sc_file.sh
+      pkill -USR1 -x sxhkd && $HOME/.bin/crt_sxhkdrc_sc_file.sh
 
 ## Kill
 super + shift + q
@@ -143,15 +143,15 @@ alt + p
 
 ## Raises volume
 XF86AudioRaiseVolume
-    changeVolume 10%+
+    $HOME/.bin/changeVolume 10%+
 
 ## Lowers volume
 XF86AudioLowerVolume
-    changeVolume 10%-
+    $HOME/.bin/changeVolume 10%-
 
 ## Mute
 XF86AudioMute
-    changeVolume toggle
+    $HOME/.bin/changeVolume toggle
 
 #Playerctl works for Pragha, Spotify and others
 #DELETE the line for mpc if you want to use playerctl
@@ -180,11 +180,11 @@ XF86AudioStop
 
 ## Brightness up
 XF86MonBrightnessUp
-    changeBrightness -inc 10
+    $HOME/.bin/changeBrightness -inc 10
 
 ## Brightness down
 XF86MonBrightnessDown
-    changeBrightness -dec 10
+    $HOME/.bin/changeBrightness -dec 10
 
 
 #########################
