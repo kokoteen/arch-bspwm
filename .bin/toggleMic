@@ -1,0 +1,18 @@
+#!/bin/bash
+# toggleMic
+
+# Arbitrary but unique message id
+msgId="991051"
+
+# Change the microphone status
+amixer set Capture "$@" > /dev/null
+
+# Query amixer for the current microphone status
+status="$(amixer get Capture | tail -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
+
+# Show the microphone notification 
+[ "$status" == "on" ] && mic_icon="mic-on" || mic_icon="mic-off"
+
+dunstify -a "toggleMic" -u low -i "$mic_icon" -r "$msgId" \
+"Microphone: ${status} "
+
