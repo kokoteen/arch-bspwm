@@ -186,6 +186,10 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     $HOME/.bin/changeBrightness -dec 10
 
+## Microphone toggle
+XF86AudioMicMute
+    $HOME/.bin/toggleMic toggle
+
 
 #########################
 # BSPWM LAYOUT KEYS     #
