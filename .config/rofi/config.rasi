@@ -7,4 +7,3 @@ configuration {
 	show-match: false;
 	theme: "/usr/share/rofi/themes/ArcoLinux-Nord.rasi";
 }
-@import "/home/kokotin/.config/rofi/themes/ArcoLinux-Nord_round.rasi"
