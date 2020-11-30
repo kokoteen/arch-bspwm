@@ -4,16 +4,14 @@
 ## 1. Installation
 
 1. install [arch](https://wiki.archlinux.org/index.php/installation_guide "arch")  
-    `base base-devel linux linux-frimware dhcpcd 
+    `base base-devel linux linux-firmware dhcpcd 
      intel-ucode vim man-db man-pages inetutils netctl iwd`
 2. install yay:  
 	- get yay from git
 	`git clone https://aur.archlinux.org/yay.git`
 	- make pkg
 	`cd yay && makepkg -si`
-3. install pkg with ***"yay"***  
-`$ yay -S $(<pkgs.txt)`
-4. create ***"git --bare"*** repository:
+3. create ***"git --bare"*** repository:
     - clone dotfiles into a ***"bare"*** repository  
     `$ git clone --bare https://github.com/kokoteen/arch-bspwm.git $HOME/.cfg`
     - define the alias in the current ***".bashrc"***  
@@ -22,6 +20,8 @@
     `$ gitt checkout`
     - set the flag ***"showUntrackedFiles"*** to ***"no"*** on this specific (local) repository  
     `$ gitt config --local status.showUntrackedFiles no`
+4. install pkg with ***"yay"***  
+    `$ yay -S $(<pkgs.txt)`
 5. if you're not using display manager, add in `bash_profile` following code if you want to autostart `startx`:   
     ```console
     if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
@@ -59,3 +59,6 @@ For `yay` to have colored output uncomment `Color` in `/etc/pacman.conf`
 
 ### 4. Powerline fonts
 Detailed instruction can be found [here](https://github.com/powerline/fonts.git)
+
+### 5. Move /home to partition
+Instruction can be found [here](https://help.ubuntu.com/community/Partitioning/Home/Moving)
