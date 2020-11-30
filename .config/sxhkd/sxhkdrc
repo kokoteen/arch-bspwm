@@ -16,11 +16,11 @@ Menu
 
 ## Rofi run
 super + F3
-      rofi -show drun -theme themes/ArcoLinux-Nord_round
+      rofi -show run -theme themes/ArcoLinux-Nord_round
 
 ## Emoji
 super + F4
-      rofimoji
+      rofimoji --rofi-args "-theme themes/ArcoLinux-Nord_round" 
 
 ## Appfinder
 super + F5
