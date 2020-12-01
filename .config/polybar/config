@@ -168,7 +168,7 @@ format = <label-state> <label-mode>
 
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-underline= ${colors.color0}
+label-focused-underline= ${colors.foreground}
 label-focused-padding = 4
 label-focused-foreground = ${colors.foreground}
 
