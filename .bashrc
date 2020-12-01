@@ -16,10 +16,10 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 export DESKTOP_SESSION=bspwm
 export HISTCONTROL=ignoreboth:erasedups
 
-if [ "$TERM" != "linux"  ]; then
-    PS1=" \[$(tput setaf 8)\]\[$(tput setab 8)\]\[$(tput bold)\]\[$(tput setaf 2)\]-> \[$(tput setaf 4)\]\W \[$(tput setaf 7)\]\\$\[$(tput sgr0)\]\[$(tput setaf 8)\]\[$(tput sgr0)\] "
-else
+if [ "$TERM" == "linux"  ] || [ -n "$SSH_TTY" ]; then
     PS1="\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+else
+    PS1=" \[$(tput setaf 8)\]\[$(tput setab 8)\]\[$(tput bold)\]\[$(tput setaf 2)\]-> \[$(tput setaf 4)\]\W \[$(tput setaf 7)\]\\$\[$(tput sgr0)\]\[$(tput setaf 8)\]\[$(tput sgr0)\] "
 fi
 
 if [ -d "$HOME/.bin" ]; then 
