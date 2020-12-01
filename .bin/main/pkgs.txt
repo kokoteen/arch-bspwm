@@ -278,16 +278,11 @@ xarchiver
 #! skroz nepotrebno al zanimljivo
 playerctl - kontrolise bilo koji player iz terminala
 
-scrot - screenshot
-
 inxi -?
 
 hwinfo - samo mu ime kaze al je bolja lshw
 
 xl2tpd -?
 
-xdg-desktop-portal-gtk -?
-
 dmenu - msm da mi ne treba zbog rofi
 
-xfce4-notifyd --promeniti na dunst nekako
