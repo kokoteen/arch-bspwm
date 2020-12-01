@@ -4,11 +4,13 @@
 ## 1. Installation
 
 1. install [arch](https://wiki.archlinux.org/index.php/installation_guide "arch")  
-    `base base-devel linux linux-firmware dhcpcd 
-     intel-ucode vim man-db man-pages inetutils netctl iwd`
+    `base base-devel linux linux-firmware dhcpcd go 
+     intel-ucode vim man-db man-pages inetutils netctl iwd 
+     networkmanager network-manager-applet wireless_tools 
+     dialog os-prober mtools dosfstools`
 2. install yay:  
 	- get yay from git
-	`git clone https://aur.archlinux.org/yay.git`
+	`git clone https://aur.archlinux.org/yay.git `
 	- make pkg
 	`cd yay && makepkg -si`
 3. create ***"git --bare"*** repository:
@@ -22,13 +24,14 @@
     `$ gitt config --local status.showUntrackedFiles no`
 4. install pkg with ***"yay"***  
     `$ yay -S $(<pkgs.txt)`
-5. if you're not using display manager, add in `bash_profile` following code if you want to autostart `startx`:   
+5.  Run `xdg-user-dirs` 
+6. if you're not using display manager, add in `bash_profile` following code if you want to autostart `startx`:   
     ```console
     if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
         exec startx 2> "$HOME"/.xsession-errors
     fi
     ```
-6. if you're using display manager, start it with following commands:  
+7. if you're using display manager, start it with following commands:  
 `$ sudo systemctl enable lightdm.service -f`  
 `$ sudo systemctl set-default graphical.target`
 
