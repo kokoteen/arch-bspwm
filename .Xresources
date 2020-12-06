@@ -76,11 +76,11 @@ URxvt*colorUL:           #87afd7
 
 ! fonts
 URxvt*letterSpace: 	    		0
-URxvt*font:                 	xft:My Font:style=Regular:size=13
-URxvt*imFont:               	xft:My Font:style=Regular:size=13
-URxvt*boldFont:             	xft:My Font:style=Bold:size=13
-URxvt*italicFont:           	xft:My Font:style=Italic:size=13
-URxvt*boldItalicFont:     		xft:My Font:style=Bold Italic:size=13
+URxvt*font:                 	xft:UbuntuMono Nerd Font Mono:style=Regular:size=13
+URxvt*imFont:               	xft:UbuntuMono Nerd Font Mono:style=Regular:size=13
+URxvt*boldFont:             	xft:UbuntuMono Nerd Font Mono:style=Bold:size=13
+URxvt*italicFont:           	xft:UbuntuMono Nerd Font Mono:style=Italic:size=13
+URxvt*boldItalicFont:     		xft:UbuntuMono Nerd Font Mono:style=Bold Italic:size=13
 
 ! perl extensions
 URxvt*perl-ext-common:  default,clipboard,url-select,keyboard-select,resize-font,matcher
