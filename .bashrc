@@ -13,14 +13,11 @@
 [[ $- != *i* ]] && return
 
 export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_STYLE_OVERRIDE=GTK+
 export DESKTOP_SESSION=bspwm
 export HISTCONTROL=ignoreboth:erasedups
 
-if [ "$TERM" == "linux"  ] || [ -n "$SSH_TTY" ]; then
-    PS1="\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
-else
-    PS1=" \[$(tput setaf 8)\]\[$(tput setab 8)\]\[$(tput bold)\]\[$(tput setaf 2)\]-> \[$(tput setaf 4)\]\W \[$(tput setaf 7)\]\\$\[$(tput sgr0)\]\[$(tput setaf 8)\]\[$(tput sgr0)\] "
-fi
+PS1="\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 if [ -d "$HOME/.bin" ]; then 
     PATH="$HOME/.bin:$PATH"
@@ -123,4 +120,5 @@ export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/bin/virtualenvwrapper_lazy.sh
 
-
+# starship promt (needs to be last)
+eval "$(starship init bash)"

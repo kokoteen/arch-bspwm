@@ -1,0 +1,100 @@
+add_newline = false 	# Don't print a new line at the start of the prompt
+[line_break]
+disabled = false
+
+[character]                            
+success_symbol = "[❯](bold green)"    
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[V](bold green) "
+
+[package]
+disabled = true
+
+[dart]
+format = "via [🔰 $version](bold red) "
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = true
+format = "[$path](bold cyan) "
+read_only = "🔒"
+read_only_style = "red"
+
+[docker_context]
+format = "via [🐋 $context](blue bold)"
+
+[git_branch]
+format = "on [$symbol$branch]($style) "
+symbol = "  "
+style = "bold purple"
+truncation_length = 4
+truncation_symbol = "…/"
+
+[git_commit]
+commit_hash_length = 7
+format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+style = "bold green"
+tag_symbol = "🏷 "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+cherry_pick = "[CHERRY-PICKING]"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style = "bold yellow"
+
+[git_status]
+conflicted = "🏳"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+
+[golang]
+format = "via [$symbol$version]($style) "
+symbol = "🐹 "
+style = "bold cyan"
+
+[hostname]
+ssh_only = true
+format =  "on [$hostname]($style) in "
+style = "bold dimmed green"
+trim_at = "."
+disabled = false
+
+[java]
+format = "via [${symbol}${version}]($style) "
+symbol = "☕ "
+style = "red dimmed"
+
+[jobs]
+threshold = 1
+format = "[$symbol$number]($style) "
+symbol = "✦ "
+style = "bold blue"
+
+[lua]
+format = "via [$symbol$version]($style) "
+symbol = "🌙 "
+style = "bold blue"
+lua_binary = "lua"
+
+[python]
+format = "via [$symbol$pyenv_prefix$version($virtualenv)]($style)"
+symbol = "🐍 "
+style = "yellow bold"
+pyenv_version_name = true
+pyenv_prefix = "pyenv "
+scan_for_pyfiles = true
+python_binary = "python"

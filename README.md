@@ -60,8 +60,9 @@ Type=simple
 ```
 For `yay` to have colored output uncomment `Color` in `/etc/pacman.conf`
 
-### 4. Powerline fonts
-Detailed instruction can be found [here](https://github.com/powerline/fonts.git)
+### 4. Powerline fonts & Nerd Fonts
+Detailed instruction for Powerline fonts can be found [here](https://github.com/powerline/fonts.git)  
+Detailed instruction for Nerd Fonts can be found [here](https://www.nerdfonts.com/#home)
 
-### 5. Move /home to partition
+### 5. Move `/home` dir to partition
 Instruction can be found [here](https://help.ubuntu.com/community/Partitioning/Home/Moving)

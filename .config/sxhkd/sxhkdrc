@@ -22,22 +22,18 @@ super + F3
 super + F4
       rofimoji --rofi-args "-theme themes/ArcoLinux-Nord_round" 
 
-## Appfinder
+#
 super + F5
-      xfce4-appfinder
-
+      
 ## Meld
 super + F6
       meld
 
-
 ## Virtualbox
 super + F7
 
-
 #
 #super + F8
-
 
 ## Logout
 super + F9
@@ -81,7 +77,7 @@ super + Escape
 
 ## Terminal emulator
 super + Return
-      urxvt
+      alacritty
 
 #########################
 # SUPER + SHIFT KEYS    #

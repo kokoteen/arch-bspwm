@@ -112,13 +112,13 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = '│'
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = '│'
-let g:airline_symbols.linenr = 'ℓ:'
-let g:airline_symbols.branch = 'ƕ' " µ
-let g:airline_symbols.paste = 'Ƥ' " ρ
+let g:airline_symbols.linenr = ':' " ℓ
+let g:airline_symbols.branch = '' " µ ƕ
+let g:airline_symbols.paste = 'Ƥ' " ρ Ƥ
 let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_symbols.readonly = 'Ʀ'
-let g:airline_symbols.dirty='⚡'
-let g:airline_symbols.maxlinenr = ' #'
+let g:airline_symbols.readonly = '' " Ʀ
+let g:airline_symbols.dirty=''
+let g:airline_symbols.maxlinenr = '' " #
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
