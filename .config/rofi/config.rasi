@@ -5,5 +5,5 @@ configuration {
 	separator-style: "solid";
 	hide-scrollbar: true;
 	show-match: false;
-	theme: "/usr/share/rofi/themes/ArcoLinux-Nord.rasi";
+	theme: "~/.config/rofi/themes/ArcoLinux-Nord_round.rasi";
 }
