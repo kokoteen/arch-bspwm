@@ -128,8 +128,8 @@ tray-scale = 1.0
 tray-position = right
 tray-background = ${colors.background}
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+scroll-up = bspwm.next
+scroll-down = bspwm.prev
 
 
 
