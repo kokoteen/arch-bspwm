@@ -3,8 +3,8 @@ add_newline = false 	# Don't print a new line at the start of the prompt
 disabled = false
 
 [character]                            
-success_symbol = "[❯](bold green)"    
-error_symbol = "[❯](bold red)"
+success_symbol = "[ 🐞](bold yellow)"    
+error_symbol = "[ 🤬](bold red)"
 vicmd_symbol = "[V](bold green) "
 
 [package]
@@ -22,7 +22,10 @@ read_only = "🔒"
 read_only_style = "red"
 
 [docker_context]
-format = "via [🐋 $context](blue bold)"
+format = "via [$symbol$context]($style)"
+symbol = "🐳"
+style = "blue bold"
+disable = false
 
 [git_branch]
 format = "on [$symbol$branch]($style) "
@@ -49,7 +52,7 @@ am_or_rebase = "AM/REBASE"
 style = "bold yellow"
 
 [git_status]
-conflicted = "🏳"
+conflicted = "⚔️"
 ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
@@ -91,10 +94,10 @@ style = "bold blue"
 lua_binary = "lua"
 
 [python]
-format = "via [$symbol$pyenv_prefix$version($virtualenv)]($style)"
+format = "via [$symbol($pyenv_prefix)$version \\($virtualenv\\)]($style)"
 symbol = "🐍 "
 style = "yellow bold"
-pyenv_version_name = true
+pyenv_version_name = false
 pyenv_prefix = "pyenv "
 scan_for_pyfiles = true
 python_binary = "python"
