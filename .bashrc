@@ -17,6 +17,8 @@ export QT_STYLE_OVERRIDE=GTK+
 export DESKTOP_SESSION=bspwm
 export HISTCONTROL=ignoreboth:erasedups
 
+set -o vi # use vi in terminal
+
 PS1="\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 if [ -d "$HOME/.bin" ]; then 

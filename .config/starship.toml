@@ -35,8 +35,8 @@ truncation_length = 4
 truncation_symbol = "…/"
 
 [git_commit]
-commit_hash_length = 7
 format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+commit_hash_length = 7
 style = "bold green"
 tag_symbol = "🏷 "
 
@@ -52,6 +52,8 @@ am_or_rebase = "AM/REBASE"
 style = "bold yellow"
 
 [git_status]
+format = '([\[ $all_status$ahead_behind \]]($style))'
+style = "bold red"
 conflicted = "⚔️"
 ahead = "⇡${count}"
 behind = "⇣${count}"
@@ -60,8 +62,8 @@ untracked = "🤷‍"
 stashed = "📦"
 modified = "📝"
 staged = '[++\($count\)](green)'
-renamed = "👅"
-deleted = "🗑"
+renamed = "💱"
+deleted = "🔥"
 
 
 [golang]

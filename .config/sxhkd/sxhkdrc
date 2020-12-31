@@ -62,6 +62,9 @@ super + y
 super + f
       bspc node --state \~fullscreen
 
+## Sticky window
+super + s
+      bspc node --state \~floating --flag sticky
 
 ## Toggle pseudo tiling of window
 super + p

@@ -26,7 +26,7 @@
     `$ yay -S $(<pkgs.txt)`
 5.  Run `xdg-user-dirs` 
 6. if you're not using display manager, add in `bash_profile` following code if you want to autostart `startx`:   
-    ```console
+    ```bash
     if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
         exec startx 2> "$HOME"/.xsession-errors
     fi
