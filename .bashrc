@@ -13,7 +13,7 @@
 [[ $- != *i* ]] && return
 
 export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_STYLE_OVERRIDE=GTK+
+# export QT_STYLE_OVERRIDE=GTK+
 export DESKTOP_SESSION=bspwm
 export HISTCONTROL=ignoreboth:erasedups
 
@@ -54,7 +54,7 @@ alias merge="xrdb -merge ~/.Xresources"
 alias startx='startx 2> "$HOME"/.xsession-errors'
 
 # Aliases for software managment
-alias update='yay -Syyu'
+alias update='yay -Syu'
 alias search='yay -Ss'
 
 #Cleanup orphaned packages
