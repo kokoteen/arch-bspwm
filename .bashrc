@@ -13,7 +13,6 @@
 [[ $- != *i* ]] && return
 
 export QT_QPA_PLATFORMTHEME=qt5ct
-# export QT_STYLE_OVERRIDE=GTK+
 export DESKTOP_SESSION=bspwm
 export HISTCONTROL=ignoreboth:erasedups
 

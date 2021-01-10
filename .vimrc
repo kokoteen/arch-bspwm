@@ -3,6 +3,10 @@ if filereadable(expand("~/.vimrc.plug"))
   source ~/.vimrc.plug
 endif
 
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 " Set compatibility to Vim only.
 set nocompatible
 
@@ -92,11 +96,10 @@ autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
 " Color sheme
-set background=dark
+set background=light
 set colorcolumn=100
 highlight Normal ctermfg=grey ctermbg=black
-colorscheme dracula
-
+colorscheme PaperColor
 
 " LET PART
 
