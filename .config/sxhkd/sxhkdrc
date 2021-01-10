@@ -110,13 +110,19 @@ super + shift + x
 super + shift + p
       xfce4-settings-manager
 
+## Screen-Locker
+super + shift + l
+      betterlockscreen -l
+
+## Toggle Light/Dark theme
+super + shift + t
+      $HOME/.bin/toggleTheme.sh && $HOME/.config/bspwm/bspwmrc
+
 #########################
 # SUPER + CTRL KEYS    #
 #########################
 
-## Screen-Locker
-super + ctrl + l
-      betterlockscreen -l
+
 
 
 #########################
