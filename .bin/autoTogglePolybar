@@ -1,17 +1,18 @@
 #!/usr/bin/bash
 
 status="show"
-y_lim=7
+y_low=1
+y_upp=25
 pid="$(pgrep -x polybar | tail -1)"
 
 while :
 do
     y=$(xdotool getmouselocation | awk '{print $2}' | cut -d: -f2)
 
-    if [ "$y" -lt "$y_lim" ] && [ $status == "hide" ]; then
+    if [ "$y" -lt "$y_low" ] && [ $status == "hide" ]; then
         polybar-msg cmd show > /dev/null
         status="show"
-    elif [ "$y" -gt "$y_lim" ] && [ $status == "show" ]; then
+    elif [ "$y" -gt "$y_upp" ] && [ $status == "show" ]; then
         polybar-msg cmd hide > /dev/null
         status="hide"
      elif [ "$(pgrep -x polybar | tail -1)" != "$pid" ]; then
