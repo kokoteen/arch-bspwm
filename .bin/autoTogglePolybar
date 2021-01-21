@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+status="show"
+
+while :
+do
+
+    y=$(xdotool getmouselocation | awk '{print $2}' | cut -d: -f2)
+    
+    if [ "$y" -lt "20" ] && [ $status == "hide" ]; then
+        polybar-msg cmd show > /dev/null
+        status="show"
+    elif [ "$y" -gt "20" ] && [ $status == "show" ]; then
+        polybar-msg cmd hide > /dev/null
+        status="hide"
+    fi
+
+    sleep 0.9
+done
+
+
+
+

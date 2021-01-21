@@ -13,7 +13,7 @@ bspc rule -r "*"
 #bspc config border_radius        	8 # needs patch
 bspc config border_width         	2
 bspc config window_gap           	3
-bspc config top_padding          	32
+bspc config top_padding          	1
 bspc config bottom_padding       	1
 bspc config left_padding         	1
 bspc config right_padding        	1
