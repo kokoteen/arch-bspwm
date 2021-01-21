@@ -2,6 +2,7 @@
 
 status="show"
 y_lim=7
+pid="$(pgrep -x polybar | tail -1)"
 
 while :
 do
@@ -13,6 +14,10 @@ do
     elif [ "$y" -gt "$y_lim" ] && [ $status == "show" ]; then
         polybar-msg cmd hide > /dev/null
         status="hide"
+     elif [ "$(pgrep -x polybar | tail -1)" != "$pid" ]; then
+        polybar-msg cmd show > /dev/null
+        status="show"
+        pid="$(pgrep -x polybar | tail -1)"
     fi
 
     sleep 0.9
