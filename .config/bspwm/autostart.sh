@@ -2,7 +2,7 @@
 
 run()
 {
-  if ! pgrep "$1" ;
+  if ! pgrep -f "$1" ;
   then
     "$@"&
   fi
