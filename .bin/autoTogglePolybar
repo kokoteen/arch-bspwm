@@ -1,22 +1,22 @@
 #!/usr/bin/bash
 
 status="show"
-y_low=1
-y_upp=25
+y_low=875
+y_upp=897
 pid="$(pgrep -x polybar | tail -1)"
 
 while :
 do
     y=$(xdotool getmouselocation | awk '{print $2}' | cut -d: -f2)
-
-    if [ "$y" -lt "$y_low" ] && [ $status == "hide" ]; then
-        polybar-msg cmd show > /dev/null
-        status="show"
-    elif [ "$y" -gt "$y_upp" ] && [ $status == "show" ]; then
-        polybar-msg cmd hide > /dev/null
+    echo $y
+    if [ "$y" -lt "$y_low" ] && [ $status == "show" ]; then
+        polybar-msg cmd hide #> /dev/null
         status="hide"
+    elif [ "$y" -gt "$y_upp" ] && [ $status == "hide" ]; then
+        polybar-msg cmd show #> /dev/null
+        status="show"
      elif [ "$(pgrep -x polybar | tail -1)" != "$pid" ]; then
-        polybar-msg cmd show > /dev/null
+        polybar-msg cmd show #> /dev/null
         status="show"
         pid="$(pgrep -x polybar | tail -1)"
     fi
