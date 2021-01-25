@@ -1,20 +1,20 @@
 #!/usr/bin/bash
 
-status="show"
-y_low=0
-y_upp=25
-pid="$(pgrep -x polybar | tail -1)"
-
-while :
-do
-    eval "$(xdotool getmouselocation --shell)"
-    [ "$Y" -eq "$y_low" ] && [ $status == "hide" ] && polybar-msg cmd show > /dev/null && \
-        status="show"
-    [ "$Y" -gt "$y_upp" ] && [ $status == "show" ] && polybar-msg cmd hide > /dev/null && \
-        status="hide"
-    [ "$(pgrep -x polybar | tail -1)" != "$pid" ] && polybar-msg cmd show > /dev/null && \
-        status="show" && pid="$(pgrep -x polybar | tail -1)"
-
-    sleep 0.9
-done
-
+#status="show"
+#y_low=0
+#y_upp=25
+#pid="$(pgrep -x polybar | tail -1)"
+#
+#while :
+#do
+#    eval "$(xdotool getmouselocation --shell)"
+#    [ "$Y" -eq "$y_low" ] && [ $status == "hide" ] && polybar-msg cmd show > /dev/null && \
+#        status="show"
+#    [ "$Y" -gt "$y_upp" ] && [ $status == "show" ] && polybar-msg cmd hide > /dev/null && \
+#        status="hide"
+#    [ "$(pgrep -x polybar | tail -1)" != "$pid" ] && polybar-msg cmd show > /dev/null && \
+#        status="show" && pid="$(pgrep -x polybar | tail -1)"
+#
+#    sleep 0.9
+#done
+xdotool behave_screen_edge bottom exec polybar-msg cmd toggle
