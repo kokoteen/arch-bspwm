@@ -1,25 +1,20 @@
 #!/usr/bin/bash
 
 status="show"
-y_low=1
+y_low=0
 y_upp=25
 pid="$(pgrep -x polybar | tail -1)"
 
 while :
 do
-    y=$(xdotool getmouselocation | awk '{print $2}' | cut -d: -f2)
-
-    if [ "$y" -lt "$y_low" ] && [ $status == "hide" ]; then
-        polybar-msg cmd show > /dev/null
+    eval "$(xdotool getmouselocation --shell)"
+    [ "$Y" -eq "$y_low" ] && [ $status == "hide" ] && polybar-msg cmd show > /dev/null && \
         status="show"
-    elif [ "$y" -gt "$y_upp" ] && [ $status == "show" ]; then
-        polybar-msg cmd hide > /dev/null
+    [ "$Y" -gt "$y_upp" ] && [ $status == "show" ] && polybar-msg cmd hide > /dev/null && \
         status="hide"
-     elif [ "$(pgrep -x polybar | tail -1)" != "$pid" ]; then
-        polybar-msg cmd show > /dev/null
-        status="show"
-        pid="$(pgrep -x polybar | tail -1)"
-    fi
+    [ "$(pgrep -x polybar | tail -1)" != "$pid" ] && polybar-msg cmd show > /dev/null && \
+        status="show" && pid="$(pgrep -x polybar | tail -1)"
 
     sleep 0.9
 done
+
