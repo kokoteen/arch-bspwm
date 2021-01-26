@@ -96,10 +96,10 @@ autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
 " Color sheme
-set background=light
+set background=dark
 set colorcolumn=100
 highlight Normal ctermfg=grey ctermbg=black
-colorscheme PaperColor
+colorscheme dracula
 
 " LET PART
 

@@ -57,7 +57,7 @@ schemes:
       cyan:    '#00a5ab'
       white:   '#ffffff'
     
-colors: *light
+colors: *dark
 
 # Font configuration (changes require restart)
 font:

@@ -1,39 +1,57 @@
 #!/usr/bin/bash
+function bubble_sort()
+{
+    local array=($@) max=$#
+    for ((i=0; i<$max; i++)); do
+        for ((j=0; j<$max-i-1; j++)); do
+            if ((array[j]>array[j+1])); then
+                t=${array[j]}
+                array[j]=${array[j+1]}
+                array[j+1]=$t
+            fi
+        done
+    done
+    echo ${array[@]}
+}
 
-#status="show"
-#pid="$(pgrep -x polybar | tail -1)"
-#
-#while :
-#do
-#
-#    sleep 0.9
-#done
-
-# xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2
-
+status="show"
+pid="$(pgrep -x polybar | tail -1)"
 
 declare -a delta
 declare -a bins 
 declare -a y_upp
 
 delta=( $(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'x' -f1) )
-bins=( $(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2) )
-bins+=( $(("${bins[-1]}"+"${delta[-1]}")) )
-y_upp=( $(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f1 | cut -d'x' -f2) )
+delta=($(bubble_sort "${delta[@]}"))
 
-bins=( $(sort <<< "${bins[@]}") )
-y_upp=( $(sort <<< "${y_upp[@]}") )
-echo ${bins[@]}
-eval "$(xdotool getmouselocation --shell)"
-for ((i=0;i<$(("${#bins[@]}"-1));i++)); do
-    if (("${bins[i]}"<="$X" && "$X"<="${bins[i+1]}")); then
-        y_low=$(("${y_upp[i]}"-25))
-        [ "$Y" -lt "$y_low" ] && [ $status == "hide" ] && polybar-msg cmd show > /dev/null && \
-            status="show"
-        [ "$Y" -gt "$y_upp" ] && [ $status == "show" ] && polybar-msg cmd hide > /dev/null &&
-            status="hide"
-        [ "$(pgrep -x polybar | tail -1)" != "$pid" ] && polybar-msg cmd show > /dev/null && \
-            status="show" && pid="$(pgrep -x polybar | tail -1)"
-        break
-    fi
+bins=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2))
+bins=($(bubble_sort ${bins[@]}))
+bins+=($(( "${bins[-1]}"+"${delta[-1]}" )))
+
+y_upp=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f1 | cut -d'x' -f2))
+y_upp=($bubble_sort ${y_upp[@]})
+
+while :
+do
+    eval "$(xdotool getmouselocation --shell)"
+    for ((i=0;i<$(("${#bins[@]}"-1));i++)); do
+        if ((bins[i]<=X && X<=bins[i+1])); then
+            y_low=$(("${y_upp[i]}"-25))
+            echo $X
+            #echo $(("${y_upp[i]}"-2))
+            [ "$Y" -lt "$y_low" ] && [ $status == "show" ] && polybar-msg cmd hide > /dev/null && \
+                status="hide"
+            [ "$Y" -gt $(("${y_upp[i]}"-2)) ] && [ $status == "hide" ] && polybar-msg cmd show > /dev/null &&
+                status="show"
+            [ "$(pgrep -x polybar | tail -1)" != "$pid" ] && polybar-msg cmd show > /dev/null && \
+                status="show" && pid="$(pgrep -x polybar | tail -1)"
+            break
+        fi
+    done
+
+    sleep 0.9
 done
+
+# xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2
+
+
