@@ -22,14 +22,14 @@ declare -a bins
 declare -a y_upp
 
 delta=( $(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'x' -f1) )
-delta=($(bubble_sort "${delta[@]}"))
+#delta=($(bubble_sort "${delta[@]}"))
 
 bins=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2))
 bins=($(bubble_sort ${bins[@]}))
 bins+=($(( "${bins[-1]}"+"${delta[-1]}" )))
 
 y_upp=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f1 | cut -d'x' -f2))
-y_upp=($bubble_sort ${y_upp[@]})
+#y_upp=($bubble_sort ${y_upp[@]})
 
 while :
 do
@@ -37,7 +37,6 @@ do
     for ((i=0;i<$(("${#bins[@]}"-1));i++)); do
         if ((bins[i]<=X && X<=bins[i+1])); then
             y_low=$(("${y_upp[i]}"-25))
-            echo $X
             #echo $(("${y_upp[i]}"-2))
             [ "$Y" -lt "$y_low" ] && [ $status == "show" ] && polybar-msg cmd hide > /dev/null && \
                 status="hide"
