@@ -1,17 +1,26 @@
 #!/usr/bin/bash
+
 function bubble_sort()
 {
-    local array=($@) max=$#
-    for ((i=0; i<$max; i++)); do
-        for ((j=0; j<$max-i-1; j++)); do
+    local array=("$@") max=$#
+    for ((i=0; i<max; i++)); do
+        for ((j=0; j<max-i-1; j++)); do
             if ((array[j]>array[j+1])); then
                 t=${array[j]}
                 array[j]=${array[j+1]}
                 array[j+1]=$t
+
+                t=${y_upp[j]}
+                y_upp[j]=${y_upp[j+1]}
+                y_upp[j+1]=$t
+                
+                t=${delta[j]}
+                delta[j]=${delta[j+1]}
+                delta[j+1]=$t
             fi
         done
     done
-    echo ${array[@]}
+    bins=("${array[@]}")
 }
 
 status="show"
@@ -21,15 +30,13 @@ declare -a delta
 declare -a bins 
 declare -a y_upp
 
-delta=( $(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'x' -f1) )
-#delta=($(bubble_sort "${delta[@]}"))
+y_upp=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f1 | cut -d'x' -f2))
+
+delta=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'x' -f1))
 
 bins=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2))
-bins=($(bubble_sort ${bins[@]}))
+bubble_sort "${bins[@]}"
 bins+=($(( "${bins[-1]}"+"${delta[-1]}" )))
-
-y_upp=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f1 | cut -d'x' -f2))
-#y_upp=($bubble_sort ${y_upp[@]})
 
 while :
 do
@@ -50,7 +57,4 @@ do
 
     sleep 0.9
 done
-
-# xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2
-
 
