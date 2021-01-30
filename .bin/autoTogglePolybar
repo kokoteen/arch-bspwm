@@ -29,6 +29,7 @@ pid="$(pgrep -x polybar | tail -1)"
 declare -a delta
 declare -a bins 
 declare -a y_upp
+declare -a y_low
 
 y_upp=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f1 | cut -d'x' -f2))
 
@@ -38,14 +39,16 @@ bins=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'
 bubble_sort "${bins[@]}"
 bins+=($(( "${bins[-1]}"+"${delta[-1]}" )))
 
+for (( i=0; i<"${#y_upp[@]}"; i++  )); do
+    y_low[i]=$(("${y_upp[i]}"-25))
+done
+
 while :
 do
     eval "$(xdotool getmouselocation --shell)"
-    for ((i=0;i<$(("${#bins[@]}"-1));i++)); do
-        if ((bins[i]<=X && X<=bins[i+1])); then
-            y_low=$(("${y_upp[i]}"-25))
-            #echo $(("${y_upp[i]}"-2))
-            [ "$Y" -lt "$y_low" ] && [ $status == "show" ] && polybar-msg cmd hide > /dev/null && \
+    for ((i=0; i<"${#bins[@]}"-1; i++)); do
+        if ((bins[i]<=X && X<bins[i+1])); then
+            [ "$Y" -lt "${y_low[i]}" ] && [ $status == "show" ] && polybar-msg cmd hide > /dev/null && \
                 status="hide"
             [ "$Y" -gt $(("${y_upp[i]}"-2)) ] && [ $status == "hide" ] && polybar-msg cmd show > /dev/null &&
                 status="show"
