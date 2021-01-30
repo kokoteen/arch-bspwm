@@ -257,7 +257,7 @@ grub-theme-vimix
 usb_modeswitch
 wpa_supplicant
 lm_sensors
-the_platinum_searcher-bin
+ripgrep
 
 xcursor-simpleandsoft
 xcursor-vanilla-dmz-aa
@@ -287,3 +287,5 @@ xl2tpd -?
 
 dmenu - msm da mi ne treba zbog rofi
 
+procs
+bat

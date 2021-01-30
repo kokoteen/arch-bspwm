@@ -73,8 +73,8 @@ bspc rule -a feh state=floating
 bspc rule -a Matplotlib state=floating center=true
 bspc rule -a File-roller state=floating center=true
 bspc rule -a Pavucontrol state=floating center=true
-bspc rule -a Signal state=floating center=true rectangle=680x750
-bspc rule -a TelegramDesktop state=floating center=true rectangle=680x750
+bspc rule -a Signal state=floating center=true rectangle=670x514+0+0
+bspc rule -a TelegramDesktop state=floating center=true rectangle=309x514+0+0
 
 
 #open applications on specific workspaces
