@@ -58,6 +58,6 @@ do
         fi
     done
 
-    sleep 0.9
+    sleep 2
 done
 
