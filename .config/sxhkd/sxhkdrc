@@ -92,7 +92,7 @@ super + shift + d
 
 ## Reload bspwm
 super + shift + r
-      $HOME/.config/bspwm/bspwmrc
+      bspc wm -r 
 
 ## Reload sxhkd
 super + shift + s

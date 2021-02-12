@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+killall autoTogglePolybar
+
+bspc wm -r
