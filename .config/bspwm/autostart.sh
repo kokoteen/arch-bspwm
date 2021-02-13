@@ -71,5 +71,5 @@ run "$HOME/.config/polybar/launch.sh"				# polybar
 run autoTogglePolybar
 run nm-applet 										# wifi icon
 run kdeconnect-indicator							# kdeconnect  
-run /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 	# Authentication agents
+run polkit-dumb-agent 								# Authentication agents
 run dunst											# notification

@@ -116,7 +116,7 @@ font-2 = "FontAwesome:size=13;4"
 
 modules-left = bspwm
 modules-center = weather clock 
-modules-right = xkeyboard cpu2 memory2 pavolume date battery
+modules-right = xkeyboard cpu2 memory2 pavolume battery
 
 tray-detached = false
 tray-offset-x = 0
@@ -295,7 +295,7 @@ label = %percentage:3%%
 
 [module/date]
 type = custom/script
-exec = /usr/bin/date '+%a %d-%m-%Y'
+exec = /usr/bin/date '+%a %d/%m'
 click-left = /usr/bin/gsimplecal
 interval = 5
 ;    
@@ -312,6 +312,7 @@ label = %output%
 [module/clock]
 type = custom/script
 exec = /usr/bin/date '+%I:%M %p'
+click-left = /usr/bin/gsimplecal
 interval = 5
 ;
 format-prefix = " "

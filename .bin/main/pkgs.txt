@@ -271,7 +271,7 @@ visual-studio-code-bin
 gnome-keyring
 dunst
 polkit
-polkit-gnome
+polkit-dumb-agent-git
 fzf
 xarchiver
 alacritty
