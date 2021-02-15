@@ -12,7 +12,7 @@ run()
 [ ! -f "$HOME/.monitor_position" ] && printf "%s\n" "monitor_position 1" "mirror_mode 0" > "$HOME/.monitor_position"
 
 #find out your monitor name with xrandr or arandr (save and you get this line)
-autorandr -c #--force
+[ "$(grep -w mirror_mode "$HOME/.monitor_position" | awk '{print $2}')" -eq "0" ] && autorandr -c 
 
 #create/configures .clock_docked 
 #for conky clock

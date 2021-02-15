@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-function bubble_sort()
+bubble_sort()
 {
     local array=("$@") max=$#
     for ((i=0; i<max; i++)); do
@@ -31,11 +31,10 @@ declare -a bins
 declare -a y_upp
 declare -a y_low
 
-y_upp=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f1 | cut -d'x' -f2))
+mapfile -t y_upp < <(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f1| cut -d'x' -f2)
+mapfile -t delta < <(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'x' -f1)
+mapfile -t bins  < <(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2)
 
-delta=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'x' -f1))
-
-bins=($(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2))
 bubble_sort "${bins[@]}"
 bins+=($(( "${bins[-1]}"+"${delta[-1]}" )))
 

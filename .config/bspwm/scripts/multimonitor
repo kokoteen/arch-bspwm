@@ -1,0 +1,56 @@
+#!/usr/bin/bash
+
+bubble_sort()
+{
+    local array=("$@") max=$#
+    for ((i=0; i<max; i++)); do
+        for ((j=0; j<max-i-1; j++)); do
+            if ((array[j]>array[j+1])); then
+                t=${array[j]}
+                array[j]=${array[j+1]}
+                array[j+1]=$t
+
+                t=${monitor_names[j]}
+                monitor_names[j]=${monitor_names[j+1]}
+                monitor_names[j+1]=$t
+            fi
+        done
+    done
+    bins=("${array[@]}")
+}
+
+declare -a layout
+declare -a ws
+
+n="$(xrandr | grep -c "\*" )" # num of monitors
+case $n in 
+    1) ws=(5);;
+    2) ws=(5 5);;
+    3) ws=(3 4 4);;
+    4) ws=(2 3 3 2);;
+    5) ws=(2 2 2 2 2);;
+    6) ws=(1 2 2 2 2 1);;
+    7) ws=(1 1 2 2 2 1 1);;
+    8) ws=(1 1 1 2 2 1 1 1);;
+    9) ws=(1 1 1 1 2 1 1 1 1);;
+    10)ws=(1 1 1 1 1 1 1 1 1 1);;
+esac
+
+j=1     # init ws or desktop
+for ((i=0;i<n;i++)); do
+    pom=""
+    for ((k=0;k<ws[i];k++)); do
+        pom+="$j "
+        ((j++))
+    done
+    layout[i]="$pom"
+done
+
+mapfile -t bins < <(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2)
+mapfile -t monitor_names < <(xrandr -q | sed -nE 's/ connected .*//p')
+
+bubble_sort "${bins[@]}"
+
+for ((i=0;i<n;i++)); do
+    bspc monitor "${monitor_names[i]}" -d ${layout[i]}
+done
