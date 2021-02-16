@@ -39,7 +39,7 @@
 
 ## 2. Setup dual-monitor
 
-After installation, to configure dual monitor setup, run ***"cfg_monitor_pos.sh"***  by presing `super + F10`.
+After installation, to configure dual monitor setup, run ***"monitorMode"***  by presing `super + F10`.
 
 ## 3. Common problems
 

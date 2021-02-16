@@ -1,10 +1,10 @@
 #!/bin/sh
 
-DARK_MODE=$(grep -w dark_mode "$HOME/.monitor_position" | awk '{print $2}')
+DARK_MODE=$(grep -w dark_mode "$HOME/.my_settings" | awk '{print $2}')
 
 if [ "$DARK_MODE" -eq "0" ]; then
     #Dark
-    sed -i "s+dark_mode 0+dark_mode 1+" "$HOME/.monitor_position"
+    sed -i "s+dark_mode 0+dark_mode 1+" "$HOME/.my_settings"
 
     #gtk3
     sed -i "s+gtk-icon-theme-name=Papirus+gtk-icon-theme-name=Papirus-Dark+" "$HOME/.config/gtk-3.0/settings.ini"
@@ -27,7 +27,7 @@ if [ "$DARK_MODE" -eq "0" ]; then
     sed -i "s+custom_palette=false+custom_palette=true+" "$HOME/.config/qt5ct/qt5ct.conf"
 else
     #Light
-    sed -i "s+dark_mode 1+dark_mode 0+" "$HOME/.monitor_position"
+    sed -i "s+dark_mode 1+dark_mode 0+" "$HOME/.my_settings"
 
     #gtk3
     sed -i "s+gtk-icon-theme-name=Papirus-Dark+gtk-icon-theme-name=Papirus+" "$HOME/.config/gtk-3.0/settings.ini"

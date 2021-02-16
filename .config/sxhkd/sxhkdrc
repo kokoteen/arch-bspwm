@@ -41,7 +41,7 @@ super + F9
 
 ## Monitor Position
 super + F10
-      $HOME/.bin/cfg_monitor_pos.sh
+      $HOME/.bin/monitorMode
 
 ## Rofi sxhkdrc file
 super + F11

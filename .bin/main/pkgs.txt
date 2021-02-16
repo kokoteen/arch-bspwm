@@ -275,6 +275,8 @@ polkit-dumb-agent-git
 fzf
 xarchiver
 alacritty
+keynav
+bat
 
 #! skroz nepotrebno al zanimljivo
 playerctl - kontrolise bilo koji player iz terminala
@@ -288,4 +290,3 @@ xl2tpd -?
 dmenu - msm da mi ne treba zbog rofi
 
 procs
-bat

@@ -40,7 +40,7 @@ bspc config presel_feedback_color	"#00ff84"
 
 
 #AutoConfig monitor
-if [ "$(grep -w mirror_mode "$HOME/.monitor_position" | awk '{print $2}')" -eq "1" ]; then
+if [ "$(grep -w mirror_mode "$HOME/.my_settings" | awk '{print $2}')" -eq "1" ]; then
     bspc monitor -d 1 2 3 
 else
     "$HOME/.config/bspwm/scripts/multimonitor" 
