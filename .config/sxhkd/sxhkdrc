@@ -116,7 +116,7 @@ super + shift + l
 
 ## Toggle Light/Dark theme
 super + shift + t
-      $HOME/.bin/toggleTheme.sh && $HOME/.config/bspwm/bspwmrc
+      $HOME/.bin/toggleTheme.sh && bspc wm -r
 
 #########################
 # SUPER + CTRL KEYS    #
@@ -140,7 +140,7 @@ ctrl + shift + Escape
 
 ## Screeenshooter
 alt + p
-     xfce4-screenshooter
+    io.elementary.screenshot-tool
 
 #########################
 #     MULTIMEDIA KEYS   #

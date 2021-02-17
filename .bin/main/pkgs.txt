@@ -185,7 +185,7 @@ kdeconnect
 krita
 wps-office
 wps-office-mime
-firefox
+brave
 gparted
 gpick
 barrier
@@ -199,10 +199,7 @@ mtpfs
 lshw
 sysfsutils
 syslinux
-sutils-git
 speedtest-cli
-kvantum-qt5
-kvantum-theme-arc
 android-tools
 xdg-utils
 xdg-user-dirs
@@ -251,8 +248,8 @@ pulseaudio-equalizer-ladspa
 pavucontrol
 
 grub
-grub-customizer
-grub-theme-vimix
+#grub-customizer
+#grub-theme-vimix
 
 usb_modeswitch
 wpa_supplicant
@@ -266,7 +263,8 @@ qt5-styleplugins
 qt5-xmlpatterns
 qt5ct
 
-xfce4-screenshooter
+pantheon-screenshot
+flameshot
 visual-studio-code-bin
 gnome-keyring
 dunst
@@ -277,6 +275,7 @@ xarchiver
 alacritty
 keynav
 bat
+procs
 
 #! skroz nepotrebno al zanimljivo
 playerctl - kontrolise bilo koji player iz terminala
@@ -289,4 +288,4 @@ xl2tpd -?
 
 dmenu - msm da mi ne treba zbog rofi
 
-procs
+

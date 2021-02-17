@@ -18,8 +18,7 @@ run()
 n=$(xrandr | grep -w connected | wc | awk '{print $1}')
 killall conky
 for ((i=0;i<n;i++)); do
-	conky -c <(sed -e "s/xinerama_head = 0/xinerama_head = ${i}/g" "$HOME/.config/bspwm/clock_primary") &
-    sleep 5
+    conky -c <(sed -e "s/xinerama_head = 0/xinerama_head = ${i}/g" "$HOME/.config/bspwm/clock_primary") &
 done
 
 #add keyboard layout
