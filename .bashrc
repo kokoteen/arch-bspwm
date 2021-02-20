@@ -120,5 +120,8 @@ export WORKON_HOME=~/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/bin/virtualenvwrapper_lazy.sh
 
+#command not found
+source /usr/share/doc/pkgfile/command-not-found.bash
+
 # starship promt (needs to be last)
 eval "$(starship init bash)"

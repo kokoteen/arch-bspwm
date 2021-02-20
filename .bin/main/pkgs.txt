@@ -276,6 +276,7 @@ alacritty
 keynav
 bat
 procs
+pkgfile
 
 #! skroz nepotrebno al zanimljivo
 playerctl - kontrolise bilo koji player iz terminala

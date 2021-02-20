@@ -31,7 +31,10 @@
         exec startx 2> "$HOME"/.xsession-errors
     fi
     ```
-7. if you're using display manager, start it with following commands:  
+7. setup `pkgfile` tool for searching files from packages in the official repo:
+`$ sudo sysytemctl enable pkgfile-update.timer`
+`$ sudo sysytemctl restart pkgfile-update.timer`
+8. if you're using display manager, start it with following commands:  
 `$ sudo systemctl enable lightdm.service -f`  
 `$ sudo systemctl set-default graphical.target`
 
