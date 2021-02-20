@@ -1,6 +1,0 @@
-[General]
-theme=ArcDark
-
-[Applications]
-ArcDark=simplescreenrecorder, qbittorrent, vlc, flameshot
-Default=virtualbox
