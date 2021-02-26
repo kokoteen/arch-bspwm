@@ -52,7 +52,7 @@ am_or_rebase = "AM/REBASE"
 style = "bold yellow"
 
 [git_status]
-format = '([\[ $all_status$ahead_behind \]]($style)) '
+format = '([\[$all_status$ahead_behind\]]($style)) '
 style = "bold red"
 conflicted = "⚔️"
 ahead = "⇡${count}"

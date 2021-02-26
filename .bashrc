@@ -27,7 +27,7 @@ fi
 # alias ls='ls -oAh --group-directories-first --color=auto'
 alias ls='exa -lah --group-directories-first'
 alias l='ls'
-alias cat='bat'
+alias cat='bat -p'
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
