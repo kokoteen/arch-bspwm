@@ -76,7 +76,7 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFE
 set encoding=utf-8
 
 " Highlight matching search patterns
-set hlsearch
+set nohlsearch
 " Enable incremental search
 set incsearch
 " Include matching uppercase words with lowercase search term
