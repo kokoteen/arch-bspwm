@@ -1,3 +1,6 @@
+" command-line mode
+nnoremap <space> :
+
 " movement
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -17,6 +20,6 @@ nnoremap <silent> <Right> :vertical resize +2<CR>
 
 " ctrl+s save
 noremap <silent> <C-S>      :update<CR>
-vnoremap <silent> <C-S>     <C-C>:update<CR>
-inoremap <silent> <C-S>     <C-O>:update<CR>
+vnoremap <silent> <C-S>     <C-C>:update<CR><ESC>
+inoremap <silent> <C-S>     <C-O>:update<CR><ESC>
 
