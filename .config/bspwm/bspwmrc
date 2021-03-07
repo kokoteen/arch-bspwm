@@ -9,8 +9,8 @@ bspc rule -r "*"
 
 #BSPWM configuration
 #bspc config border_radius        	8 # needs patch
-bspc config border_width         	2
-bspc config window_gap           	3
+bspc config border_width         	1
+bspc config window_gap           	2
 bspc config top_padding          	0
 bspc config bottom_padding       	0
 bspc config left_padding         	0
@@ -45,11 +45,6 @@ if [ "$(grep -w mirror_mode "$HOME/.my_settings" | awk '{print $2}')" -eq "1" ];
 else
     "$HOME/.config/bspwm/scripts/multimonitor" 
 fi
-
-#Fullscreen applications
-bspc rule -a Vlc state=fullscreen
-bspc rule -a VirtualBox Manager state=fullscreen
-bspc rule -a VirtualBox Machine state=fullscreen
 
 #Floating applications
 bspc rule -a Arandr state=floating
