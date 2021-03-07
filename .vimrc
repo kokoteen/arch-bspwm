@@ -42,7 +42,7 @@ set smartindent
 set cursorline
 
 " Display 5 lines above/below the cursor when scrolling with a mouse.
-set scrolloff=5
+set scrolloff=8
 " Fixes common backspace problems
 set backspace=indent,eol,start
 
