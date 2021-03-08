@@ -1,3 +1,11 @@
+" NERDTree configuration
+nnoremap  <C-b> :NERDTreeToggle<CR>
+nnoremap  <C-f> :NERDTreeFind<CR>
+
+" Split
+noremap <leader>h :<C-u>split<CR>
+noremap <leader>v :<C-u>vsplit<CR>
+
 " command-line mode
 nnoremap <space> :
 

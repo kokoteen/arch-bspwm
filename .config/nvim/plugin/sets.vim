@@ -14,3 +14,4 @@ set inccommand=nosplit
 set ignorecase
 set smartcase
 set modelines=0
+"set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
