@@ -21,13 +21,23 @@ xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
 " resize
-nnoremap <silent> <Up> :resize -2<CR>
-nnoremap <silent> <Down> :resize +2<CR>
-nnoremap <silent> <Left> :vertical resize -2<CR>
-nnoremap <silent> <Right> :vertical resize +2<CR>
+nnoremap <silent> <Up>      :resize -2<CR>
+nnoremap <silent> <Down>    :resize +2<CR>
+nnoremap <silent> <Left>    :vertical resize -2<CR>
+nnoremap <silent> <Right>   :vertical resize +2<CR>
 
 " ctrl+s save
 noremap <silent> <C-S>      :update<CR>
 vnoremap <silent> <C-S>     <C-C>:update<CR><ESC>
 inoremap <silent> <C-S>     <C-O>:update<CR><ESC>
 
+" greatest remap ever
+vnoremap <leader>p "_dP
+
+" next greatest remap ever : asbjornHaland
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d

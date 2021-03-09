@@ -16,7 +16,7 @@ endfun
 
 augroup highlight_yank
     autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 140})
 augroup END
 
 augroup THE_PRIMEAGEN
