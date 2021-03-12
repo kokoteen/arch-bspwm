@@ -1,4 +1,3 @@
-source ~/.config/nvim/plugin/plugins.vim
 filetype plugin indent on
 syntax on
 
@@ -25,4 +24,14 @@ augroup THE_PRIMEAGEN
     autocmd BufWritePre * :call TrimWhitespace()
     autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
 augroup END
+
+" pokusaj da se napravi funkcija koja ce da komentarise liniju
+" bezuspesno
+"fun! CommentLine()
+"        if &filetype == 'vim'
+"                return '"'
+"        elseif &filetype == 'python'
+"                return '#'
+"        endif
+"endfun
 
