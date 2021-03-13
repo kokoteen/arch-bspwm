@@ -66,3 +66,11 @@ settings:
     global: overlay
   scrolling.smooth:
     global: true
+  tabs.max_width:
+    global: -1
+  tabs.min_width:
+    global: -1
+  tabs.position:
+    global: bottom
+  tabs.width:
+    global: 15%
