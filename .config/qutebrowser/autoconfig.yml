@@ -29,17 +29,9 @@ settings:
         l: scroll-px 100 0
   bindings.key_mappings:
     global:
-      <Ctrl+Enter>: <Ctrl+Return>
       <Ctrl+[>: <Escape>
-      <Ctrl+i>: <Tab>
-      <Ctrl+j>: <Return>
-      <Ctrl+m>: <Return>
-      <Enter>: <Return>
-      <Shift+Enter>: <Return>
-      <Shift+Return>: <Return>
       <Space>: ':'
       <\>: <Ctrl+^>
-      j: K
   colors.webpage.darkmode.enabled:
     global: false
   content.blocking.adblock.lists:
