@@ -21,6 +21,8 @@ settings:
   bindings.commands:
     global:
       normal:
+        J: tab-prev
+        K: tab-next
         h: scroll-px -100 0
         j: scroll-px 0 100
         k: scroll-px 0 -100
