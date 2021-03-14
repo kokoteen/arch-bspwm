@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/pack/plugins/start')
         Plug 'easymotion/vim-easymotion'
         Plug 'tpope/vim-surround'
         "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+        Plug 'michaeljsmith/vim-indent-object'
         "Plug 'NLKNguyen/papercolor-theme'
         "Plug 'jremmen/vim-ripgrep'
 

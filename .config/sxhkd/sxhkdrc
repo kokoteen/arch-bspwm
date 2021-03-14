@@ -3,7 +3,7 @@
 #########################
 
 ## Browser
-super + F1 
+super + F1
       brave
 
 ## File Manager
@@ -20,11 +20,11 @@ super + F3
 
 ## Emoji
 super + F4
-      rofimoji --rofi-args "-theme themes/ArcoLinux-Nord_round" 
+      rofimoji --rofi-args "-theme themes/ArcoLinux-Nord_round"
 
 #
 super + F5
-      
+
 ## Meld
 super + F6
       meld
@@ -49,7 +49,7 @@ super + F11
 
 ## Rofi theme selector
 super + F12
-      rofi-theme-selector  
+      rofi-theme-selector
 
 #########################
 # SUPER + ... KEYS      #
@@ -57,7 +57,7 @@ super + F12
 ## Yayfzf
 super + y
       urxvt -e $HOME/.bin/yayfzf.sh
-       
+
 ## Toggle fullscreen of window
 super + f
       bspc node --state \~fullscreen
@@ -92,7 +92,7 @@ super + shift + d
 
 ## Reload bspwm
 super + shift + r
-      bspc wm -r 
+      bspc wm -r
 
 ## Reload sxhkd
 super + shift + s
@@ -229,6 +229,22 @@ super + {_,shift + }{Left,Down,Up,Right}
 ## Focus/swap windows by direction
 super + {_,shift + }{h,j,k,l}
       bspc node --{focus,swap} {west,south,north,east}
+
+## Focus the next/previous window in the current desktop
+super + {_,shift + }c
+    bspc node -f {next,prev}.local.!hidden.window
+
+## Focus a floating window / Cycle floating windows.
+super + {_,shift + }g
+	bspc node 'focused.floating#{next,prev}.local.!hidden.floating' -f \
+	    || bspc node 'last.local.!focused.!hidden.floating' -f \
+	    || bspc node  'any.local.!focused.!hidden.floating' -f
+
+## Focus a (pseudo_)tiled window / Cycle (pseudo_)tiled windows.
+super + {_,shift + }t
+	bspc node 'focused.!floating.!fullscreen.window#{next,prev}.local.!hidden.!floating.!fullscreen.window' -f \
+	    || bspc node 'last.local.!focused.!hidden.!floating.!fullscreen.window' -f \
+	    || bspc node  'any.local.!focused.!hidden.!floating.!fullscreen.window' -f
 
 ## Flip layout vertically/horizontally
 super + {_,shift + }a

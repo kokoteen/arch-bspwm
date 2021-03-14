@@ -34,6 +34,8 @@ settings:
       <\>: <Ctrl+^>
   colors.webpage.darkmode.enabled:
     global: false
+  content.autoplay:
+    global: false
   content.blocking.adblock.lists:
     global:
     - https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt
@@ -54,12 +56,16 @@ settings:
     global: true
   fonts.default_size:
     global: 13pt
+  new_instance_open_target:
+    global: tab
   qt.args:
     global: null
   qt.force_software_rendering:
     global: software-opengl
   qt.highdpi:
     global: true
+  qt.process_model:
+    global: process-per-site-instance
   scrolling.bar:
     global: overlay
   scrolling.smooth:
