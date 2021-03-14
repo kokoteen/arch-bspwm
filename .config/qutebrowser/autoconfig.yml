@@ -36,9 +36,14 @@ settings:
     global: false
   content.blocking.adblock.lists:
     global:
+    - https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt
+    - https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt
     - https://easylist.to/easylist/easylist.txt
     - https://easylist.to/easylist/easyprivacy.txt
     - https://easylist-downloads.adblockplus.org/easyprivacy.txt
+  content.blocking.hosts.lists:
+    global:
+    - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
   content.geolocation:
     https://www.telegraf.rs: false
   content.javascript.enabled:
@@ -50,8 +55,7 @@ settings:
   fonts.default_size:
     global: 13pt
   qt.args:
-    global:
-    - ignore-gpu-blacklist
+    global: null
   qt.force_software_rendering:
     global: software-opengl
   qt.highdpi:
@@ -60,6 +64,13 @@ settings:
     global: overlay
   scrolling.smooth:
     global: true
+  statusbar.widgets:
+    global:
+    - keypress
+    - url
+    - scroll
+    - history
+    - progress
   tabs.max_width:
     global: -1
   tabs.min_width:
