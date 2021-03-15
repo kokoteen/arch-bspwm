@@ -46,6 +46,7 @@ vnoremap <leader>d "_d
 nnoremap <leader>c I<C-R>=CommentLine()<CR><ESC>0
 vnoremap <leader>c 0I<C-R>=CommentLine()<CR><ESC>0
 
+" uncomment line(s)
 nnoremap <leader>u :s+^\("\\|#\\|//\) ++<CR>
 vnoremap <leader>u :s+^\("\\|#\\|//\) ++<CR>
 
