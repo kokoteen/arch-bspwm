@@ -41,3 +41,11 @@ nnoremap <leader>Y gg"+yG
 
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
+
+" comment line(s)
+nnoremap <leader>c I<C-R>=CommentLine()<CR><ESC>0
+vnoremap <leader>c 0I<C-R>=CommentLine()<CR><ESC>0
+
+nnoremap <leader>u :s+^\("\\|#\\|//\) ++<CR>
+vnoremap <leader>u :s+^\("\\|#\\|//\) ++<CR>
+
