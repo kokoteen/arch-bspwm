@@ -41,9 +41,9 @@ bspc config presel_feedback_color	"#00ff84"
 
 #AutoConfig monitor
 if [ "$(grep -w mirror_mode "$HOME/.my_settings" | awk '{print $2}')" -eq "1" ]; then
-    bspc monitor -d 1 2 3 
+    bspc monitor -d 1 2 3
 else
-    "$HOME/.config/bspwm/scripts/multimonitor" 
+    "$HOME/.config/bspwm/scripts/multimonitor"
 fi
 
 #Floating applications
@@ -54,6 +54,7 @@ bspc rule -a Xarchiver state=floating center=true
 bspc rule -a Pavucontrol state=floating center=true
 bspc rule -a Signal state=floating center=true rectangle=670x514+0+0
 bspc rule -a TelegramDesktop state=floating center=true rectangle=309x514+0+0
+bspc rule -a Bitwarden state=floating center=true
 
 
 #open applications on specific workspaces

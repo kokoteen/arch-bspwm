@@ -23,10 +23,10 @@ settings:
       normal:
         J: tab-prev
         K: tab-next
-        h: scroll-px -100 0
-        j: scroll-px 0 100
-        k: scroll-px 0 -100
-        l: scroll-px 100 0
+        h: run-with-count 4 scroll left
+        j: run-with-count 4 scroll down
+        k: run-with-count 4 scroll up
+        l: run-with-count 4 scroll right
   bindings.key_mappings:
     global:
       <Ctrl+[>: <Escape>
