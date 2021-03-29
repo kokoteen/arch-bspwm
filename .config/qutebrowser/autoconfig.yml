@@ -40,11 +40,11 @@ settings:
     global:
     - https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
     - https://secure.fanboy.co.nz/fanboy-annoyance.txt
-    - https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt
     - https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt
     - https://easylist.to/easylist/easylist.txt
     - https://easylist.to/easylist/easyprivacy.txt
     - https://easylist-downloads.adblockplus.org/easyprivacy.txt
+    - https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt
   content.blocking.hosts.lists:
     global:
     - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
