@@ -1,3 +1,6 @@
+" UNDOTree configuration
+nnoremap <F5> :UndotreeToggle<CR>
+
 " NERDTree configuration
 nnoremap  <C-b> :NERDTreeToggle<CR>
 nnoremap  <C-f> :NERDTreeFind<CR>
@@ -43,10 +46,10 @@ nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
 " comment line(s)
-nnoremap <leader>c I<C-R>=CommentLine()<CR><ESC>0
-vnoremap <leader>c 0I<C-R>=CommentLine()<CR><ESC>0
+nnoremap <leader>c I<C-R>=CommentLine()<CR><ESC>
+vnoremap <leader>c 0I<C-R>=CommentLine()<CR><ESC>
 
 " uncomment line(s)
-nnoremap <leader>u :s+^\("\\|#\\|//\) ++<CR>
-vnoremap <leader>u :s+^\("\\|#\\|//\) ++<CR>
+nnoremap <leader>u :s+\S\s*++<CR>
+vnoremap <leader>u :s+\S\s*++<CR>
 

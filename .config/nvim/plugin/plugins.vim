@@ -1,13 +1,13 @@
 call plug#begin('~/.config/nvim/pack/plugins/start')
 
-        "Fugitive Vim Github Wrapper
-        Plug 'tpope/vim-fugitive', { 'on': 'Gstatus' }
-        Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-        Plug 'easymotion/vim-easymotion'
-        Plug 'tpope/vim-surround'
-        "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-        Plug 'michaeljsmith/vim-indent-object'
-        "Plug 'NLKNguyen/papercolor-theme'
-        "Plug 'jremmen/vim-ripgrep'
+    Plug 'tpope/vim-fugitive', { 'on': 'Gstatus' }
+    Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'easymotion/vim-easymotion'
+    Plug 'tpope/vim-surround'
+    "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'michaeljsmith/vim-indent-object'
+    Plug 'mbbill/undotree'
+    Plug 'jremmen/vim-ripgrep'
+    "Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()

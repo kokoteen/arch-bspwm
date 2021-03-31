@@ -49,6 +49,7 @@ settings:
     global:
     - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
   content.geolocation:
+    https://www.google.com: false
     https://www.telegraf.rs: false
   content.javascript.enabled:
     global: true

@@ -27,9 +27,9 @@ augroup END
 
 " pokusaj da se napravi funkcija koja ce da komentarise liniju
 fun! CommentLine()
-        if &filetype == 'vim'
-                return '" '
-        elseif &filetype == 'python'
-                return '# '
-        endif
+    if &filetype == 'vim'
+        return '" '
+    elseif &filetype == 'python'
+        return '# '
+    endif
 endfun
