@@ -8,6 +8,7 @@ call plug#begin('~/.config/nvim/pack/plugins/start')
     Plug 'michaeljsmith/vim-indent-object'
     Plug 'mbbill/undotree'
     Plug 'jremmen/vim-ripgrep'
+    Plug 'machakann/vim-swap'
     "Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
