@@ -7,6 +7,10 @@ function! FileSize(bytes)
 endfunction
 
 function! ActiveStatus()
+    if &filetype == 'nerdtree'
+        return ""
+    endif
+
     let statusline=""
     let statusline.="%1*"
     let statusline.="%(%{'help'!=&filetype?'\ \ '.bufnr('%'):''}\ %)"
@@ -21,13 +25,17 @@ function! ActiveStatus()
     let statusline.="\ %2*"
     let statusline.="\ %{''!=#&filetype?&filetype:'none'}"
     let statusline.="\ %1*"
-    let statusline.="\ Ln %l,Col %c\ "
+    let statusline.="\ Ln %l,Col %c:Tot %L\ "
     let statusline.="\ %2*"
     let statusline.="%{FileSize(line2byte('$')+len(getline('$')))}"
     return statusline
 endfunction
 
 function! InactiveStatus()
+    if &filetype != 'nerdtree'
+        return ""
+    endif
+
     let statusline=""
     let statusline.="%(%{'help'!=&filetype?'\ \ '.bufnr('%'):''}\ %)"
     let statusline.="|\ %<"
@@ -37,7 +45,7 @@ function! InactiveStatus()
     " right side
     let statusline.="%="
     let statusline.="\ %{''!=#&filetype?&filetype:'none'}"
-    let statusline.="\ | Ln %l,Col %c\ "
+    let statusline.="\ | Ln %l,Col %c:Tot %L\ "
     let statusline.="|%{FileSize(line2byte('$')+len(getline('$')))}"
     return statusline
 endfunction
@@ -50,8 +58,8 @@ hi User3 guibg=#323436 guifg=#e06c75
 
 augroup status
     autocmd!
-    autocmd WinEnter * setlocal statusline=%!ActiveStatus()
-    autocmd WinLeave * setlocal statusline=%!InactiveStatus()
+    autocmd FocusGained,VimEnter,WinEnter,BufWinEnter * setlocal statusline=%!ActiveStatus()
+    autocmd FocusLost,VimLeave,WinLeave,BufWinLeave * setlocal statusline=%!InactiveStatus()
 augroup END
 
 
