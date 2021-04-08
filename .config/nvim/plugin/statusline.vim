@@ -7,10 +7,6 @@ function! FileSize(bytes)
 endfunction
 
 function! ActiveStatus()
-    if &filetype == 'nerdtree'
-        return ""
-    endif
-
     let statusline=""
     let statusline.="%1*"
     let statusline.="%(%{'help'!=&filetype?'\ \ '.bufnr('%'):''}\ %)"
@@ -32,10 +28,6 @@ function! ActiveStatus()
 endfunction
 
 function! InactiveStatus()
-    if &filetype != 'nerdtree'
-        return ""
-    endif
-
     let statusline=""
     let statusline.="%(%{'help'!=&filetype?'\ \ '.bufnr('%'):''}\ %)"
     let statusline.="|\ %<"
