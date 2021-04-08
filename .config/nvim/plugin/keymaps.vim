@@ -50,6 +50,6 @@ nnoremap <leader>c I<C-R>=CommentLine()<CR><ESC>
 vnoremap <leader>c 0I<C-R>=CommentLine()<CR><ESC>
 
 " uncomment line(s)
-nnoremap <leader>u :s+\S\s*++<CR>
-vnoremap <leader>u :s+\S\s*++<CR>
+nnoremap <leader>u :s+\S\s++<CR>
+vnoremap <leader>u :s+\S\s++<CR>
 
