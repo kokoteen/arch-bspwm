@@ -74,6 +74,10 @@ super + p
 super + v
       pavucontrol
 
+## Toggle polybar
+super + b
+      polybar-msg cmd toggle; bspc config bottom_padding 0
+
 ## Xkill
 super + Escape
       xkill
@@ -129,9 +133,8 @@ super + shift + t
 # CONTROL + SHIFT KEYS  #
 #########################
 
-## Xcfe4-TaskManager
+##
 ctrl + shift + Escape
-      xfce4-taskmanager
 
 
 #########################
