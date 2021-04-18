@@ -40,7 +40,7 @@ format-background = #00FF00
 [colors]
 ; Nord theme ============
 ; first two for transparency ex. 00-ff
-background = #ff2F343F 
+background = #ff2F343F
 foreground = #f3f4f5
 alert = #d08770
 volume-min = #a3be8c
@@ -115,7 +115,7 @@ font-2 = "FontAwesome:size=13;4"
 
 
 modules-left = bspwm
-modules-center = weather clock 
+modules-center = weather clock
 modules-right = xkeyboard cpu2 memory2 pavolume battery
 
 tray-detached = false
@@ -241,7 +241,7 @@ format-full-prefix = ""
 format-full-foreground = ${colors.foreground}
 format-full-background = ${colors.background}
 
-;     
+;    
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -268,7 +268,7 @@ type = internal/cpu
 interval = 3
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-;   
+;  
 format-prefix = ""
 format-font = 2
 format-prefix-foreground = ${colors.foreground}

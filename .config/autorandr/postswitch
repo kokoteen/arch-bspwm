@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-killall polybar 
-killall autoTogglePolybar 
+killall polybar
+# killall autoTogglePolybar
 killall conky  && bspc wm -r
 
 

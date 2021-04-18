@@ -13,7 +13,7 @@ bubble_sort()
                 t=${y_upp[j]}
                 y_upp[j]=${y_upp[j+1]}
                 y_upp[j+1]=$t
-                
+
                 t=${delta[j]}
                 delta[j]=${delta[j+1]}
                 delta[j+1]=$t
@@ -27,7 +27,7 @@ status="show"
 pid="$(pgrep -x polybar | tail -1)"
 
 declare -a delta
-declare -a bins 
+declare -a bins
 declare -a y_upp
 declare -a y_low
 
