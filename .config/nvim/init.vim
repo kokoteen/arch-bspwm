@@ -29,7 +29,8 @@ augroup END
 fun! CommentLine()
     if &filetype == 'vim'
         return '" '
-    elseif &filetype == 'python' || &filetype == 'sh'
+    elseif &filetype == 'python' || &filetype == 'sh' || &filetype == 'conf'
+
         return '# '
     endif
 endfun

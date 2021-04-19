@@ -29,7 +29,7 @@ feh --bg-scale "$HOME/.config/bspwm/wallpapers/wallhaven-3zovvv.jpg"
 
 xsetroot -cursor_name left_ptr
 numlockx on 										# num lock
-picom --config "$HOME/.config/bspwm/compton.conf" &
+picom --config "$HOME/.config/bspwm/picom.conf" &
 
 #bluetooth
 #blueberry-tray &
