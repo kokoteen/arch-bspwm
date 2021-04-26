@@ -21,7 +21,7 @@ function! ActiveStatus()
     let statusline.="\ %2*"
     let statusline.="\ %{''!=#&filetype?&filetype:'none'}"
     let statusline.="\ %1*"
-    let statusline.="\ Ln %l,Col %c:Tot %L\ "
+    let statusline.="\ Ln %l,Col %c:Tot %L"
     let statusline.="\ %2*"
     let statusline.="%{FileSize(line2byte('$')+len(getline('$')))}"
     return statusline
@@ -37,7 +37,7 @@ function! InactiveStatus()
     " right side
     let statusline.="%="
     let statusline.="\ %{''!=#&filetype?&filetype:'none'}"
-    let statusline.="\ | Ln %l,Col %c:Tot %L\ "
+    let statusline.="\ | Ln %l,Col %c:Tot %L"
     let statusline.="|%{FileSize(line2byte('$')+len(getline('$')))}"
     return statusline
 endfunction
