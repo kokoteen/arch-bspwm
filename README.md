@@ -16,7 +16,7 @@
 3. create ***"git --bare"*** repository:
     - clone dotfiles into a ***"bare"*** repository
     `$ git clone --bare https://github.com/kokoteen/arch-bspwm.git $HOME/.cfg`
-    - define the alias for easier use
+    - define the alias for easier use  
     `alias gitt='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
     - checkout the actual content from the bare repository to `$HOME` and delete everything that is in conflict
     `$ gitt checkout`
