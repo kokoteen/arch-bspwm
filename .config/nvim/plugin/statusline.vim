@@ -12,7 +12,7 @@ function! ActiveStatus()
     let statusline.="%(%{'help'!=&filetype?'\ \ '.bufnr('%'):''}\ %)"
     let statusline.="%2*"
     let statusline.="\ %<"
-    let statusline.="%f"
+    let statusline.="%t"
     let statusline.="\ %3*"
     let statusline.="%{&readonly?'\ ':''}"
     let statusline.="%{&modified?'\ *':''}"
@@ -21,7 +21,7 @@ function! ActiveStatus()
     let statusline.="\ %2*"
     let statusline.="\ %{''!=#&filetype?&filetype:'none'}"
     let statusline.="\ %1*"
-    let statusline.="\ Ln %l,Col %c:Tot %L"
+    let statusline.="\ L%l, C%c :%L"
     let statusline.="\ %2*"
     let statusline.="%{FileSize(line2byte('$')+len(getline('$')))}"
     return statusline
@@ -31,13 +31,13 @@ function! InactiveStatus()
     let statusline=""
     let statusline.="%(%{'help'!=&filetype?'\ \ '.bufnr('%'):''}\ %)"
     let statusline.="|\ %<"
-    let statusline.="%f"
+    let statusline.="%t"
     let statusline.="%{&readonly?'\ ':''}"
     let statusline.="%{&modified?'\ *':''}"
     " right side
     let statusline.="%="
     let statusline.="\ %{''!=#&filetype?&filetype:'none'}"
-    let statusline.="\ | Ln %l,Col %c:Tot %L"
+    let statusline.="\ | L%l, C%c :%L"
     let statusline.="|%{FileSize(line2byte('$')+len(getline('$')))}"
     return statusline
 endfunction
