@@ -38,7 +38,7 @@ truncation_symbol = "…/"
 format = "[\\($hash\\)]($style) [\\($tag\\)]($style) "
 commit_hash_length = 7
 style = "bold green"
-tag_symbol = "🏷 "
+tag_symbol = "🏁"
 
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
@@ -54,12 +54,12 @@ style = "bold yellow"
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style)) '
 style = "bold red"
-conflicted = "⚔️"
+conflicted = "💥"
 ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 untracked = "🤷"
-stashed = "📦"
+stashed = "📌"
 modified = "📝"
 staged = '[++\($count\)](green)'
 renamed = "💱"
