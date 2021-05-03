@@ -1,6 +1,6 @@
-#########################
-# SUPER + FUNCTION KEYS #
-#########################
+##########################
+## SUPER + FN KEY       ##
+##########################
 
 ## Browser
 super + F1
@@ -16,7 +16,7 @@ Menu
 
 ## Rofi run
 super + F3
-      rofi -show run -theme themes/ArcoLinux-Nord_round
+      rofi -show drun -theme themes/ArcoLinux-Nord_round
 
 ## Emoji
 super + F4
@@ -51,9 +51,10 @@ super + F11
 super + F12
       rofi-theme-selector
 
-#########################
-# SUPER + ... KEYS      #
-#########################
+##########################
+## SUPER + ... KEYS     ##
+##########################
+
 ## Yayfzf
 super + y
       urxvt -e $HOME/.bin/yayfzf.sh
@@ -86,13 +87,9 @@ super + Escape
 super + Return
       alacritty
 
-#########################
-# SUPER + SHIFT KEYS    #
-#########################
-
-## DMENU
-super + shift + d
-      dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=23'
+##########################
+## SUPER + SHIFT KEYS   ##
+##########################
 
 ## Reload bspwm
 super + shift + r
@@ -110,44 +107,35 @@ super + shift + q
 super + shift + x
       bspc quit
 
-## Xfce4-settings-manager
-super + shift + p
-      xfce4-settings-manager
-
-## Screen-Locker
-super + shift + l
-      betterlockscreen -l
-
 ## Toggle Light/Dark theme
 super + shift + t
       $HOME/.bin/toggleTheme.sh && bspc wm -r
 
-#########################
-# SUPER + CTRL KEYS    #
-#########################
+##########################
+## SUPER + CTRL KEYS    ##
+##########################
 
 
+##########################
+## CONTROL + SHIFT KEYS ##
+##########################
 
 
-#########################
-# CONTROL + SHIFT KEYS  #
-#########################
-
-##
-ctrl + shift + Escape
-
-
-#########################
-#     SCREENSHOTS       #
-#########################
+##########################
+##     ALT + KEY        ##
+##########################
 
 ## Screeenshooter
 alt + p
     io.elementary.screenshot-tool
 
-#########################
-#     MULTIMEDIA KEYS   #
-#########################
+## Screen-Locker
+alt + l
+      betterlockscreen -l
+
+##########################
+##    MULTIMEDIA KEYS   ##
+##########################
 
 ## Raises volume
 XF86AudioRaiseVolume
@@ -199,9 +187,9 @@ XF86AudioMicMute
     $HOME/.bin/toggleMic toggle
 
 
-#########################
-# BSPWM LAYOUT KEYS     #
-#########################
+##########################
+## BSPWM LAYOUT KEYS    ##
+##########################
 
 #################################################################
 
@@ -213,7 +201,7 @@ super + {1-9,0}
 
 ## Move window to selected desktop FOR QWERTY KEYBOARDS
 super + shift + {1-9,0}
-      id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+      bspc node -d '^{1-9,10}' --follow
 
 #################################################################
 
@@ -253,13 +241,22 @@ super + {_,shift + }t
 super + {_,shift + }a
       bspc node @/ --flip {vertical,horizontal}
 
-## Expand tiled space
-super + alt + {h,j,k,l}
-      bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}
+## Right expand or shrink a window
+super + ctrl + l
+      bspc node -z right 10 0 || bspc node -z left 10 0
 
-## Contract tiled space
-super + ctrl + {h,j,k,l}
-      bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
+## Left expand or shrink a window
+super + ctrl + h
+      bspc node -z left -10 0 || bspc node -z right -10 0
+
+## Top expand or shrink a window
+super + ctrl + k
+      bspc node -z top 0 -10 || bspc node -z bottom 0 -10
+
+## Bottom expand or shrink a window
+super + ctrl + j
+      bspc node -z bottom 0 10 || bspc node -z top 0 10
+
 
 ## Increase/decrease window gap on focused desktop
 super + bracket{left,right}
