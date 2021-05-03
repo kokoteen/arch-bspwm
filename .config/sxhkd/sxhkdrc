@@ -1,5 +1,5 @@
 ##########################
-## SUPER + FN KEY       ##
+##      SUPER + FN KEY
 ##########################
 
 ## Browser
@@ -52,7 +52,7 @@ super + F12
       rofi-theme-selector
 
 ##########################
-## SUPER + ... KEYS     ##
+##      SUPER + ... KEYS
 ##########################
 
 ## Yayfzf
@@ -88,7 +88,7 @@ super + Return
       alacritty
 
 ##########################
-## SUPER + SHIFT KEYS   ##
+##      SUPER + SHIFT KEYS
 ##########################
 
 ## Reload bspwm
@@ -112,17 +112,17 @@ super + shift + t
       $HOME/.bin/toggleTheme.sh && bspc wm -r
 
 ##########################
-## SUPER + CTRL KEYS    ##
+##      SUPER + CTRL KEYS
 ##########################
 
 
 ##########################
-## CONTROL + SHIFT KEYS ##
+##      CONTROL + SHIFT KEYS
 ##########################
 
 
 ##########################
-##     ALT + KEY        ##
+##      ALT + KEY
 ##########################
 
 ## Screeenshooter
@@ -134,7 +134,7 @@ alt + l
       betterlockscreen -l
 
 ##########################
-##    MULTIMEDIA KEYS   ##
+##      MULTIMEDIA KEYS
 ##########################
 
 ## Raises volume
@@ -154,7 +154,7 @@ XF86AudioMute
 #putting a hashtag in front of the mpc line will NOT work
 #mpc works for ncmpcpp
 
-## PLAY
+## Play
 XF86AudioPlay
     mpc toggle
     #playerctl play-pause
@@ -188,7 +188,7 @@ XF86AudioMicMute
 
 
 ##########################
-## BSPWM LAYOUT KEYS    ##
+##      BSPWM LAYOUT KEYS
 ##########################
 
 #################################################################
@@ -212,6 +212,10 @@ super + Tab
 ## Rotate desktop
 super + r
       bspc node @/ --rotate {90,-90}
+
+# Rotate tree
+super + {_,shift +}d
+    bspc node @/ -C {forward,backward}
 
 ## Focus/swap windows by direction
 super + {_,shift + }{Left,Down,Up,Right}
@@ -257,7 +261,6 @@ super + ctrl + k
 super + ctrl + j
       bspc node -z bottom 0 10 || bspc node -z top 0 10
 
-
 ## Increase/decrease window gap on focused desktop
 super + bracket{left,right}
       bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 5 ))
@@ -271,11 +274,11 @@ super + ctrl + {e,r,t,y}
       bspc node --focus @{parent,brother,first,second}
 
 ## Preselect the splitting area for next window on leaf/parent
-super + ctrl + {u,i,o,p}
+super + alt + {u,i,o,p}
       bspc node --presel-dir \~{west,south,north,east}
 
 ## Define splitting ratio for next window on leaf/parent
-super + ctrl + {1-9}
+super + alt + {1-9}
       bspc node --presel-ratio 0.{1-9}
 
 ## Cancel preselection
