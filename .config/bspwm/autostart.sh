@@ -15,7 +15,7 @@ run()
 [ "$(grep -w mirror_mode "$HOME/.my_settings" | awk '{print $2}')" -eq "0" ] && autorandr -c
 
 #run conky clock
-n=$(xrandr | grep -w connected | wc | awk '{print $1}')
+n=$(xrandr | xrandr -q | sed -nE 's/ connected .* \(.*//p' | wc | awk '{print $1}')
 killall conky
 for ((i=0;i<n;i++)); do
     conky -c <(sed -e "s/xinerama_head = 0/xinerama_head = ${i}/g" "$HOME/.config/bspwm/clock_primary") &

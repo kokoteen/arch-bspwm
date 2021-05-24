@@ -23,7 +23,7 @@ declare -a layout
 declare -a ws
 
 n="$(xrandr | grep -c "\*" )" # num of monitors
-case $n in 
+case $n in
     1) ws=(5);;
     2) ws=(5 5);;
     3) ws=(3 4 4);;
@@ -47,7 +47,8 @@ for ((i=0;i<n;i++)); do
 done
 
 mapfile -t bins < <(xrandr -q | sed -nE 's/.* connected (primary )?(.*) \(.*/\2/p' | cut -d'+' -f2)
-mapfile -t monitor_names < <(xrandr -q | sed -nE 's/ connected .*//p')
+# mapfile -t monitor_names < <(xrandr -q | sed -nE 's/ connected .*//p')
+mapfile -t monitor_names < <(xrandr -q | sed -nE 's/ connected .* \(.*//p')
 
 bubble_sort "${bins[@]}"
 
