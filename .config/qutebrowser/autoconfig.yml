@@ -32,8 +32,14 @@ settings:
       <Ctrl+[>: <Escape>
       <Space>: ':'
       <\>: <Ctrl+^>
+  colors.webpage.bg:
+    global: black
   colors.webpage.darkmode.enabled:
+    global: true
+  colors.webpage.darkmode.grayscale.all:
     global: false
+  colors.webpage.preferred_color_scheme:
+    global: auto
   content.autoplay:
     global: false
   content.blocking.adblock.lists:
@@ -53,10 +59,12 @@ settings:
     https://www.telegraf.rs: false
   content.javascript.enabled:
     global: true
-  content.notifications:
+  content.notifications.enabled:
     https://www.reddit.com: false
   content.pdfjs:
     global: true
+  content.user_stylesheets:
+    global: nord-dark-all-sites.css
   fonts.default_size:
     global: 13pt
   new_instance_open_target:
