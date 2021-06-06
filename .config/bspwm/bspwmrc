@@ -64,4 +64,4 @@ bspc rule -a Bitwarden state=floating center=true
 #bspc rule -a Thunar desktop='^8' follow=on
 
 ###External rules
-bspc config external_rules_command ~/.config/bspwm/scripts/external_rules_command_old
+bspc config external_rules_command ~/.config/bspwm/scripts/external_rules_command
