@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# flutter emulator (android)
-[ "$(xtitle "$1")" = "Emulator" ] && echo state=floating rectangle=290x518+0+0
-
-# yayfzf
-[ "$(xtitle "$1")" = "yayfzf.sh" ] && echo state=floating 
