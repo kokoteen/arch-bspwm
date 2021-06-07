@@ -22,7 +22,7 @@ for ((i=0;i<n;i++)); do
 done
 
 #add keyboard layout
-setxkbmap us,rs,hr -option 'grp:ctrl_alt_toggle' 	# man xkeyboard-config
+setxkbmap us,"rs(yz)",hr -option 'grp:shift_caps_toggle' 	# man xkeyboard-config
 
 #wallpaper
 feh --bg-scale "$HOME/.config/bspwm/wallpapers/pexels-arist-creathrive-2253573.jpg"
