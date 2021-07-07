@@ -20,5 +20,6 @@ call plug#begin('~/.config/nvim/pack/plugins/start')
     " colors
     Plug 'ful1e5/onedark.nvim'
     "Plug 'NLKNguyen/papercolor-theme'
-
+    " cloror parentheses
+    Plug 'p00f/nvim-ts-rainbow'
 call plug#end()
