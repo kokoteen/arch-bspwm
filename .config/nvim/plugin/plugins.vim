@@ -22,4 +22,5 @@ call plug#begin('~/.config/nvim/pack/plugins/start')
     "Plug 'NLKNguyen/papercolor-theme'
     " cloror parentheses
     Plug 'p00f/nvim-ts-rainbow'
+    Plug 'dhruvasagar/vim-pairify'
 call plug#end()
