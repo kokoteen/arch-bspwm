@@ -1,5 +1,6 @@
 set tabstop=4 softtabstop=4
 set shiftwidth=4
+set autoindent
 set smartindent
 setlocal colorcolumn=80
 highlight Normal ctermfg=grey ctermbg=black

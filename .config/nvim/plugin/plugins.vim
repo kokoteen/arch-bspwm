@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/pack/plugins/start')
     Plug 'nvim-treesitter/playground'
     Plug 'hrsh7th/nvim-compe'
     Plug 'neovim/nvim-lspconfig'
+    Plug 'kabouzeid/nvim-lspinstall'
     " dependencies
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
@@ -22,5 +23,6 @@ call plug#begin('~/.config/nvim/pack/plugins/start')
     "Plug 'NLKNguyen/papercolor-theme'
     " cloror parentheses
     Plug 'p00f/nvim-ts-rainbow'
+    Plug 'windwp/nvim-autopairs'
     Plug 'dhruvasagar/vim-pairify'
 call plug#end()

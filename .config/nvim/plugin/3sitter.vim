@@ -9,7 +9,7 @@ require'nvim-treesitter.configs'.setup {
     -- disable = { "c", "rust" },  -- list of language that will be disabled
   },
   indent = {
-    enable = true
+    enable = fase
   },
   incremental_selection = {
     enable = true,
