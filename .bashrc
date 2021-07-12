@@ -19,7 +19,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 PS1="\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
-if [ -d "$HOME/.bin" ]; then 
+if [ -d "$HOME/.bin" ]; then
     PATH="$HOME/.bin:$PATH"
 fi
 

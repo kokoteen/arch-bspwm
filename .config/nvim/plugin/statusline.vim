@@ -50,8 +50,8 @@ hi User3 guibg=#323436 guifg=#e06c75
 
 augroup status
     autocmd!
-    autocmd FocusGained,VimEnter,WinEnter,BufWinEnter * setlocal statusline=%!ActiveStatus()
-    autocmd FocusLost,VimLeave,WinLeave,BufWinLeave * setlocal statusline=%!InactiveStatus()
+    autocmd FocusGained,VimEnter,WinEnter,BufWinEnter,BufEnter * setlocal statusline=%!ActiveStatus()
+    autocmd FocusLost,VimLeave,WinLeave,BufWinLeave,BufLeave * setlocal statusline=%!InactiveStatus()
 augroup END
 
 

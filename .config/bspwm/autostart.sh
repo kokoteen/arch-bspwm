@@ -39,6 +39,6 @@ run "$HOME/.config/polybar/launch.sh"				# polybar
 # run autoTogglePolybar
 run nm-applet 										# wifi icon
 run kdeconnect-indicator							# kdeconnect
-run polkit-dumb-agent 								# Authentication agents
+run lxqt-policykit-agent 								# Authentication agents
 run dunst											# notification
 run keynav                                          # keyboard mous

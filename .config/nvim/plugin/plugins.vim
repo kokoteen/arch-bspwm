@@ -13,14 +13,14 @@ call plug#begin('~/.config/nvim/pack/plugins/start')
     Plug 'hrsh7th/nvim-compe'
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
-    " dependencies
+    " dependencies for telescope
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
     " telescope
     Plug 'nvim-telescope/telescope.nvim'
     " colors
     Plug 'ful1e5/onedark.nvim'
-    "Plug 'NLKNguyen/papercolor-theme'
+    Plug 'dracula/vim', { 'as': 'dracula' }
     " cloror parentheses
     Plug 'p00f/nvim-ts-rainbow'
     Plug 'windwp/nvim-autopairs'
